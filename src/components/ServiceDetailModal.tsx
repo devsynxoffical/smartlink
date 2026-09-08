@@ -65,12 +65,12 @@ export const ServiceDetailModal: React.FC<ServiceDetailModalProps> = ({
         </div>
 
         {/* Content Body */}
-        <div className="modal-body" style={{ maxHeight: '60vh', overflowY: 'auto', padding: '28px' }}>
-          <p style={{ fontSize: '15.5px', color: '#334155', lineHeight: '1.65', marginBottom: '24px' }}>
+        <div className="modal-body" style={{ maxHeight: '65vh', overflowY: 'auto' }}>
+          <p style={{ fontSize: '15px', color: '#334155', lineHeight: '1.65', marginBottom: '24px' }}>
             {service.details.overview}
           </p>
 
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '24px', marginBottom: '24px' }}>
+          <div className="service-modal-2col">
             {/* Core Capabilities */}
             <div>
               <h4 style={{ fontSize: '15px', fontWeight: 800, color: '#0f172a', marginBottom: '12px', display: 'flex', alignItems: 'center', gap: '8px' }}>

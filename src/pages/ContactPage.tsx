@@ -86,7 +86,7 @@ export const ContactPage: React.FC<ContactPageProps> = ({ onOpenQuote }) => {
       {/* 2. CONTACT INFO & FORM SECTION */}
       <section className="section" style={{ background: '#ffffff' }}>
         <div className="container-wide">
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1.3fr', gap: '48px', alignItems: 'flex-start' }}>
+          <div className="contact-main-grid">
             {/* Left Contact Info */}
             <div>
               <span className="eyebrow-blue" style={{ fontSize: '11.5px', fontWeight: 800, color: '#0075ff', textTransform: 'uppercase', letterSpacing: '0.1em' }}>
@@ -148,7 +148,7 @@ export const ContactPage: React.FC<ContactPageProps> = ({ onOpenQuote }) => {
             </div>
 
             {/* Right Form Card */}
-            <div style={{ background: '#f8fafc', border: '1px solid #e2e8f0', borderRadius: '16px', padding: '36px', boxShadow: '0 4px 20px rgba(0,0,0,0.03)' }}>
+            <div className="contact-form-card">
               {submitted ? (
                 <div style={{ textAlign: 'center', padding: '40px 20px' }}>
                   <div style={{ width: '60px', height: '60px', background: '#ecfdf5', color: '#059669', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 16px auto' }}>
@@ -170,7 +170,7 @@ export const ContactPage: React.FC<ContactPageProps> = ({ onOpenQuote }) => {
                     Send Us a Message
                   </h3>
 
-                  <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '14px' }}>
+                  <div className="form-grid-2col">
                     <div className="form-group" style={{ marginBottom: 0 }}>
                       <label className="form-label">Full Name *</label>
                       <input
@@ -195,7 +195,7 @@ export const ContactPage: React.FC<ContactPageProps> = ({ onOpenQuote }) => {
                     </div>
                   </div>
 
-                  <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '14px' }}>
+                  <div className="form-grid-2col">
                     <div className="form-group" style={{ marginBottom: 0 }}>
                       <label className="form-label">Phone Number</label>
                       <input

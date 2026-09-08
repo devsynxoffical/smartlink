@@ -27,6 +27,7 @@ export const BackToTop: React.FC = () => {
       onClick={scrollToTop}
       aria-label="Scroll to top of page"
       title="Back to Top"
+      className="back-to-top-btn"
       style={{
         position: 'fixed',
         bottom: '28px',

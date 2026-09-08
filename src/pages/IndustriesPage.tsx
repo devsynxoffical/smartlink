@@ -94,9 +94,9 @@ export const IndustriesPage: React.FC<IndustriesPageProps> = ({
       {/* 2. INDUSTRIES WE SERVE (8 CARDS IN 4x2 GRID) */}
       <section className="section" style={{ background: '#ffffff' }}>
         <div className="container-wide">
-          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', marginBottom: '40px' }}>
+          <div className="section-header-row">
             <div>
-              <span className="eyebrow-blue" style={{ fontSize: '11.5px', fontWeight: 800, color: '#0075ff', textTransform: 'uppercase', letterSpacing: '0.1em' }}>
+              <span className="eyebrow-blue">
                 INDUSTRIES WE SERVE
               </span>
               <h2 style={{ fontSize: '34px', fontWeight: 800, color: '#0a1128', marginTop: '6px' }}>

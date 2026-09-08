@@ -224,16 +224,16 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onNavigate, onOpenQuote })
               </button>
             </div>
             <div className="modal-body">
-              <div style={{ display: 'flex', gap: '20px', alignItems: 'center', marginBottom: '20px' }}>
+              <div className="executive-profile-row">
                 <img 
                   src={selectedLeader.image} 
                   alt={selectedLeader.name} 
-                  style={{ width: '100px', height: '125px', objectFit: 'cover', borderRadius: '8px' }}
+                  style={{ width: '100px', height: '125px', objectFit: 'cover', borderRadius: '8px', flexShrink: 0 }}
                 />
                 <div>
                   <h3 style={{ fontSize: '22px', fontWeight: 800, color: '#0a1128' }}>{selectedLeader.name}</h3>
                   <p style={{ fontSize: '14px', fontWeight: 700, color: '#0075ff', margin: '4px 0 10px 0' }}>{selectedLeader.role}</p>
-                  <div style={{ display: 'flex', gap: '10px' }}>
+                  <div className="executive-profile-actions">
                     <a 
                       href={`mailto:${selectedLeader.email}`} 
                       style={{ fontSize: '12px', color: '#475569', background: '#f1f5f9', padding: '6px 12px', borderRadius: '6px', fontWeight: 600, display: 'inline-flex', alignItems: 'center', gap: '4px' }}

@@ -337,8 +337,8 @@ export const ProjectsPage: React.FC<ProjectsPageProps> = ({
               </div>
             </div>
 
-            <div className="modal-body" style={{ padding: '24px' }}>
-              <div style={{ display: 'flex', gap: '20px', marginBottom: '18px', fontSize: '13px', color: '#64748b' }}>
+            <div className="modal-body">
+              <div style={{ display: 'flex', gap: '20px', marginBottom: '18px', fontSize: '13px', color: '#64748b', flexWrap: 'wrap' }}>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
                   <MapPin size={16} color="var(--primary-blue)" />
                   <span>{selectedProject.location}</span>
@@ -357,7 +357,7 @@ export const ProjectsPage: React.FC<ProjectsPageProps> = ({
                 <h4 style={{ fontSize: '14px', fontWeight: 800, color: '#0a1128', marginBottom: '10px', display: 'flex', alignItems: 'center', gap: '8px' }}>
                   <Layers size={16} color="var(--primary-blue)" /> Technical Scope Delivered:
                 </h4>
-                <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '8px' }}>
+                <div className="form-grid-2col" style={{ gap: '8px' }}>
                   {selectedProject.scope.map((item, idx) => (
                     <div key={idx} style={{
                       fontSize: '13px',
@@ -376,6 +376,7 @@ export const ProjectsPage: React.FC<ProjectsPageProps> = ({
               <div style={{ display: 'flex', justifyContent: 'flex-end', gap: '12px' }}>
                 <button
                   className="btn-primary"
+                  style={{ width: '100%', justifyContent: 'center' }}
                   onClick={() => {
                     setSelectedProject(null);
                     onOpenQuote();

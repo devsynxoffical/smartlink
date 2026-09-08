@@ -296,14 +296,15 @@ export const Header: React.FC<HeaderProps> = ({
               About Us & Leadership
             </button>
             <button className={`mobile-nav-link ${currentTab === 'services' ? 'active' : ''}`} onClick={() => handleNavClick('services')}>
-              Services Overview
+              <span>Services Overview</span>
+              <ChevronDown size={15} />
             </button>
-            <div style={{ paddingLeft: '16px', display: 'flex', flexDirection: 'column', gap: '8px', marginBottom: '8px' }}>
+            <div className="mobile-sub-group">
               {servicesData.map(s => (
                 <button 
                   key={s.id} 
                   onClick={() => handleNavClick('service-detail', s.id)}
-                  style={{ textAlign: 'left', fontSize: '13px', color: '#64748b', background: 'none', border: 'none', padding: '4px 0' }}
+                  className="mobile-sub-link"
                 >
                   • {s.title}
                 </button>
@@ -311,14 +312,15 @@ export const Header: React.FC<HeaderProps> = ({
             </div>
 
             <button className={`mobile-nav-link ${currentTab === 'industries' ? 'active' : ''}`} onClick={() => handleNavClick('industries')}>
-              Industries Served
+              <span>Industries Served</span>
+              <ChevronDown size={15} />
             </button>
-            <div style={{ paddingLeft: '16px', display: 'flex', flexDirection: 'column', gap: '8px', marginBottom: '8px' }}>
+            <div className="mobile-sub-group">
               {industriesData.map(ind => (
                 <button 
                   key={ind.id} 
                   onClick={() => handleNavClick('industry-detail', ind.id)}
-                  style={{ textAlign: 'left', fontSize: '13px', color: '#64748b', background: 'none', border: 'none', padding: '4px 0' }}
+                  className="mobile-sub-link"
                 >
                   • {ind.title}
                 </button>

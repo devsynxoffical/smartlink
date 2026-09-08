@@ -68,7 +68,7 @@ export const WhyUsPage: React.FC<WhyUsPageProps> = ({ onNavigate, onOpenQuote })
             </p>
           </div>
 
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '28px' }}>
+          <div className="why-us-pillars-grid">
             <div className="service-card" style={{ padding: '32px' }}>
               <div className="service-card-icon-box">
                 <Award size={24} />

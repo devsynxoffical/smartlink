@@ -169,7 +169,7 @@ export const QuoteModal: React.FC<QuoteModalProps> = ({
                     </div>
                   </div>
 
-                  <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '16px' }}>
+                  <div className="form-grid-2col">
                     <div className="form-group">
                       <label className="form-label">Facility / Property Type</label>
                       <select
@@ -231,7 +231,7 @@ export const QuoteModal: React.FC<QuoteModalProps> = ({
                 </div>
               ) : (
                 <div>
-                  <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '16px' }}>
+                  <div className="form-grid-2col">
                     <div className="form-group">
                       <label className="form-label">Your Name *</label>
                       <input
@@ -256,7 +256,7 @@ export const QuoteModal: React.FC<QuoteModalProps> = ({
                     </div>
                   </div>
 
-                  <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '16px' }}>
+                  <div className="form-grid-2col">
                     <div className="form-group">
                       <label className="form-label">Business Email *</label>
                       <input

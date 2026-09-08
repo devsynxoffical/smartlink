@@ -104,9 +104,9 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({
       {/* 2. COMPREHENSIVE SOLUTIONS 6-CARDS */}
       <section className="section" style={{ background: '#ffffff' }}>
         <div className="container-wide">
-          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', marginBottom: '40px' }}>
+          <div className="section-header-row">
             <div>
-              <span className="eyebrow-blue" style={{ fontSize: '11.5px', fontWeight: 800, color: '#0075ff', textTransform: 'uppercase', letterSpacing: '0.1em' }}>
+              <span className="eyebrow-blue">
                 OUR CAPABILITIES
               </span>
               <h2 style={{ fontSize: '34px', fontWeight: 800, color: '#0a1128', marginTop: '6px' }}>
@@ -118,7 +118,7 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({
             </p>
           </div>
 
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '28px' }}>
+          <div className="services-3grid">
             {servicesData.map((svc) => (
               <div
                 key={svc.id}
@@ -237,8 +237,8 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({
       {/* 4. FLUKE CERTIFICATION BANNER */}
       <section className="section" style={{ background: '#050b17', color: '#ffffff' }}>
         <div className="container-wide">
-          <div style={{ background: 'linear-gradient(90deg, #071530 0%, #0d2757 100%)', border: '1px solid rgba(0, 117, 255, 0.4)', borderRadius: '16px', padding: '48px' }}>
-            <div style={{ display: 'grid', gridTemplateColumns: '1.4fr 1fr', gap: '32px', alignItems: 'center' }}>
+          <div className="fluke-banner-card">
+            <div className="fluke-banner-grid">
               <div>
                 <span className="eyebrow-cyan" style={{ marginBottom: '8px' }}>QUALITY GUARANTEE</span>
                 <h3 style={{ fontSize: '30px', fontWeight: 900, color: '#ffffff', marginBottom: '12px' }}>
