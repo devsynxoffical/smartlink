@@ -5,7 +5,7 @@ import { Footer } from './components/Footer';
 import { Preloader } from './components/Preloader';
 import { TopLoadingBar } from './components/TopLoadingBar';
 import { BackToTop } from './components/BackToTop';
-import { DispatchBadge } from './components/DispatchBadge';
+
 import { HomePage } from './pages/HomePage';
 import { AboutPage } from './pages/AboutPage';
 import { ServicesPage } from './pages/ServicesPage';
@@ -172,7 +172,6 @@ export function App() {
 
       {/* 6. Professional Floating Widgets */}
       <BackToTop />
-      <DispatchBadge onOpenQuote={() => handleOpenQuote()} />
 
       {/* 7. Interactive Modals */}
       <QuoteModal

@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import type { NavTab, LeaderItem } from '../types';
 import { leadershipData, locationsData } from '../data/siteData';
 import { 
-  MapPin, 
   ArrowRight, 
   Mail
 } from 'lucide-react';
@@ -12,12 +11,12 @@ interface AboutPageProps {
   onOpenQuote: () => void;
 }
 
-export const AboutPage: React.FC<AboutPageProps> = ({ onNavigate, onOpenQuote }) => {
+export const AboutPage: React.FC<AboutPageProps> = ({ onNavigate }) => {
   const [selectedLeader, setSelectedLeader] = useState<LeaderItem | null>(null);
 
   return (
     <div className="about-page-exact">
-      {/* 1. HERO SECTION - Exact 1:1 Match to Mockup #1 */}
+      {/* 1. HERO SECTION - Exact 1:1 Match to Mockup */}
       <section 
         className="about-hero-section"
         style={{
@@ -35,36 +34,25 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onNavigate, onOpenQuote })
                 <span className="blue-highlight">of IT Experience.</span>
               </h1>
               <p className="about-hero-subtext">
-                The experts at Smart-Links Cabling Solutions, LLC. are here to assist you.
+                The experts at Smart-Links Cabling Solutions, LLC.<br />
+                are here to assist you.
               </p>
-              <div>
-                <button 
-                  onClick={onOpenQuote}
-                  className="btn-primary"
-                  style={{ display: 'inline-flex', alignItems: 'center', gap: '8px' }}
-                >
-                  <span>GET A QUOTE</span>
-                  <ArrowRight size={16} />
-                </button>
-              </div>
             </div>
 
-            {/* Right Tag Banner */}
+            {/* Right Tag Banner (Plain Stacked Typography) */}
             <div className="about-hero-right-tag">
-              <div className="tag-banner-box">
-                <div className="tag-banner-heading">
-                  CONNECTING<br />
-                  PEOPLE<br />
-                  PLACES<br />
-                  POSSIBILITIES
-                </div>
+              <div className="about-hero-tagline-text">
+                CONNECTING<br />
+                PEOPLE<br />
+                PLACES<br />
+                POSSIBILITIES
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* 2. OUR LEADERSHIP - Exact 4-Column Layout Match to Mockup #1 */}
+      {/* 2. OUR LEADERSHIP - Exact 4-Column Layout Match to Mockup */}
       <section className="leadership-section">
         <div className="container-wide">
           <div className="leadership-grid-4col">
@@ -81,7 +69,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onNavigate, onOpenQuote })
               <button 
                 onClick={() => onNavigate('contact')}
                 className="btn-primary"
-                style={{ fontSize: '13.5px', padding: '12px 22px' }}
+                style={{ fontSize: '13.5px', padding: '12px 24px', borderRadius: '6px' }}
               >
                 <span>MEET OUR LEADERSHIP</span>
                 <ArrowRight size={15} />
@@ -93,11 +81,13 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onNavigate, onOpenQuote })
               <div className="leader-photo-wrap">
                 <img src="/andrew_wilson.jpg" alt="Andrew Wilson" />
               </div>
-              <h3 className="leader-name">Andrew Wilson</h3>
-              <p className="leader-role">President & CEO</p>
-              <p className="leader-bio">
-                Visionary leadership with a focus on growth, innovation, and customer success.
-              </p>
+              <div className="leader-card-body">
+                <h3 className="leader-name">Andrew Wilson</h3>
+                <p className="leader-role">President & CEO</p>
+                <p className="leader-bio">
+                  Visionary leadership with a focus on growth, innovation, and customer success.
+                </p>
+              </div>
             </div>
 
             {/* Column 3: Michael Carter */}
@@ -105,11 +95,13 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onNavigate, onOpenQuote })
               <div className="leader-photo-wrap">
                 <img src="/michael_carter.jpg" alt="Michael Carter" />
               </div>
-              <h3 className="leader-name">Michael Carter</h3>
-              <p className="leader-role">Chief Operating Officer</p>
-              <p className="leader-bio">
-                Operational excellence driving nationwide delivery and client satisfaction.
-              </p>
+              <div className="leader-card-body">
+                <h3 className="leader-name">Michael Carter</h3>
+                <p className="leader-role">Chief Operating Officer</p>
+                <p className="leader-bio">
+                  Operational excellence driving nationwide delivery and client satisfaction.
+                </p>
+              </div>
             </div>
 
             {/* Column 4: Jennifer Martinez */}
@@ -117,23 +109,25 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onNavigate, onOpenQuote })
               <div className="leader-photo-wrap">
                 <img src="/jennifer_martinez.jpg" alt="Jennifer Martinez" />
               </div>
-              <h3 className="leader-name">Jennifer Martinez</h3>
-              <p className="leader-role">Chief Technology Officer</p>
-              <p className="leader-bio">
-                Leading technology strategy and ensuring innovative, scalable solutions.
-              </p>
+              <div className="leader-card-body">
+                <h3 className="leader-name">Jennifer Martinez</h3>
+                <p className="leader-role">Chief Technology Officer</p>
+                <p className="leader-bio">
+                  Leading technology strategy and ensuring innovative, scalable solutions.
+                </p>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* 3. OUR STORY SECTION - Exact 1:1 Match to Mockup #1 */}
+      {/* 3. OUR STORY SECTION - Exact 1:1 Match to Mockup */}
       <section className="story-section">
         <div className="container-wide">
           <div className="story-grid-2col">
             {/* Left Narrative */}
             <div>
-              <div className="eyebrow-dashes" style={{ marginBottom: '14px' }}>OUR STORY</div>
+              <div className="eyebrow-dashes-left" style={{ marginBottom: '14px' }}>OUR STORY</div>
               <h2 className="story-heading">
                 A Strong Foundation<br />
                 for a Connected Tomorrow.
@@ -148,7 +142,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onNavigate, onOpenQuote })
                 <button 
                   onClick={() => onNavigate('why-us')}
                   className="btn-primary"
-                  style={{ fontSize: '13.5px', padding: '12px 24px' }}
+                  style={{ fontSize: '13.5px', padding: '12px 24px', borderRadius: '6px' }}
                 >
                   <span>OUR FULL STORY</span>
                   <ArrowRight size={15} />
@@ -156,10 +150,10 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onNavigate, onOpenQuote })
               </div>
             </div>
 
-            {/* Right Photo with High-Visibility Vest Technician */}
+            {/* Right Photo with Smart-Links Technician */}
             <div className="story-photo-container">
               <img 
-                src="/technician_vest.jpg" 
+                src="/technician_cabling.jpg" 
                 alt="Smart-Links Cabling Solutions Technician" 
               />
               <div className="story-badge-overlay">
@@ -174,12 +168,12 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onNavigate, onOpenQuote })
         </div>
       </section>
 
-      {/* 4. OUR LOCATIONS SECTION - Exact 5-Column Match to Mockup #1 */}
+      {/* 4. OUR LOCATIONS SECTION - Exact 5-Column Match to Mockup */}
       <section className="locations-section">
         <div className="container-wide">
           <div className="locations-header-row">
             <div>
-              <div className="eyebrow-dashes" style={{ marginBottom: '8px' }}>OUR LOCATIONS</div>
+              <div className="eyebrow-dashes-left" style={{ marginBottom: '8px' }}>OUR LOCATIONS</div>
               <h2 className="locations-title">
                 Strategically Located. Nationwide Support.
               </h2>
@@ -191,20 +185,25 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onNavigate, onOpenQuote })
 
           <div className="locations-grid-5col">
             {locationsData.map((loc) => (
-              <div key={loc.id} className="location-card-v1">
-                <div>
-                  <div className="location-top-row">
-                    <MapPin size={18} className="location-pin-icon" />
-                    <h3 className="location-name">{loc.name}</h3>
+              <div key={loc.id} className="location-col-item">
+                <div className="location-item-inner">
+                  <div className="location-pin-wrap">
+                    <svg width="22" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="location-pin-svg">
+                      <path d="M12 2C8.13401 2 5 5.13401 5 9C5 14.25 12 22 12 22C12 22 19 14.25 19 9C19 5.13401 15.866 2 12 2Z" fill="#0075FF"/>
+                      <circle cx="12" cy="9" r="3.2" fill="#FFFFFF"/>
+                    </svg>
                   </div>
-                  <div className="location-address">
-                    {loc.address}<br />
-                    {loc.cityStateZip}
+                  <div className="location-info-block">
+                    <h3 className="location-name">{loc.name}</h3>
+                    <div className="location-address">
+                      {loc.address}<br />
+                      {loc.cityStateZip}
+                    </div>
+                    <a href={`tel:${loc.phone.replace(/[^0-9]/g, '')}`} className="location-phone">
+                      {loc.phone}
+                    </a>
                   </div>
                 </div>
-                <a href={`tel:${loc.phone.replace(/[^0-9]/g, '')}`} className="location-phone">
-                  {loc.phone}
-                </a>
               </div>
             ))}
           </div>

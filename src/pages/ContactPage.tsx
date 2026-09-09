@@ -1,7 +1,19 @@
 import React, { useState } from 'react';
 import type { NavTab } from '../types';
-import { locationsData } from '../data/siteData';
-import { MapPin, Phone, Mail, Clock, Send, CheckCircle2, ArrowRight, Headphones } from 'lucide-react';
+import { 
+  Phone, 
+  Mail, 
+  MapPin, 
+  Clock, 
+  Users, 
+  Headphones, 
+  Zap, 
+  ShieldCheck, 
+  Lock, 
+  ArrowRight,
+  CheckCircle2,
+  Navigation
+} from 'lucide-react';
 
 interface ContactPageProps {
   onNavigate: (tab: NavTab) => void;
@@ -9,12 +21,13 @@ interface ContactPageProps {
 }
 
 export const ContactPage: React.FC<ContactPageProps> = ({ onOpenQuote }) => {
-  const [name, setName] = useState('');
+  const [firstName, setFirstName] = useState('');
+  const [lastName, setLastName] = useState('');
+  const [company, setCompany] = useState('');
   const [email, setEmail] = useState('');
   const [phone, setPhone] = useState('');
-  const [subject, setSubject] = useState('New Project Consultation');
+  const [serviceType, setServiceType] = useState('Structured Cabling');
   const [message, setMessage] = useState('');
-  const [preferredLocation, setPreferredLocation] = useState('Orlando, FL (HQ)');
   const [submitted, setSubmitted] = useState(false);
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -24,280 +37,353 @@ export const ContactPage: React.FC<ContactPageProps> = ({ onOpenQuote }) => {
 
   return (
     <div className="contact-page-exact">
-      {/* 1. HERO SECTION */}
+      {/* 1. HERO SECTION - Exact 1:1 Match to Mockup */}
       <section 
-        className="subpage-hero"
+        className="contact-hero-section"
         style={{
           backgroundImage: `url('/contact_hero_bg.jpg')`
         }}
       >
-        <div className="subpage-hero-overlay" />
+        <div className="contact-hero-overlay" />
         <div className="container-wide" style={{ position: 'relative', zIndex: 2 }}>
-          <div className="subpage-hero-grid">
+          <div className="contact-hero-grid">
+            {/* Left Hero Content */}
             <div>
-              <div className="eyebrow-cyan">GET IN TOUCH</div>
-              <h1 className="subpage-title">
-                LET'S BUILD SOMETHING <br />
-                <span style={{ color: '#0075ff' }}>EXTRAORDINARY.</span>
+              <div className="eyebrow-cyan">CONTACT US</div>
+              <h1 className="contact-hero-title">
+                LET'S BUILD <br />
+                WHAT'S NEXT <br />
+                <span className="blue-highlight">TOGETHER.</span>
               </h1>
-              <p className="subpage-desc">
-                Get in touch with our certified engineers to discuss low voltage cabling, fiber optic deployments, security surveillance, and commercial infrastructure.
+              <p className="contact-hero-subtext">
+                Have a project in mind or need expert advice? Our team is ready to help with reliable infrastructure solutions tailored to your needs.
               </p>
-              <div style={{ display: 'flex', gap: '14px', flexWrap: 'wrap' }}>
-                <button 
-                  onClick={onOpenQuote}
-                  className="btn-primary"
-                  style={{ display: 'inline-flex', alignItems: 'center', gap: '8px' }}
-                >
-                  <span>REQUEST A PROJECT QUOTE</span>
-                  <ArrowRight size={16} />
-                </button>
-                <a 
-                  href="tel:4075550100"
-                  className="btn-outline-white"
-                  style={{ display: 'inline-flex', alignItems: 'center', gap: '6px' }}
-                >
-                  <Phone size={14} /> (407) 555-0100
-                </a>
+
+              {/* 3 Badges Row */}
+              <div className="contact-hero-badges-row">
+                <div className="contact-badge-pill">
+                  <Headphones size={16} className="contact-badge-icon" />
+                  <span>Expert Guidance</span>
+                </div>
+                <div className="contact-badge-pill">
+                  <Zap size={16} className="contact-badge-icon" />
+                  <span>Fast Response</span>
+                </div>
+                <div className="contact-badge-pill">
+                  <ShieldCheck size={16} className="contact-badge-icon" />
+                  <span>Solutions You Can Trust</span>
+                </div>
               </div>
             </div>
 
-            <div style={{ display: 'flex', justifyContent: 'flex-end' }}>
-              <div className="tag-banner-box" style={{ width: '100%', maxWidth: '320px' }}>
-                <div style={{ fontSize: '11px', fontWeight: 800, color: '#00bfff', textTransform: 'uppercase', marginBottom: '8px' }}>
-                  HEADQUARTERS
+            {/* Right Tag Banner */}
+            <div className="contact-hero-right-tag">
+              <div className="contact-tagline-block">
+                <div className="contact-tagline-words">
+                  CONNECTING<br />
+                  PEOPLE<br />
+                  PLACES<br />
+                  POSSIBILITIES
                 </div>
-                <div style={{ fontSize: '16px', fontWeight: 900, color: '#ffffff', marginBottom: '6px' }}>
-                  ORLANDO, FL
-                </div>
-                <p style={{ fontSize: '12.5px', color: '#cbd5e1', lineHeight: '1.5', marginBottom: '14px' }}>
-                  Serving enterprise clients, general contractors, and public institutions nationwide.
-                </p>
-                <div style={{ paddingTop: '12px', borderTop: '1px solid rgba(255, 255, 255, 0.15)', fontSize: '11px', color: '#00bfff', fontWeight: 800, display: 'flex', alignItems: 'center', gap: '6px' }}>
-                  <Headphones size={15} />
-                  <span>24/7 Field Dispatch Available</span>
-                </div>
+                <div className="contact-tagline-bar" />
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* 2. CONTACT INFO & FORM SECTION */}
-      <section className="section" style={{ background: '#ffffff' }}>
+      {/* 2. FORM & CONTACT INFORMATION SECTION */}
+      <section className="contact-content-section">
         <div className="container-wide">
-          <div className="contact-main-grid">
-            {/* Left Contact Info */}
-            <div>
-              <span className="eyebrow-blue" style={{ fontSize: '11.5px', fontWeight: 800, color: '#0075ff', textTransform: 'uppercase', letterSpacing: '0.1em' }}>
-                DIRECT INQUIRY
-              </span>
-              <h2 style={{ fontSize: '32px', fontWeight: 800, color: '#0a1128', marginTop: '6px', marginBottom: '14px' }}>
-                We're Here to Help You Connect
-              </h2>
-              <p style={{ fontSize: '14.5px', color: '#64748b', lineHeight: '1.65', marginBottom: '32px' }}>
-                Whether you have an upcoming architectural RFP, need emergency fiber splicing, or are expanding your multi-site retail or corporate footprint, our team is ready to assist.
+          <div className="contact-split-grid">
+            {/* Left: Form */}
+            <div className="contact-form-column">
+              <div className="eyebrow-blue">SEND US A MESSAGE</div>
+              <h2 className="contact-col-heading">Get in Touch</h2>
+              <p className="contact-col-desc">
+                Fill out the form below and a member of our team will get back to you shortly. Whether it's a quote, a question, or a partnership opportunity — we're here to help.
               </p>
 
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
-                <div style={{ display: 'flex', gap: '14px', alignItems: 'flex-start', background: '#f8fafc', padding: '16px', borderRadius: '10px', border: '1px solid #e2e8f0' }}>
-                  <div style={{ background: '#eff6ff', padding: '10px', borderRadius: '8px', color: '#0075ff' }}>
-                    <MapPin size={20} />
-                  </div>
-                  <div>
-                    <h4 style={{ fontSize: '14.5px', fontWeight: 800, color: '#0a1128' }}>Corporate Headquarters</h4>
-                    <p style={{ fontSize: '13px', color: '#64748b', marginTop: '2px' }}>1234 Innovation Drive, Orlando, FL 32801</p>
-                  </div>
-                </div>
-
-                <div style={{ display: 'flex', gap: '14px', alignItems: 'flex-start', background: '#f8fafc', padding: '16px', borderRadius: '10px', border: '1px solid #e2e8f0' }}>
-                  <div style={{ background: '#eff6ff', padding: '10px', borderRadius: '8px', color: '#0075ff' }}>
-                    <Phone size={20} />
-                  </div>
-                  <div>
-                    <h4 style={{ fontSize: '14.5px', fontWeight: 800, color: '#0a1128' }}>National Direct Line</h4>
-                    <p style={{ fontSize: '13px', color: '#0075ff', fontWeight: 700, marginTop: '2px' }}>
-                      <a href="tel:4075550100">(407) 555-0100</a>
-                    </p>
-                  </div>
-                </div>
-
-                <div style={{ display: 'flex', gap: '14px', alignItems: 'flex-start', background: '#f8fafc', padding: '16px', borderRadius: '10px', border: '1px solid #e2e8f0' }}>
-                  <div style={{ background: '#eff6ff', padding: '10px', borderRadius: '8px', color: '#0075ff' }}>
-                    <Mail size={20} />
-                  </div>
-                  <div>
-                    <h4 style={{ fontSize: '14.5px', fontWeight: 800, color: '#0a1128' }}>Email Inquiries & RFPs</h4>
-                    <p style={{ fontSize: '13px', color: '#0075ff', fontWeight: 700, marginTop: '2px' }}>
-                      <a href="mailto:info@smart-linksces.com">info@smart-linksces.com</a>
-                    </p>
-                  </div>
-                </div>
-
-                <div style={{ display: 'flex', gap: '14px', alignItems: 'flex-start', background: '#f8fafc', padding: '16px', borderRadius: '10px', border: '1px solid #e2e8f0' }}>
-                  <div style={{ background: '#eff6ff', padding: '10px', borderRadius: '8px', color: '#0075ff' }}>
-                    <Clock size={20} />
-                  </div>
-                  <div>
-                    <h4 style={{ fontSize: '14.5px', fontWeight: 800, color: '#0a1128' }}>Hours of Operation</h4>
-                    <p style={{ fontSize: '13px', color: '#64748b', marginTop: '2px' }}>Monday – Friday: 7:00 AM – 6:00 PM EST</p>
-                    <p style={{ fontSize: '11.5px', color: '#94a3b8', marginTop: '2px' }}>24/7 On-Call Emergency Service for Contract Clients</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Right Form Card */}
-            <div className="contact-form-card">
               {submitted ? (
-                <div style={{ textAlign: 'center', padding: '40px 20px' }}>
-                  <div style={{ width: '60px', height: '60px', background: '#ecfdf5', color: '#059669', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 16px auto' }}>
-                    <CheckCircle2 size={32} />
-                  </div>
-                  <h3 style={{ fontSize: '24px', fontWeight: 800, color: '#0a1128', marginBottom: '8px' }}>
-                    Message Received!
-                  </h3>
-                  <p style={{ fontSize: '14px', color: '#64748b', lineHeight: '1.6', maxWidth: '420px', margin: '0 auto 24px auto' }}>
-                    Thank you for contacting Smart-Links. A project engineer from our {preferredLocation} office will follow up with you within 2 business hours.
+                <div className="contact-success-box">
+                  <CheckCircle2 size={40} className="success-icon" />
+                  <h3>Message Received!</h3>
+                  <p>
+                    Thank you, {firstName || 'there'}! A member of our team will review your inquiry and reach out within 1 business day.
                   </p>
-                  <button onClick={() => setSubmitted(false)} className="btn-primary" style={{ fontSize: '13px', padding: '10px 20px' }}>
+                  <button 
+                    onClick={() => {
+                      setSubmitted(false);
+                      setFirstName('');
+                      setLastName('');
+                      setCompany('');
+                      setEmail('');
+                      setPhone('');
+                      setMessage('');
+                    }}
+                    className="btn-primary"
+                    style={{ marginTop: '16px' }}
+                  >
                     SEND ANOTHER MESSAGE
                   </button>
                 </div>
               ) : (
-                <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
-                  <h3 style={{ fontSize: '20px', fontWeight: 800, color: '#0a1128', marginBottom: '4px' }}>
-                    Send Us a Message
-                  </h3>
-
-                  <div className="form-grid-2col">
-                    <div className="form-group" style={{ marginBottom: 0 }}>
-                      <label className="form-label">Full Name *</label>
-                      <input
-                        type="text"
-                        required
-                        value={name}
-                        onChange={(e) => setName(e.target.value)}
-                        placeholder="John Doe"
-                        className="form-input"
-                      />
-                    </div>
-                    <div className="form-group" style={{ marginBottom: 0 }}>
-                      <label className="form-label">Email Address *</label>
-                      <input
-                        type="email"
-                        required
-                        value={email}
-                        onChange={(e) => setEmail(e.target.value)}
-                        placeholder="john@company.com"
-                        className="form-input"
-                      />
-                    </div>
+                <form onSubmit={handleSubmit} className="contact-form-clean">
+                  <div className="form-row-2col">
+                    <input 
+                      type="text" 
+                      placeholder="First Name *" 
+                      required
+                      value={firstName}
+                      onChange={(e) => setFirstName(e.target.value)}
+                      className="contact-input-field" 
+                    />
+                    <input 
+                      type="text" 
+                      placeholder="Last Name *" 
+                      required
+                      value={lastName}
+                      onChange={(e) => setLastName(e.target.value)}
+                      className="contact-input-field" 
+                    />
                   </div>
 
-                  <div className="form-grid-2col">
-                    <div className="form-group" style={{ marginBottom: 0 }}>
-                      <label className="form-label">Phone Number</label>
-                      <input
-                        type="tel"
-                        value={phone}
-                        onChange={(e) => setPhone(e.target.value)}
-                        placeholder="(407) 555-0100"
-                        className="form-input"
-                      />
-                    </div>
-                    <div className="form-group" style={{ marginBottom: 0 }}>
-                      <label className="form-label">Target Office</label>
-                      <select
-                        value={preferredLocation}
-                        onChange={(e) => setPreferredLocation(e.target.value)}
-                        className="form-select"
+                  <div className="form-row-2col">
+                    <input 
+                      type="text" 
+                      placeholder="Company Name *" 
+                      required
+                      value={company}
+                      onChange={(e) => setCompany(e.target.value)}
+                      className="contact-input-field" 
+                    />
+                    <input 
+                      type="email" 
+                      placeholder="Email Address *" 
+                      required
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
+                      className="contact-input-field" 
+                    />
+                  </div>
+
+                  <div className="form-row-2col">
+                    <input 
+                      type="tel" 
+                      placeholder="Phone Number *" 
+                      required
+                      value={phone}
+                      onChange={(e) => setPhone(e.target.value)}
+                      className="contact-input-field" 
+                    />
+                    <div className="select-wrap">
+                      <select 
+                        value={serviceType}
+                        onChange={(e) => setServiceType(e.target.value)}
+                        className="contact-select-field"
                       >
-                        <option value="Orlando, FL (HQ)">Orlando, FL (Corporate HQ)</option>
-                        <option value="Birmingham, AL">Birmingham, AL (Southeast)</option>
-                        <option value="Iselin, NJ">Iselin, NJ (Northeast)</option>
-                        <option value="Chicago, IL">Chicago, IL (Midwest)</option>
-                        <option value="San Jose, CA">San Jose, CA (West Coast)</option>
+                        <option value="Structured Cabling">Structured Cabling</option>
+                        <option value="Fiber Optics">Fiber Optic Solutions</option>
+                        <option value="Video Surveillance">Video Surveillance</option>
+                        <option value="Access Control">Access Control</option>
+                        <option value="DAS & Wireless">DAS Systems</option>
+                        <option value="IT Solutions">IT Solutions</option>
+                        <option value="General Inquiry">General Inquiry / RFP</option>
                       </select>
                     </div>
                   </div>
 
-                  <div className="form-group" style={{ marginBottom: 0 }}>
-                    <label className="form-label">Inquiry Subject</label>
-                    <select
-                      value={subject}
-                      onChange={(e) => setSubject(e.target.value)}
-                      className="form-select"
-                    >
-                      <option value="New Project Consultation">New Project Consultation / RFP</option>
-                      <option value="Structured Cabling Quote">Structured Cabling & Fiber Optics</option>
-                      <option value="Security & Video Surveillance">Video Surveillance & Access Control</option>
-                      <option value="DAS & Wireless Solutions">DAS & In-Building Wireless</option>
-                      <option value="Emergency Splicing / Service">Emergency Splicing & Repair</option>
-                      <option value="General Inquiry">General Company Inquiry</option>
-                    </select>
-                  </div>
-
-                  <div className="form-group" style={{ marginBottom: 0 }}>
-                    <label className="form-label">Project Scope / Message *</label>
-                    <textarea
-                      rows={4}
+                  <div>
+                    <textarea 
+                      placeholder="How can we help? *&#10;Tell us about your project, timeline, or any specific requirements..."
+                      rows={5}
                       required
                       value={message}
                       onChange={(e) => setMessage(e.target.value)}
-                      placeholder="Please describe your facility type, estimated drops, timeline, and requirements..."
-                      className="form-textarea"
+                      className="contact-textarea-field"
                     />
                   </div>
 
-                  <button
-                    type="submit"
-                    className="btn-primary"
-                    style={{ width: '100%', justifyContent: 'center', padding: '14px', marginTop: '6px' }}
-                  >
-                    <Send size={15} />
-                    <span>SEND MESSAGE TO SMART-LINKS</span>
-                  </button>
+                  <div className="contact-form-footer">
+                    <button type="submit" className="btn-primary contact-submit-btn">
+                      <span>SEND MESSAGE</span>
+                      <ArrowRight size={16} />
+                    </button>
+                    <div className="contact-security-notice">
+                      <Lock size={15} className="security-icon" />
+                      <span>Your information is secure and will only be used to respond to your inquiry.</span>
+                    </div>
+                  </div>
                 </form>
               )}
+            </div>
+
+            {/* Right: Contact Information */}
+            <div className="contact-info-column">
+              <div className="eyebrow-blue">CONTACT INFORMATION</div>
+              <h2 className="contact-col-heading">Let's Connect</h2>
+
+              <div className="contact-info-cards-stack">
+                {/* 1. Call Us */}
+                <div className="contact-info-row-item">
+                  <div className="contact-icon-circle">
+                    <Phone size={18} />
+                  </div>
+                  <div>
+                    <h3 className="contact-info-label">Call Us</h3>
+                    <a href="tel:4075550100" className="contact-info-main-link">(407) 555-0100</a>
+                    <p className="contact-info-sub">Mon – Fri, 8:00 AM – 6:00 PM (EST)</p>
+                  </div>
+                </div>
+
+                {/* 2. Email Us */}
+                <div className="contact-info-row-item">
+                  <div className="contact-icon-circle">
+                    <Mail size={18} />
+                  </div>
+                  <div>
+                    <h3 className="contact-info-label">Email Us</h3>
+                    <a href="mailto:info@smart-linkscs.com" className="contact-info-main-link">info@smart-linkscs.com</a>
+                    <p className="contact-info-sub">We typically respond within 24 hours.</p>
+                  </div>
+                </div>
+
+                {/* 3. Visit Us */}
+                <div className="contact-info-row-item">
+                  <div className="contact-icon-circle">
+                    <MapPin size={18} />
+                  </div>
+                  <div>
+                    <h3 className="contact-info-label">Visit Us</h3>
+                    <div className="contact-info-main-text">
+                      1234 Innovation Drive<br />
+                      Orlando, FL 32801
+                    </div>
+                    <p className="contact-info-sub">Our headquarters</p>
+                  </div>
+                </div>
+
+                {/* 4. Business Hours */}
+                <div className="contact-info-row-item">
+                  <div className="contact-icon-circle">
+                    <Clock size={18} />
+                  </div>
+                  <div>
+                    <h3 className="contact-info-label">Business Hours</h3>
+                    <div className="contact-info-main-text">Monday – Friday</div>
+                    <p className="contact-info-sub">8:00 AM – 6:00 PM (EST)</p>
+                  </div>
+                </div>
+
+                {/* 5. Partner Opportunities */}
+                <div className="contact-info-row-item">
+                  <div className="contact-icon-circle">
+                    <Users size={18} />
+                  </div>
+                  <div>
+                    <h3 className="contact-info-label">Partner Opportunities</h3>
+                    <a href="mailto:partnerships@smart-linkscs.com" className="contact-info-main-link">partnerships@smart-linkscs.com</a>
+                    <p className="contact-info-sub">Let's build something great together.</p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* 3. LOCATIONS SECTION */}
-      <section className="locations-section" style={{ borderTop: '1px solid #eef2f6' }}>
+      {/* 3. LOCATION & HEADQUARTERS MAP SECTION */}
+      <section className="contact-hq-section">
         <div className="container-wide">
-          <div className="locations-header-row">
-            <div>
-              <div className="eyebrow-dashes" style={{ marginBottom: '8px' }}>OUR LOCATIONS</div>
-              <h2 className="locations-title">
-                Strategically Located. Nationwide Support.
-              </h2>
-            </div>
-            <div className="locations-sub-note">
-              5 Regional Offices to Serve You.
-            </div>
-          </div>
+          <div className="contact-hq-grid">
+            {/* Left: Functional Interactive Map Embed */}
+            <div className="contact-map-wrapper">
+              <iframe
+                title="Smart-Links Cabling Solutions Headquarters Map"
+                src="https://maps.google.com/maps?q=1234+Innovation+Drive,+Orlando,+FL+32801&t=m&z=14&ie=UTF8&iwloc=&output=embed"
+                width="100%"
+                height="100%"
+                style={{ border: 0, display: 'block', width: '100%', height: '100%', minHeight: '460px' }}
+                allowFullScreen={true}
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              />
 
-          <div className="locations-grid-5col">
-            {locationsData.map((loc) => (
-              <div key={loc.id} className="location-card-v1">
-                <div>
-                  <div className="location-top-row">
-                    <MapPin size={18} className="location-pin-icon" />
-                    <h3 className="location-name">{loc.name}</h3>
+              {/* Headquarters Pin Popup Card */}
+              <div className="map-pin-callout">
+                <div className="map-pin-callout-inner">
+                  <div className="map-callout-pin-icon">
+                    <svg width="24" height="30" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M12 2C8.13401 2 5 5.13401 5 9C5 14.25 12 22 12 22C12 22 19 14.25 19 9C19 5.13401 15.866 2 12 2Z" fill="#0075FF"/>
+                      <circle cx="12" cy="9" r="3.2" fill="#FFFFFF"/>
+                    </svg>
                   </div>
-                  <div className="location-address">
-                    {loc.address}<br />
-                    {loc.cityStateZip}
+                  <div>
+                    <h4 className="map-callout-title">Smart-Links Cabling Solutions</h4>
+                    <p className="map-callout-address">
+                      1234 Innovation Drive<br />
+                      Orlando, FL 32801
+                    </p>
                   </div>
                 </div>
-                <a href={`tel:${loc.phone.replace(/[^0-9]/g, '')}`} className="location-phone">
-                  {loc.phone}
+              </div>
+            </div>
+
+            {/* Right: Visit Our Headquarters Dark Card */}
+            <div className="contact-hq-card">
+              <div className="eyebrow-cyan">OUR LOCATION</div>
+              <h2 className="contact-hq-title">Visit Our Headquarters</h2>
+              <p className="contact-hq-desc">
+                We welcome clients, partners, and industry professionals to meet with our team and learn more about how Smart-Links Cabling Solutions can support your next project.
+              </p>
+              
+              <div style={{ marginBottom: '24px' }}>
+                <a 
+                  href="https://maps.google.com/?q=1234+Innovation+Drive+Orlando+FL+32801" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="btn-outline-white-contact"
+                >
+                  <Navigation size={15} />
+                  <span>GET DIRECTIONS</span>
+                  <ArrowRight size={15} />
                 </a>
               </div>
-            ))}
+
+              <div className="hq-building-photo-wrap">
+                <img 
+                  src="/about_hero_bg.jpg" 
+                  alt="Smart-Links Cabling Solutions Headquarters" 
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 4. READY TO GET STARTED? (BLUE BANNER) */}
+      <section 
+        className="contact-cta-banner"
+        style={{ backgroundImage: `url('/blue_wave_cta.jpg')` }}
+      >
+        <div className="container-wide">
+          <div className="contact-cta-inner">
+            <div>
+              <div className="eyebrow-cyan" style={{ marginBottom: '6px' }}>READY TO GET STARTED?</div>
+              <h2 className="contact-cta-title">Request a Quote</h2>
+              <p className="contact-cta-desc">
+                Tell us about your project, and we'll provide a customized solution and competitive pricing.
+              </p>
+            </div>
+            <div>
+              <button 
+                onClick={onOpenQuote}
+                className="btn-white-quote"
+              >
+                <span>REQUEST A QUOTE</span>
+                <ArrowRight size={16} />
+              </button>
+            </div>
           </div>
         </div>
       </section>

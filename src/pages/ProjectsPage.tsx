@@ -67,35 +67,39 @@ export const ProjectsPage: React.FC<ProjectsPageProps> = ({
 
   return (
     <div className="projects-page-root">
-      {/* 1. HERO SECTION */}
+      {/* 1. HERO SECTION (WITH INFRASTRUCTURE/PEOPLE/PLACES/POSSIBILITIES ON BUILDING WALL) */}
       <section
-        className="hero-wrapper"
+        className="projects-hero-exact"
         style={{
-          backgroundImage: `url('/featured_building.jpg')`
+          backgroundImage: `url('/projects_hero_building_wall_perfect.jpg')`
         }}
       >
-        <div className="hero-overlay" />
+        <div className="projects-hero-dark-overlay" />
         <div className="container-wide" style={{ position: 'relative', zIndex: 2, width: '100%' }}>
-          <div className="hero-content-grid">
-            <div>
-              <div className="hero-tagline-cyan">OUR PROJECTS</div>
-              <h1 className="hero-main-title">
+          <div className="projects-hero-grid-exact">
+            {/* Left Column: Heading & CTA */}
+            <div className="projects-hero-left-col">
+              <div className="projects-hero-eyebrow">OUR PROJECTS</div>
+              <h1 className="projects-hero-title">
                 REAL PROJECTS.<br />
-                <span className="cyan-highlight">REAL IMPACT.</span>
+                <span className="cyan-text">REAL IMPACT.</span>
               </h1>
-              <p className="hero-sub-p">
+              <p className="projects-hero-sub">
                 From global brands to local businesses, Smart-Links Cabling Solutions has delivered reliable infrastructure that keeps organizations connected, secure, and ready for what's next.
               </p>
-              <div className="hero-actions-row">
-                <button className="btn-primary" onClick={onOpenQuote}>
-                  <span>Discuss Your Project</span>
-                  <ArrowRight size={16} />
+              <div className="projects-hero-btn-row">
+                <button className="btn-primary projects-hero-btn" onClick={onOpenQuote}>
+                  <span>DISCUSS YOUR PROJECT</span>
+                  <ArrowRight size={15} />
                 </button>
               </div>
             </div>
 
-            {/* Right sidebar */}
-            <div className="hero-sidebar-pillars">
+            {/* Center: Spacer revealing the building wall typography */}
+            <div className="projects-hero-center-spacer" />
+
+            {/* Right Column: 6 Services List */}
+            <div className="projects-hero-pillars-col">
               {[
                 'STRUCTURED CABLING',
                 'FIBER OPTIC',
@@ -103,10 +107,13 @@ export const ProjectsPage: React.FC<ProjectsPageProps> = ({
                 'ACCESS CONTROL',
                 'DAS',
                 'IT SOLUTIONS'
-              ].map((item, idx) => (
-                <div key={idx} className="pillar-item" onClick={() => onNavigate('services')}>
-                  <span>{item}</span>
-                  <ArrowRight size={14} />
+              ].map((service, idx) => (
+                <div
+                  key={idx}
+                  className="projects-pillar-row"
+                  onClick={() => onNavigate('services')}
+                >
+                  <span>{service}</span>
                 </div>
               ))}
             </div>
@@ -114,16 +121,16 @@ export const ProjectsPage: React.FC<ProjectsPageProps> = ({
         </div>
       </section>
 
-      {/* 2. FILTER BAR & SEARCH */}
-      <section className="section section-light" style={{ paddingBottom: '30px' }}>
+      {/* 2. FILTER PILLS & SEARCH BAR */}
+      <section className="projects-main-section">
         <div className="container-wide">
-          <div className="filter-bar-container">
+          <div className="projects-filter-bar-row">
             {/* Filter Pill Tabs */}
-            <div className="filter-tabs-scroll">
+            <div className="projects-pill-tabs">
               {filterTabs.map((tab) => (
                 <button
                   key={tab}
-                  className={`filter-tab-pill ${activeFilter === tab ? 'active' : ''}`}
+                  className={`projects-filter-pill ${activeFilter === tab ? 'active' : ''}`}
                   onClick={() => setActiveFilter(tab)}
                 >
                   {tab}
@@ -132,8 +139,8 @@ export const ProjectsPage: React.FC<ProjectsPageProps> = ({
             </div>
 
             {/* Search Box */}
-            <div className="search-input-box">
-              <Search size={16} color="#64748b" />
+            <div className="projects-search-field">
+              <Search size={15} className="projects-search-icon" />
               <input
                 type="text"
                 placeholder="Search projects..."
@@ -141,54 +148,61 @@ export const ProjectsPage: React.FC<ProjectsPageProps> = ({
                 onChange={(e) => setSearchQuery(e.target.value)}
               />
               {searchQuery && (
-                <button onClick={() => setSearchQuery('')} style={{ color: '#94a3b8' }}>
+                <button onClick={() => setSearchQuery('')} className="projects-search-clear">
                   <X size={14} />
                 </button>
               )}
             </div>
           </div>
 
-          {/* Projects 3-Col Grid */}
-          <div className="projects-grid">
+          {/* 3. PROJECTS 3-COL GRID (9 CARDS) */}
+          <div className="projects-cards-grid-exact">
             {filteredProjects.map((proj) => (
               <div
                 key={proj.id}
-                className="project-card"
+                className="project-card-exact"
                 onClick={() => setSelectedProject(proj)}
-                style={{ cursor: 'pointer' }}
               >
-                <div className="project-card-image-wrap">
+                {/* Photo Header */}
+                <div className="project-card-thumb-wrap">
                   <img
                     src={proj.image}
                     alt={proj.title}
-                    className="project-card-img"
+                    className="project-card-thumb-img"
                   />
-                  {/* Client brand banner over card */}
-                  <div style={{
-                    position: 'absolute',
-                    top: '14px',
-                    left: '14px',
-                    backgroundColor: proj.logoBg || '#0a1128',
-                    color: '#ffffff',
-                    padding: '6px 14px',
-                    borderRadius: '6px',
-                    fontSize: '13px',
-                    fontWeight: 800,
-                    letterSpacing: '0.03em',
-                    boxShadow: '0 4px 10px rgba(0,0,0,0.2)'
-                  }}>
-                    {proj.logoText}
-                  </div>
                 </div>
 
-                <div className="project-card-body">
-                  <span className="project-client-name">{proj.client}</span>
-                  <span className="project-category-tag">{proj.categoryLabel}</span>
-                  <p className="project-card-desc">{proj.description}</p>
-                  <div className="project-card-footer">
-                    <div className="project-arrow-btn">
-                      <ArrowRight size={16} />
-                    </div>
+                {/* Card Body */}
+                <div className="project-card-body-exact">
+                  <div className="project-brand-row-exact">
+                    {proj.id === 'walmart-supercenter' ? (
+                      <span className="brand-walmart-text">
+                        Walmart<span className="walmart-spark">✻</span>
+                      </span>
+                    ) : proj.logoImage ? (
+                      <div className={`project-logo-badge-box badge-${proj.id}`}>
+                        <img 
+                          src={proj.logoImage} 
+                          alt={proj.client} 
+                          className={`project-logo-file-img img-${proj.id}`} 
+                        />
+                      </div>
+                    ) : proj.id === 'chanel-flagship' ? (
+                      <span className="brand-chanel-text">CHANEL</span>
+                    ) : proj.id === 'morgan-stanley' ? (
+                      <span className="brand-morgan-text">Morgan Stanley</span>
+                    ) : (
+                      <span className="brand-default-text">{proj.client}</span>
+                    )}
+                  </div>
+
+                  <span className="project-category-eyebrow">{proj.categoryLabel}</span>
+                  <p className="project-desc-exact">{proj.description}</p>
+                  
+                  <div className="project-card-bottom-row">
+                    <span className="project-naked-arrow">
+                      <ArrowRight size={17} />
+                    </span>
                   </div>
                 </div>
               </div>
@@ -196,98 +210,111 @@ export const ProjectsPage: React.FC<ProjectsPageProps> = ({
           </div>
 
           {filteredProjects.length === 0 && (
-            <div style={{ textAlign: 'center', padding: '60px 0', color: '#64748b' }}>
-              <p style={{ fontSize: '18px', fontWeight: 600 }}>No projects found matching "{searchQuery}" in {activeFilter}</p>
+            <div className="projects-empty-state">
+              <p>No projects found matching "{searchQuery}" in {activeFilter}</p>
               <button
                 className="btn-outline-dark"
-                style={{ marginTop: '16px' }}
                 onClick={() => { setActiveFilter('All Projects'); setSearchQuery(''); }}
               >
                 Reset Filters
               </button>
             </div>
           )}
+        </div>
+      </section>
 
-          {/* 3. METRICS BANNER 4-COL */}
-          <div className="metrics-banner-4col">
-            <div className="metric-col-item">
-              <div className="metric-icon-bubble">
-                <Building2 size={24} />
+      {/* 4. METRICS BANNER (ATTACHED FULL-WIDTH SKY BLUE BAR) */}
+      <section className="projects-metrics-strip-section">
+        <div className="container-wide">
+          <div className="projects-metrics-strip-exact">
+            <div className="projects-metric-col">
+              <div className="projects-metric-icon">
+                <Building2 size={44} strokeWidth={1.8} />
               </div>
-              <div className="metric-big-number">100+</div>
-              <div className="metric-caption">Projects Completed</div>
+              <div className="projects-metric-num">100+</div>
+              <div className="projects-metric-lbl">Projects Completed</div>
             </div>
 
-            <div className="metric-col-item">
-              <div className="metric-icon-bubble">
-                <Users size={24} />
+            <div className="projects-metric-col">
+              <div className="projects-metric-icon">
+                <Users size={44} strokeWidth={1.8} />
               </div>
-              <div className="metric-big-number">50+</div>
-              <div className="metric-caption">Enterprise Clients</div>
+              <div className="projects-metric-num">50+</div>
+              <div className="projects-metric-lbl">Enterprise Clients</div>
             </div>
 
-            <div className="metric-col-item">
-              <div className="metric-icon-bubble">
-                <Globe size={24} />
+            <div className="projects-metric-col">
+              <div className="projects-metric-icon">
+                <Globe size={44} strokeWidth={1.8} />
               </div>
-              <div className="metric-big-number">Nationwide</div>
-              <div className="metric-caption">Project Coverage</div>
+              <div className="projects-metric-num">Nationwide</div>
+              <div className="projects-metric-lbl">Project Coverage</div>
             </div>
 
-            <div className="metric-col-item">
-              <div className="metric-icon-bubble">
-                <ShieldCheck size={24} />
+            <div className="projects-metric-col">
+              <div className="projects-metric-icon">
+                <ShieldCheck size={44} strokeWidth={1.8} />
               </div>
-              <div className="metric-big-number">99%</div>
-              <div className="metric-caption">Client Satisfaction</div>
+              <div className="projects-metric-num">99%</div>
+              <div className="projects-metric-lbl">Client Satisfaction</div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* 4. WHAT OUR CLIENTS SAY CAROUSEL */}
-      <section className="section section-light" style={{ paddingTop: 0, paddingBottom: '60px' }}>
+      {/* 5. WHAT OUR CLIENTS SAY TESTIMONIAL BANNER (ATTACHED NIGHT OFFICE BG) */}
+      <section className="projects-testimonial-section" style={{ backgroundImage: `url('/projects_reviews_night_bg.jpg')` }}>
         <div className="container-wide">
-          <div className="testimonial-card-translucent" style={{ backgroundColor: '#070e1c', padding: '48px 40px', borderRadius: '16px' }}>
-            <div style={{ textAlign: 'center', maxWidth: '780px', margin: '0 auto' }}>
-              <span className="eyebrow-blue" style={{ color: 'var(--accent-cyan)', marginBottom: '16px' }}>WHAT OUR CLIENTS SAY</span>
-              <p style={{ fontSize: '20px', lineHeight: '1.6', color: '#ffffff', marginBottom: '20px', fontWeight: 500 }}>
+          <div className="projects-testimonial-banner">
+            <button className="testimonial-arrow-btn left" onClick={prevTestimonial} aria-label="Previous">
+              <ChevronLeft size={20} />
+            </button>
+
+            <div className="projects-testimonial-content">
+              <div className="projects-testimonial-tag">WHAT OUR CLIENTS SAY</div>
+              <p className="projects-testimonial-quote">
                 “{testimonialsData[testimonialIdx].quote}”
               </p>
-              <div className="testimonial-attr" style={{ color: 'var(--accent-cyan)' }}>
+              <div className="projects-testimonial-author">
                 — {testimonialsData[testimonialIdx].author}, {testimonialsData[testimonialIdx].company}
               </div>
 
-              <div className="testimonial-arrow-controls" style={{ justifyContent: 'center', marginTop: '28px' }}>
-                <button className="arrow-ctrl-btn" onClick={prevTestimonial} aria-label="Previous testimonial">
-                  <ChevronLeft size={18} />
-                </button>
-                <button className="arrow-ctrl-btn" onClick={nextTestimonial} aria-label="Next testimonial">
-                  <ChevronRight size={18} />
-                </button>
+              {/* Dots */}
+              <div className="projects-testimonial-dots">
+                {testimonialsData.map((_, i) => (
+                  <span
+                    key={i}
+                    className={`testimonial-dot ${testimonialIdx === i ? 'active' : ''}`}
+                    onClick={() => setTestimonialIdx(i)}
+                  />
+                ))}
               </div>
             </div>
+
+            <button className="testimonial-arrow-btn right" onClick={nextTestimonial} aria-label="Next">
+              <ChevronRight size={20} />
+            </button>
           </div>
         </div>
       </section>
 
-      {/* 5. CALL TO ACTION BANNER */}
-      <section className="section section-light" style={{ paddingTop: 0 }}>
+      {/* 6. CALL TO ACTION BANNER (ATTACHED BLUE NETWORK CABLES BG) */}
+      <section className="projects-cta-section" style={{ backgroundImage: `url('/projects_cta_cables_bg.jpg')` }}>
         <div className="container-wide">
-          <div className="cta-banner-home" style={{ backgroundImage: `url('/blue_wave_cta.jpg')` }}>
-            <div className="cta-banner-home-content">
-              <span className="eyebrow-blue" style={{ color: 'var(--accent-cyan)' }}>LET'S BUILD WHAT'S NEXT</span>
-              <h2 style={{ fontSize: '38px', fontWeight: 900, color: '#ffffff', lineHeight: 1.15, marginBottom: '10px' }}>
+          <div className="projects-cta-inner">
+            <div className="projects-cta-left">
+              <div className="projects-cta-tag">LET'S BUILD WHAT'S NEXT</div>
+              <h2 className="projects-cta-heading">
                 Have a Project in Mind?
               </h2>
-              <p style={{ fontSize: '15px', color: '#cbd5e1', lineHeight: '1.5' }}>
+              <p className="projects-cta-sub">
                 Partner with Smart-Links Cabling Solutions for reliable, scalable infrastructure tailored to your needs.
               </p>
             </div>
-            <div className="cta-banner-home-btn-wrap">
-              <button className="btn-secondary-white" onClick={onOpenQuote}>
-                <span>Get A Quote</span>
-                <ArrowRight size={16} />
+            <div className="projects-cta-right">
+              <button className="projects-cta-btn-white" onClick={onOpenQuote}>
+                <span>GET A QUOTE</span>
+                <ArrowRight size={15} />
               </button>
             </div>
           </div>

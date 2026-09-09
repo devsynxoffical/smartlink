@@ -61,6 +61,7 @@ export interface ProjectItem {
   description: string;
   image: string;
   logoText: string;
+  logoImage?: string;
   logoBg?: string;
   scope: string[];
   location: string;

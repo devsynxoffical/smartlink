@@ -41,17 +41,13 @@ export const Header: React.FC<HeaderProps> = ({
     <header className={`header-wrapper ${isScrolled ? 'scrolled' : ''}`}>
       <div className="container-wide">
         <div className="header-container">
-          {/* Logo matching the original branding */}
+          {/* Logo matching the exact official branding */}
           <div className="brand-logo" onClick={() => handleNavClick('home')}>
-            <svg className="logo-icon-svg" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <rect width="50" height="50" rx="10" fill="#070D18"/>
-              <path d="M14 16C14 13.7909 15.7909 12 18 12H32C34.2091 12 36 13.7909 36 16V18C36 20.2091 34.2091 22 32 22H20C17.7909 22 16 23.7909 16 26V32C16 34.2091 17.7909 36 20 36H34C36.2091 36 38 34.2091 38 32" stroke="#0056D2" strokeWidth="5.5" strokeLinecap="round"/>
-              <path d="M18 18H32C33.1046 18 34 18.8954 34 20C34 21.1046 33.1046 22 32 22H20C18.8954 22 18 22.8954 18 24V28" stroke="#00C2FF" strokeWidth="3.5" strokeLinecap="round"/>
-            </svg>
-            <div className="brand-text">
-              <span className="brand-title">Smart-Links</span>
-              <span className="brand-subtitle">Cabling Solutions</span>
-            </div>
+            <img 
+              src="/smart_links_logo_hd.png" 
+              alt="Smart-Links Cabling Solutions" 
+              className="brand-logo-full-img" 
+            />
           </div>
 
           {/* Desktop Navigation Links */}
@@ -269,7 +265,7 @@ export const Header: React.FC<HeaderProps> = ({
             </button>
 
             <button className="btn-get-quote" onClick={onOpenQuote}>
-              <span>Get A Quote</span>
+              <span>GET A QUOTE</span>
               <ArrowRight size={15} />
             </button>
 
