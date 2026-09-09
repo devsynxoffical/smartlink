@@ -25,8 +25,19 @@ export const Header: React.FC<HeaderProps> = ({
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
     };
+    const handleClickOutside = (e: MouseEvent) => {
+      const target = e.target as HTMLElement;
+      if (!target.closest('.nav-dropdown-wrap')) {
+        setServicesDropdown(false);
+        setIndustriesDropdown(false);
+      }
+    };
     window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    document.addEventListener('click', handleClickOutside);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      document.removeEventListener('click', handleClickOutside);
+    };
   }, []);
 
   const handleNavClick = (tab: NavTab, subId?: string) => {
@@ -69,81 +80,106 @@ export const Header: React.FC<HeaderProps> = ({
             {/* Services Dropdown */}
             <div 
               className="nav-dropdown-wrap"
-              style={{ position: 'relative' }}
               onMouseEnter={() => setServicesDropdown(true)}
               onMouseLeave={() => setServicesDropdown(false)}
             >
               <button
-                className={`nav-link ${currentTab === 'services' || currentTab === 'service-detail' ? 'active' : ''}`}
-                onClick={() => handleNavClick('services')}
+                className={`nav-link ${currentTab === 'services' || currentTab === 'service-detail' || servicesDropdown ? 'active' : ''}`}
+                onClick={(e) => {
+                  e.stopPropagation();
+                  setServicesDropdown(prev => !prev);
+                  setIndustriesDropdown(false);
+                }}
               >
-                Services <ChevronDown size={14} />
+                Services <ChevronDown size={14} style={{ transform: servicesDropdown ? 'rotate(180deg)' : 'none', transition: 'transform 0.2s ease' }} />
               </button>
               {servicesDropdown && (
-                <div style={{
-                  position: 'absolute',
-                  top: '100%',
-                  left: '-20px',
-                  width: '320px',
-                  backgroundColor: '#ffffff',
-                  boxShadow: '0 16px 36px rgba(0,0,0,0.14)',
-                  borderRadius: '14px',
-                  padding: '12px',
-                  zIndex: 100,
-                  border: '1px solid #e2e8f0',
-                  display: 'flex',
-                  flexDirection: 'column',
-                  gap: '4px'
-                }}>
-                  <div 
-                    onClick={() => handleNavClick('services')}
-                    style={{
-                      padding: '8px 12px',
-                      borderRadius: '8px',
-                      fontSize: '11px',
-                      fontWeight: 800,
-                      color: '#0056d2',
-                      backgroundColor: '#eff6ff',
-                      cursor: 'pointer',
-                      textTransform: 'uppercase',
-                      letterSpacing: '0.05em',
-                      marginBottom: '4px',
-                      display: 'flex',
-                      alignItems: 'center',
-                      justifyContent: 'space-between'
-                    }}
-                  >
-                    <span>All Services Overview</span>
-                    <span>&rarr;</span>
-                  </div>
-                  {servicesData.map((s) => (
-                    <div
-                      key={s.id}
-                      onClick={() => handleNavClick('service-detail', s.id)}
-                      style={{
-                        padding: '8px 12px',
-                        borderRadius: '8px',
-                        fontSize: '13px',
-                        fontWeight: 600,
-                        color: '#334155',
-                        cursor: 'pointer',
-                        transition: 'background 0.15s, color 0.15s',
-                        display: 'flex',
-                        alignItems: 'center',
-                        justifyContent: 'space-between'
-                      }}
-                      onMouseEnter={(e) => {
-                        e.currentTarget.style.backgroundColor = '#f8fafc';
-                        e.currentTarget.style.color = '#0056d2';
-                      }}
-                      onMouseLeave={(e) => {
-                        e.currentTarget.style.backgroundColor = 'transparent';
-                        e.currentTarget.style.color = '#334155';
-                      }}
-                    >
-                      <span>{s.title}</span>
+                <div className="mega-dropdown-menu mega-dropdown-services">
+                  <div className="mega-dropdown-grid">
+                    {/* Infrastructure */}
+                    <div className="mega-col">
+                      <div className="mega-col-title">Infrastructure</div>
+                      <div className="mega-col-list">
+                        <div 
+                          className="mega-item-link"
+                          onClick={() => handleNavClick('service-detail', 'structured-cabling')}
+                        >
+                          <span>Structured Cabling</span>
+                          <span className="mega-item-chevron">&gt;</span>
+                        </div>
+                        <div 
+                          className="mega-item-link"
+                          onClick={() => handleNavClick('service-detail', 'fiber-optics')}
+                        >
+                          <span>Fiber Optic Solutions</span>
+                          <span className="mega-item-chevron">&gt;</span>
+                        </div>
+                        <div 
+                          className="mega-item-link"
+                          onClick={() => handleNavClick('service-detail', 'data-center-infrastructure')}
+                        >
+                          <span>Data Center Infrastructure</span>
+                          <span className="mega-item-chevron">&gt;</span>
+                        </div>
+                      </div>
                     </div>
-                  ))}
+
+                    {/* Security & Wireless */}
+                    <div className="mega-col">
+                      <div className="mega-col-title">Security & Wireless</div>
+                      <div className="mega-col-list">
+                        <div 
+                          className="mega-item-link"
+                          onClick={() => handleNavClick('service-detail', 'video-surveillance')}
+                        >
+                          <span>Video Surveillance</span>
+                          <span className="mega-item-chevron">&gt;</span>
+                        </div>
+                        <div 
+                          className="mega-item-link"
+                          onClick={() => handleNavClick('service-detail', 'access-control')}
+                        >
+                          <span>Access Control</span>
+                          <span className="mega-item-chevron">&gt;</span>
+                        </div>
+                        <div 
+                          className="mega-item-link"
+                          onClick={() => handleNavClick('service-detail', 'das-systems')}
+                        >
+                          <span>DAS</span>
+                          <span className="mega-item-chevron">&gt;</span>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Technology */}
+                    <div className="mega-col">
+                      <div className="mega-col-title">Technology</div>
+                      <div className="mega-col-list">
+                        <div 
+                          className="mega-item-link"
+                          onClick={() => handleNavClick('service-detail', 'it-solutions')}
+                        >
+                          <span>IT Solutions</span>
+                          <span className="mega-item-chevron">&gt;</span>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Enterprise */}
+                    <div className="mega-col">
+                      <div className="mega-col-title">Enterprise</div>
+                      <div className="mega-col-list">
+                        <div 
+                          className="mega-item-link"
+                          onClick={() => handleNavClick('service-detail', 'nationwide-rollouts')}
+                        >
+                          <span>Nationwide Rollouts</span>
+                          <span className="mega-item-chevron">&gt;</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               )}
             </div>
@@ -151,82 +187,106 @@ export const Header: React.FC<HeaderProps> = ({
             {/* Industries Dropdown */}
             <div 
               className="nav-dropdown-wrap"
-              style={{ position: 'relative' }}
               onMouseEnter={() => setIndustriesDropdown(true)}
               onMouseLeave={() => setIndustriesDropdown(false)}
             >
               <button
-                className={`nav-link ${currentTab === 'industries' || currentTab === 'industry-detail' ? 'active' : ''}`}
-                onClick={() => handleNavClick('industries')}
+                className={`nav-link ${currentTab === 'industries' || currentTab === 'industry-detail' || industriesDropdown ? 'active' : ''}`}
+                onClick={(e) => {
+                  e.stopPropagation();
+                  setIndustriesDropdown(prev => !prev);
+                  setServicesDropdown(false);
+                }}
               >
-                Industries <ChevronDown size={14} />
+                Industries <ChevronDown size={14} style={{ transform: industriesDropdown ? 'rotate(180deg)' : 'none', transition: 'transform 0.2s ease' }} />
               </button>
               {industriesDropdown && (
-                <div style={{
-                  position: 'absolute',
-                  top: '100%',
-                  left: '-20px',
-                  width: '300px',
-                  backgroundColor: '#ffffff',
-                  boxShadow: '0 16px 36px rgba(0,0,0,0.14)',
-                  borderRadius: '14px',
-                  padding: '12px',
-                  zIndex: 100,
-                  border: '1px solid #e2e8f0',
-                  display: 'flex',
-                  flexDirection: 'column',
-                  gap: '4px'
-                }}>
-                  <div 
-                    onClick={() => handleNavClick('industries')}
-                    style={{
-                      padding: '8px 12px',
-                      borderRadius: '8px',
-                      fontSize: '11px',
-                      fontWeight: 800,
-                      color: '#0056d2',
-                      backgroundColor: '#eff6ff',
-                      cursor: 'pointer',
-                      textTransform: 'uppercase',
-                      letterSpacing: '0.05em',
-                      marginBottom: '4px',
-                      display: 'flex',
-                      alignItems: 'center',
-                      justifyContent: 'space-between'
-                    }}
-                  >
-                    <span>All Industries Overview</span>
-                    <span>&rarr;</span>
-                  </div>
-                  {industriesData.map((ind) => (
-                    <div
-                      key={ind.id}
-                      onClick={() => handleNavClick('industry-detail', ind.id)}
-                      style={{
-                        padding: '8px 12px',
-                        borderRadius: '8px',
-                        fontSize: '13px',
-                        fontWeight: 600,
-                        color: '#334155',
-                        cursor: 'pointer',
-                        transition: 'background 0.15s, color 0.15s',
-                        display: 'flex',
-                        alignItems: 'center',
-                        justifyContent: 'space-between'
-                      }}
-                      onMouseEnter={(e) => {
-                        e.currentTarget.style.backgroundColor = '#f8fafc';
-                        e.currentTarget.style.color = '#0056d2';
-                      }}
-                      onMouseLeave={(e) => {
-                        e.currentTarget.style.backgroundColor = 'transparent';
-                        e.currentTarget.style.color = '#334155';
-                      }}
-                    >
-                      <span>{ind.title}</span>
-                      <span style={{ fontSize: '10px', color: '#94a3b8', textTransform: 'uppercase' }}>{ind.compliance.split('/')[0]}</span>
+                <div className="mega-dropdown-menu mega-dropdown-industries">
+                  <div className="mega-dropdown-grid">
+                    {/* Commercial & Corporate */}
+                    <div className="mega-col">
+                      <div className="mega-col-title">Commercial & Corporate</div>
+                      <div className="mega-col-list">
+                        <div 
+                          className="mega-item-link"
+                          onClick={() => handleNavClick('industry-detail', 'commercial')}
+                        >
+                          <span>Commercial</span>
+                          <span className="mega-item-chevron">&gt;</span>
+                        </div>
+                        <div 
+                          className="mega-item-link"
+                          onClick={() => handleNavClick('industry-detail', 'retail')}
+                        >
+                          <span>Retail</span>
+                          <span className="mega-item-chevron">&gt;</span>
+                        </div>
+                      </div>
                     </div>
-                  ))}
+
+                    {/* Institutional & Public */}
+                    <div className="mega-col">
+                      <div className="mega-col-title">Institutional & Public</div>
+                      <div className="mega-col-list">
+                        <div 
+                          className="mega-item-link"
+                          onClick={() => handleNavClick('industry-detail', 'government')}
+                        >
+                          <span>Government</span>
+                          <span className="mega-item-chevron">&gt;</span>
+                        </div>
+                        <div 
+                          className="mega-item-link"
+                          onClick={() => handleNavClick('industry-detail', 'education')}
+                        >
+                          <span>Education</span>
+                          <span className="mega-item-chevron">&gt;</span>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Healthcare & Industrial */}
+                    <div className="mega-col">
+                      <div className="mega-col-title">Healthcare & Industrial</div>
+                      <div className="mega-col-list">
+                        <div 
+                          className="mega-item-link"
+                          onClick={() => handleNavClick('industry-detail', 'healthcare')}
+                        >
+                          <span>Healthcare</span>
+                          <span className="mega-item-chevron">&gt;</span>
+                        </div>
+                        <div 
+                          className="mega-item-link"
+                          onClick={() => handleNavClick('industry-detail', 'industrial')}
+                        >
+                          <span>Industrial</span>
+                          <span className="mega-item-chevron">&gt;</span>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Hospitality & Venues */}
+                    <div className="mega-col">
+                      <div className="mega-col-title">Hospitality & Venues</div>
+                      <div className="mega-col-list">
+                        <div 
+                          className="mega-item-link"
+                          onClick={() => handleNavClick('industry-detail', 'hospitality')}
+                        >
+                          <span>Hospitality</span>
+                          <span className="mega-item-chevron">&gt;</span>
+                        </div>
+                        <div 
+                          className="mega-item-link"
+                          onClick={() => handleNavClick('industry-detail', 'sports-entertainment')}
+                        >
+                          <span>Sports & Entertainment</span>
+                          <span className="mega-item-chevron">&gt;</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               )}
             </div>

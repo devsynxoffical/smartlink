@@ -14,7 +14,9 @@ import {
   Camera,
   Lock,
   Radio,
-  Cloud
+  Cloud,
+  Server,
+  Globe
 } from 'lucide-react';
 
 interface ServiceSubPageProps {
@@ -31,6 +33,8 @@ const getServiceIcon = (iconName: string) => {
     case 'Lock': return <Lock size={20} />;
     case 'Radio': return <Radio size={20} />;
     case 'Cloud': return <Cloud size={20} />;
+    case 'Server': return <Server size={20} />;
+    case 'Globe': return <Globe size={20} />;
     default: return <Network size={20} />;
   }
 };

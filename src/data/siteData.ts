@@ -261,6 +261,70 @@ export const servicesData: ServiceItem[] = [
         { q: 'Can you clean up and re-dress an existing messy server room?', a: 'Yes! We specialize in IDF/MDF closet cleanups, cable re-routing, custom length patch cords, and color-coded labeling with scheduled off-hours cutovers to prevent downtime.' }
       ]
     }
+  },
+  {
+    id: 'data-center-infrastructure',
+    title: 'Data Center Infrastructure',
+    tagline: 'High-density containment, structured pathways, and optical fabrics.',
+    description: 'Turnkey data center cabling, hot/cold aisle containment, server rack staging, and ultra-low-loss fiber backbones.',
+    image: '/hero_server_room_blue_cables.jpg',
+    heroImage: '/datacenter_hero_bg.jpg',
+    iconName: 'Server',
+    details: {
+      overview: 'Engineered for maximum thermal efficiency and high-density throughput. We build mission-critical data center infrastructures complying with ANSI/TIA-942 standards, integrating overhead fiber raceways, underfloor copper pathways, and clean room power distribution.',
+      capabilities: [
+        'TIA-942 Tier I-IV Data Center Topology Architecture',
+        'MTP/MPO 40G/100G/400G Ultra-Low-Loss Fiber Trunks',
+        'Hot & Cold Aisle Thermal Containment Systems',
+        'Custom Overhead Cable Tray & Ladder Rack Pathways',
+        'Server Cabinet Rack-and-Stack & Smart PDU Metering',
+        'Zero-Downtime Migration & Cable De-Installation'
+      ],
+      standards: ['ANSI/TIA-942-B', 'BICSI 002 Data Center Standard', 'ASHRAE TC 9.9 Thermal Guidelines'],
+      deliverables: ['CFD Thermal Airflow Models', 'Tier 2 Bidirectional OTDR Fiber Certifications', 'Rack Elevation CAD As-Builts', 'Cable Schedule & Port Mapping Database'],
+      processSteps: [
+        { step: '01', title: 'Aisle Containment & Layout', desc: 'Designing thermal containment zones, rack spacing, and overhead raceway heights.' },
+        { step: '02', title: 'Pathway & Fiber Backbone Rigging', desc: 'Deploying yellow Fiber-Duct raceways and high-density MPO pre-terminated trunks.' },
+        { step: '03', title: 'Cabinet Integration & PDU Power', desc: 'Mounting zero-U smart PDUs, vertical cable organizers, and server sliding rails.' },
+        { step: '04', title: 'Fluke Certification & Commissioning', desc: '100% channel verification with Fluke Versiv and thermal camera imaging inspection.' }
+      ],
+      faq: [
+        { q: 'How do you prevent hot spots and airflow recirculation?', a: 'We install modular hot/cold aisle containment barriers, blanking panels in all empty rack spaces, and brush grommets on all cable pass-throughs.' },
+        { q: 'Can you handle live data center cable cleanups?', a: 'Yes, our certified technicians work within strict MOP (Method of Procedure) protocols to safely de-install abandoned cables and re-dress live circuits without service disruption.' }
+      ]
+    }
+  },
+  {
+    id: 'nationwide-rollouts',
+    title: 'Nationwide Rollouts',
+    tagline: 'Multi-site technology deployments executed with precision.',
+    description: 'Centralized project management and standardized network, cabling, and POS rollouts across hundreds of sites simultaneously.',
+    image: '/featured_building_hd.jpg',
+    heroImage: '/about_hero_bg.jpg',
+    iconName: 'Globe',
+    details: {
+      overview: 'Seamless, large-scale multi-site technology deployments across the United States. Smart-Links serves as your single point of contact, ensuring unified installation standards, strict schedule adherence, and real-time portal reporting across all geographical markets.',
+      capabilities: [
+        'Multi-Site Retail & Hospitality Structured Cabling Rollouts',
+        'Nationwide POS & Kiosk Hardware Upgrades',
+        'Digital Signage & Audio/Visual Deployments',
+        'Centralized PMO with Real-Time Deliverable Tracking',
+        'Rapid-Response Field Dispatch & Escalation Protocols',
+        'Standardized Deliverables & Uniform As-Built Packages'
+      ],
+      standards: ['Single SOW / Nationwide SLA', 'PMI Project Management Standards', 'BICSI Uniform Installation Quality'],
+      deliverables: ['Centralized Project Dashboard Access', 'Daily Site Completion Sign-Off Sheets', 'High-Res As-Built Photo Packages', 'Consolidated Monthly Invoicing'],
+      processSteps: [
+        { step: '01', title: 'Pilot Site Validation', desc: 'Executing 1-3 proof-of-concept installations to solidify standard installation playbooks.' },
+        { step: '02', title: 'Logistics & Crew Dispatch', desc: 'Coordinating regional technician teams, hardware staging, and on-time site arrival.' },
+        { step: '03', title: 'Standardized Execution', desc: 'Uniform cabling, mounting, and testing following strict checklist quality standards.' },
+        { step: '04', title: 'Central Sign-Off & Turnkey Closeout', desc: 'Instant photo upload, manager sign-off, and customer portal approval.' }
+      ],
+      faq: [
+        { q: 'How many locations can Smart-Links handle simultaneously?', a: 'Our network of vetted, certified technicians can execute simultaneous rollouts across 50 to 500+ locations on synchronized schedules.' },
+        { q: 'Do you provide overnight and off-hours service for retail?', a: 'Yes! Over 70% of our retail and hospitality rollout work is performed during off-hours to prevent any disruption to revenue and business operations.' }
+      ]
+    }
   }
 ];
 

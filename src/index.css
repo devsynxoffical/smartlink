@@ -417,6 +417,125 @@ button {
   border-radius: 2px;
 }
 
+/* =========================================================================
+   MEGA DROPDOWN MENUS (LANDSCAPE CATEGORIZED)
+   ========================================================================= */
+.nav-dropdown-wrap {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
+
+.mega-dropdown-menu {
+  position: absolute;
+  top: calc(100% + 12px);
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  box-shadow: 0 16px 40px -8px rgba(10, 25, 50, 0.12), 0 4px 12px rgba(10, 25, 50, 0.04);
+  padding: 22px 28px 24px 28px;
+  z-index: 1000;
+  animation: megaDropdownFadeIn 0.18s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Invisible bridge so mouse moving from button to card doesn't close dropdown */
+.mega-dropdown-menu::before {
+  content: '';
+  position: absolute;
+  top: -16px;
+  left: 0;
+  right: 0;
+  height: 16px;
+}
+
+@keyframes megaDropdownFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.mega-dropdown-services {
+  left: -20px;
+  width: 760px;
+}
+
+.mega-dropdown-industries {
+  left: -140px;
+  width: 820px;
+}
+
+.mega-dropdown-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 28px;
+}
+
+.mega-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.mega-col-title {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 800;
+  color: #0c2340;
+  margin-bottom: 12px;
+  letter-spacing: -0.01em;
+  white-space: nowrap;
+}
+
+.mega-col-list {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.mega-item-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 6px 4px;
+  border-radius: 6px;
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  color: #475569;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  user-select: none;
+}
+
+.mega-item-link:hover {
+  color: #0056d2;
+  background-color: #f0f7ff;
+}
+
+.mega-item-link span {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding-right: 6px;
+}
+
+.mega-item-chevron {
+  color: #0056d2;
+  font-size: 13px;
+  font-weight: 700;
+  transition: transform 0.15s ease;
+  flex-shrink: 0;
+  line-height: 1;
+}
+
+.mega-item-link:hover .mega-item-chevron {
+  transform: translateX(3px);
+}
+
 .header-actions {
   display: flex;
   align-items: center;
