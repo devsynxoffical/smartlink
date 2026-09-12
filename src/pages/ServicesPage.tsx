@@ -455,7 +455,7 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({
             {/* Glowing US Map */}
             <div className="services-rollouts-map-box">
               <img 
-                src="/services_rollouts_map_clean.png" 
+                src="/services_rollouts_map_clean.webp" 
                 alt="Nationwide Network Coverage" 
                 className="services-rollouts-map-img" 
               />
@@ -488,7 +488,7 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({
             {/* Logistics Truck Photo */}
             <div className="services-rollouts-truck-box">
               <img 
-                src="/services_rollouts_truck.jpg?v=4" 
+                src="/services_rollouts_truck.webp?v=4" 
                 alt="Smart-Links Cabling Solutions Fleet" 
                 className="services-rollouts-truck-img" 
               />
@@ -550,7 +550,7 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({
               </div>
               <div className="services-trusted-divider"></div>
               <div className="services-trusted-logo-item">
-                <img src="/logo_home_depot.png" alt="The Home Depot" />
+                <img src="/logo_home_depot.webp" alt="The Home Depot" />
               </div>
               <div className="services-trusted-divider"></div>
               <div className="services-trusted-logo-item">
@@ -558,15 +558,15 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({
               </div>
               <div className="services-trusted-divider"></div>
               <div className="services-trusted-logo-item">
-                <img src="/logo_hilton.png" alt="Hilton" />
+                <img src="/logo_hilton.webp" alt="Hilton" />
               </div>
               <div className="services-trusted-divider"></div>
               <div className="services-trusted-logo-item">
-                <img src="/logo_holiday_inn.png" alt="Holiday Inn" />
+                <img src="/logo_holiday_inn.webp" alt="Holiday Inn" />
               </div>
               <div className="services-trusted-divider"></div>
               <div className="services-trusted-logo-item">
-                <img src="/logo_louis_vuitton.png" alt="Louis Vuitton" />
+                <img src="/logo_louis_vuitton.webp" alt="Louis Vuitton" />
               </div>
               <div className="services-trusted-divider"></div>
               <div className="services-trusted-logo-item">

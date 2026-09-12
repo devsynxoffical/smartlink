@@ -26,7 +26,7 @@ export const WhyUsPage: React.FC<WhyUsPageProps> = ({ onNavigate, onOpenQuote })
       <section 
         className="why-hero-section"
         style={{
-          backgroundImage: `url('/services_hero_bg.jpg')`
+          backgroundImage: `url('/services_hero_bg.webp')`
         }}
       >
         <div className="why-hero-overlay" />
@@ -235,7 +235,7 @@ export const WhyUsPage: React.FC<WhyUsPageProps> = ({ onNavigate, onOpenQuote })
             <div className="why-tech-photo-col">
               <div className="why-tech-photo-wrapper">
                 <img 
-                  src="/technician_server_rack.jpg" 
+                  src="/technician_server_rack.webp" 
                   alt="Smart-Links Cabling Solutions Certified Technician in Server Room" 
                 />
                 <div className="why-tech-badge-overlay">
@@ -282,7 +282,7 @@ export const WhyUsPage: React.FC<WhyUsPageProps> = ({ onNavigate, onOpenQuote })
             <div 
               className="why-difference-dark-col"
               style={{
-                backgroundImage: `url('/about_hero_bg.jpg')`
+                backgroundImage: `url('/about_hero_bg.webp')`
               }}
             >
               <div className="why-difference-overlay" />
@@ -338,17 +338,17 @@ export const WhyUsPage: React.FC<WhyUsPageProps> = ({ onNavigate, onOpenQuote })
             <div className="why-brand-pill"><span className="brand-font-sans-bold">CHANEL</span></div>
             <div className="why-brand-pill"><span className="brand-font-walmart">Walmart<span className="spark">✻</span></span></div>
             <div className="why-brand-pill">
-              <img src="/logo_home_depot.png" alt="The Home Depot" className="brand-logo-img logo-homedepot" />
+              <img src="/logo_home_depot.webp" alt="The Home Depot" className="brand-logo-img logo-homedepot" />
             </div>
             <div className="why-brand-pill"><span className="brand-font-lowes">LOWE'S</span></div>
             <div className="why-brand-pill">
-              <img src="/logo_hilton.png" alt="Hilton" className="brand-logo-img logo-hilton" />
+              <img src="/logo_hilton.webp" alt="Hilton" className="brand-logo-img logo-hilton" />
             </div>
             <div className="why-brand-pill">
-              <img src="/logo_holiday_inn.png" alt="Holiday Inn" className="brand-logo-img logo-holidayinn" />
+              <img src="/logo_holiday_inn.webp" alt="Holiday Inn" className="brand-logo-img logo-holidayinn" />
             </div>
             <div className="why-brand-pill">
-              <img src="/logo_louis_vuitton.png" alt="Louis Vuitton" className="brand-logo-img logo-lv" />
+              <img src="/logo_louis_vuitton.webp" alt="Louis Vuitton" className="brand-logo-img logo-lv" />
             </div>
           </div>
         </div>

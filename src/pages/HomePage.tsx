@@ -41,7 +41,7 @@ export const HomePage: React.FC<HomePageProps> = ({
   const heroSlides = [
     {
       id: 1,
-      image: '/hero_server_room_blue_cables.jpg',
+      image: '/hero_server_room_blue_cables.webp',
       tagline: 'CONNECTING TODAY. POWERING TOMORROW.',
       title1: 'SMART INFRASTRUCTURE',
       title2: 'STRONGER POSSIBILITIES',
@@ -53,7 +53,7 @@ export const HomePage: React.FC<HomePageProps> = ({
     },
     {
       id: 2,
-      image: '/hero_slide_2_hd.jpg',
+      image: '/hero_slide_2_hd.webp',
       tagline: 'MISSION-CRITICAL LOW VOLTAGE & FIBER.',
       title1: 'HIGH-SPEED OPTICS',
       title2: 'UNMATCHED RELIABILITY',
@@ -65,7 +65,7 @@ export const HomePage: React.FC<HomePageProps> = ({
     },
     {
       id: 3,
-      image: '/hero_slide_3_hd.jpg',
+      image: '/hero_slide_3_hd.webp',
       tagline: 'NATIONWIDE ENTERPRISE INFRASTRUCTURE.',
       title1: 'CONNECTED CAMPUSES',
       title2: 'ENGINEERED EXCELLENCE',
@@ -221,7 +221,7 @@ export const HomePage: React.FC<HomePageProps> = ({
             {/* Card 1: Structured Cabling */}
             <div className="service-card-v1">
               <img
-                src="/card_structured_cabling.jpg"
+                src="/card_structured_cabling.webp"
                 alt="Structured Cabling Infrastructure"
                 className="service-card-v1-img"
               />
@@ -246,7 +246,7 @@ export const HomePage: React.FC<HomePageProps> = ({
             {/* Card 2: Fiber Optic Solutions */}
             <div className="service-card-v1">
               <img
-                src="/card_fiber_optics.jpg"
+                src="/card_fiber_optics.webp"
                 alt="Fiber Optic Solutions"
                 className="service-card-v1-img"
               />
@@ -271,7 +271,7 @@ export const HomePage: React.FC<HomePageProps> = ({
             {/* Card 3: Video Surveillance */}
             <div className="service-card-v1">
               <img
-                src="/card_video_surveillance.jpg"
+                src="/card_video_surveillance.webp"
                 alt="Video Surveillance"
                 className="service-card-v1-img"
               />
@@ -296,7 +296,7 @@ export const HomePage: React.FC<HomePageProps> = ({
             {/* Card 4: Access Control */}
             <div className="service-card-v1">
               <img
-                src="/card_access_control.jpg"
+                src="/card_access_control.webp"
                 alt="Access Control"
                 className="service-card-v1-img"
               />
@@ -321,7 +321,7 @@ export const HomePage: React.FC<HomePageProps> = ({
             {/* Card 5: Distributed Antenna Systems (DAS) */}
             <div className="service-card-v1">
               <img
-                src="/card_das_antenna.jpg"
+                src="/card_das_antenna.webp"
                 alt="Distributed Antenna Systems (DAS)"
                 className="service-card-v1-img"
               />
@@ -346,7 +346,7 @@ export const HomePage: React.FC<HomePageProps> = ({
             {/* Card 6: IT Solutions */}
             <div className="service-card-v1">
               <img
-                src="/card_it_solutions.jpg"
+                src="/card_it_solutions.webp"
                 alt="IT Solutions"
                 className="service-card-v1-img"
               />
@@ -374,7 +374,7 @@ export const HomePage: React.FC<HomePageProps> = ({
       {/* 3. ABOUT SMART-LINKS (FULL BACKGROUND MATCH) */}
       <section 
         className="section-about-home"
-        style={{ backgroundImage: "url('/technician_cabling_reference.jpg')" }}
+        style={{ backgroundImage: "url('/technician_cabling_reference.webp')" }}
       >
         <div className="about-home-gradient-overlay" />
         <div className="about-home-container">
@@ -454,7 +454,7 @@ export const HomePage: React.FC<HomePageProps> = ({
       <section
         className="section-featured-projects"
         style={{
-          backgroundImage: `url('/featured_building_banner.jpg')`
+          backgroundImage: `url('/featured_building_banner.webp')`
         }}
       >
         <div className="featured-projects-overlay" />
@@ -556,7 +556,7 @@ export const HomePage: React.FC<HomePageProps> = ({
       {/* 6. CALL TO ACTION BANNER (FULL WIDTH, ATTACHED TO FOOTER) */}
       <section 
         className="cta-section-full"
-        style={{ backgroundImage: `url('/blue_wave_cta.jpg')` }}
+        style={{ backgroundImage: `url('/blue_wave_cta.webp')` }}
       >
         <div className="container-wide">
           <div className="cta-full-content">

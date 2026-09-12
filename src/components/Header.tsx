@@ -55,7 +55,7 @@ export const Header: React.FC<HeaderProps> = ({
           {/* Logo matching the exact official branding */}
           <div className="brand-logo" onClick={() => handleNavClick('home')}>
             <img 
-              src="/smart_links_logo_hd.png" 
+              src="/smart_links_logo_hd.webp" 
               alt="Smart-Links Cabling Solutions" 
               className="brand-logo-full-img" 
             />

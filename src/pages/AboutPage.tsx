@@ -20,7 +20,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onNavigate }) => {
       <section 
         className="about-hero-section"
         style={{
-          backgroundImage: `url('/about_hero_bg.jpg')`
+          backgroundImage: `url('/about_hero_bg.webp')`
         }}
       >
         <div className="about-hero-overlay" />
@@ -79,7 +79,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onNavigate }) => {
             {/* Column 2: Andrew Wilson */}
             <div className="leader-card-v1" onClick={() => setSelectedLeader(leadershipData[0])} style={{ cursor: 'pointer' }}>
               <div className="leader-photo-wrap">
-                <img src="/andrew_wilson.jpg" alt="Andrew Wilson" />
+                <img src="/andrew_wilson.webp" alt="Andrew Wilson" />
               </div>
               <div className="leader-card-body">
                 <h3 className="leader-name">Andrew Wilson</h3>
@@ -93,7 +93,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onNavigate }) => {
             {/* Column 3: Michael Carter */}
             <div className="leader-card-v1" onClick={() => setSelectedLeader(leadershipData[1])} style={{ cursor: 'pointer' }}>
               <div className="leader-photo-wrap">
-                <img src="/michael_carter.jpg" alt="Michael Carter" />
+                <img src="/michael_carter.webp" alt="Michael Carter" />
               </div>
               <div className="leader-card-body">
                 <h3 className="leader-name">Michael Carter</h3>
@@ -107,7 +107,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onNavigate }) => {
             {/* Column 4: Jennifer Martinez */}
             <div className="leader-card-v1" onClick={() => setSelectedLeader(leadershipData[2])} style={{ cursor: 'pointer' }}>
               <div className="leader-photo-wrap">
-                <img src="/jennifer_martinez.jpg" alt="Jennifer Martinez" />
+                <img src="/jennifer_martinez.webp" alt="Jennifer Martinez" />
               </div>
               <div className="leader-card-body">
                 <h3 className="leader-name">Jennifer Martinez</h3>
@@ -153,7 +153,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onNavigate }) => {
             {/* Right Photo with Smart-Links Technician */}
             <div className="story-photo-container">
               <img 
-                src="/technician_cabling.jpg" 
+                src="/technician_cabling.webp" 
                 alt="Smart-Links Cabling Solutions Technician" 
               />
               <div className="story-badge-overlay">

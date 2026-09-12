@@ -611,7 +611,7 @@ export const NationwideRolloutsPage: React.FC<NationwideRolloutsPageProps> = ({
             <div className="container-wide">
               <div className="rollout-detail-hero-card">
                 <div className="rollout-detail-hero-img-wrap">
-                  <img src="/datacenter_hero_bg.jpg" alt={activeService.name} />
+                  <img src="/datacenter_hero_bg.webp" alt={activeService.name} />
                   <div className="rollout-detail-hero-overlay" />
                 </div>
                 <div className="rollout-detail-hero-content">

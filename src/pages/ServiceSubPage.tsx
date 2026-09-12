@@ -54,7 +54,7 @@ export const ServiceSubPage: React.FC<ServiceSubPageProps> = ({
       <section 
         className="subpage-hero"
         style={{
-          backgroundImage: `url(${service.heroImage || '/services_hero_bg.jpg'})`
+          backgroundImage: `url(${service.heroImage || '/services_hero_bg.webp'})`
         }}
       >
         <div className="subpage-hero-overlay" />

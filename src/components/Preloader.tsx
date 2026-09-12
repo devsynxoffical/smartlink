@@ -48,7 +48,7 @@ export const Preloader: React.FC = () => {
             }}
           >
             <img 
-              src="/smart_links_logo_hd.png" 
+              src="/smart_links_logo_hd.webp" 
               alt="Smart-Links Cabling Solutions" 
               style={{
                 height: '42px',

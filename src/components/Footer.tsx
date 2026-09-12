@@ -23,7 +23,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
             <div className="footer-col-brand">
               <div className="brand-logo" onClick={() => handleNav('home')} style={{ cursor: 'pointer' }}>
                 <img 
-                  src="/smart_links_logo_hd.png" 
+                  src="/smart_links_logo_hd.webp" 
                   alt="Smart-Links Cabling Solutions" 
                   className="brand-logo-full-img" 
                 />

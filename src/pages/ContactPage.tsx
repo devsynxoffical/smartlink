@@ -41,7 +41,7 @@ export const ContactPage: React.FC<ContactPageProps> = ({ onOpenQuote }) => {
       <section 
         className="contact-hero-section"
         style={{
-          backgroundImage: `url('/contact_hero_bg.jpg')`
+          backgroundImage: `url('/contact_hero_bg.webp')`
         }}
       >
         <div className="contact-hero-overlay" />
@@ -352,7 +352,7 @@ export const ContactPage: React.FC<ContactPageProps> = ({ onOpenQuote }) => {
 
               <div className="hq-building-photo-wrap">
                 <img 
-                  src="/about_hero_bg.jpg" 
+                  src="/about_hero_bg.webp" 
                   alt="Smart-Links Cabling Solutions Headquarters" 
                 />
               </div>
@@ -364,7 +364,7 @@ export const ContactPage: React.FC<ContactPageProps> = ({ onOpenQuote }) => {
       {/* 4. READY TO GET STARTED? (BLUE BANNER) */}
       <section 
         className="contact-cta-banner"
-        style={{ backgroundImage: `url('/blue_wave_cta.jpg')` }}
+        style={{ backgroundImage: `url('/blue_wave_cta.webp')` }}
       >
         <div className="container-wide">
           <div className="contact-cta-inner">

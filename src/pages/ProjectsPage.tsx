@@ -71,7 +71,7 @@ export const ProjectsPage: React.FC<ProjectsPageProps> = ({
       <section
         className="projects-hero-exact"
         style={{
-          backgroundImage: `url('/projects_hero_building_wall_perfect.jpg')`
+          backgroundImage: `url('/projects_hero_building_wall_perfect.webp')`
         }}
       >
         <div className="projects-hero-dark-overlay" />
@@ -263,7 +263,7 @@ export const ProjectsPage: React.FC<ProjectsPageProps> = ({
       </section>
 
       {/* 5. WHAT OUR CLIENTS SAY TESTIMONIAL BANNER (ATTACHED NIGHT OFFICE BG) */}
-      <section className="projects-testimonial-section" style={{ backgroundImage: `url('/projects_reviews_night_bg.jpg')` }}>
+      <section className="projects-testimonial-section" style={{ backgroundImage: `url('/projects_reviews_night_bg.webp')` }}>
         <div className="container-wide">
           <div className="projects-testimonial-banner">
             <button className="testimonial-arrow-btn left" onClick={prevTestimonial} aria-label="Previous">
@@ -299,7 +299,7 @@ export const ProjectsPage: React.FC<ProjectsPageProps> = ({
       </section>
 
       {/* 6. CALL TO ACTION BANNER (ATTACHED BLUE NETWORK CABLES BG) */}
-      <section className="projects-cta-section" style={{ backgroundImage: `url('/projects_cta_cables_bg.jpg')` }}>
+      <section className="projects-cta-section" style={{ backgroundImage: `url('/projects_cta_cables_bg.webp')` }}>
         <div className="container-wide">
           <div className="projects-cta-inner">
             <div className="projects-cta-left">
