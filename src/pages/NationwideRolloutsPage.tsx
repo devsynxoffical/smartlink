@@ -26,7 +26,6 @@ import {
   MapPin,
   Building2,
   BarChart3,
-  Users,
   Globe,
   X,
   Plus,
