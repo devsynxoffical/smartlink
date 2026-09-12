@@ -111,18 +111,6 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
               </div>
             </div>
 
-            {/* 5. Right Brand Motto Tag Column (with divider) */}
-            <div className="footer-col-tagline">
-              <div className="footer-tagline-block">
-                <div className="footer-tagline-connecting">CONNECTING</div>
-                <div className="footer-tagline-words">
-                  PEOPLE<br />
-                  PLACES<br />
-                  POSSIBILITIES
-                </div>
-                <div className="footer-tagline-accent-bar" />
-              </div>
-            </div>
           </div>
         </div>
       </div>

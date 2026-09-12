@@ -84,17 +84,39 @@ export const Header: React.FC<HeaderProps> = ({
               onMouseLeave={() => setServicesDropdown(false)}
             >
               <button
-                className={`nav-link ${currentTab === 'services' || currentTab === 'service-detail' || servicesDropdown ? 'active' : ''}`}
-                onClick={(e) => {
-                  e.stopPropagation();
-                  setServicesDropdown(prev => !prev);
-                  setIndustriesDropdown(false);
-                }}
+                className={`nav-link ${currentTab === 'services' || currentTab === 'service-detail' ? 'active' : ''}`}
+                onClick={() => handleNavClick('services')}
               >
                 Services <ChevronDown size={14} style={{ transform: servicesDropdown ? 'rotate(180deg)' : 'none', transition: 'transform 0.2s ease' }} />
               </button>
               {servicesDropdown && (
                 <div className="mega-dropdown-menu mega-dropdown-services">
+                  {/* Top quick link to Services Main Page */}
+                  <div 
+                    onClick={() => handleNavClick('services')}
+                    style={{
+                      padding: '8px 14px',
+                      borderRadius: '8px',
+                      fontSize: '11.5px',
+                      fontWeight: 800,
+                      color: '#0056d2',
+                      backgroundColor: '#eff6ff',
+                      cursor: 'pointer',
+                      textTransform: 'uppercase',
+                      letterSpacing: '0.06em',
+                      marginBottom: '18px',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'space-between',
+                      transition: 'background 0.15s ease'
+                    }}
+                    onMouseEnter={(e) => { e.currentTarget.style.backgroundColor = '#dbeafe'; }}
+                    onMouseLeave={(e) => { e.currentTarget.style.backgroundColor = '#eff6ff'; }}
+                  >
+                    <span>All Services Overview</span>
+                    <span style={{ fontSize: '12px' }}>Explore Main Services Page &rarr;</span>
+                  </div>
+
                   <div className="mega-dropdown-grid">
                     {/* Infrastructure */}
                     <div className="mega-col">
@@ -191,17 +213,39 @@ export const Header: React.FC<HeaderProps> = ({
               onMouseLeave={() => setIndustriesDropdown(false)}
             >
               <button
-                className={`nav-link ${currentTab === 'industries' || currentTab === 'industry-detail' || industriesDropdown ? 'active' : ''}`}
-                onClick={(e) => {
-                  e.stopPropagation();
-                  setIndustriesDropdown(prev => !prev);
-                  setServicesDropdown(false);
-                }}
+                className={`nav-link ${currentTab === 'industries' || currentTab === 'industry-detail' ? 'active' : ''}`}
+                onClick={() => handleNavClick('industries')}
               >
                 Industries <ChevronDown size={14} style={{ transform: industriesDropdown ? 'rotate(180deg)' : 'none', transition: 'transform 0.2s ease' }} />
               </button>
               {industriesDropdown && (
                 <div className="mega-dropdown-menu mega-dropdown-industries">
+                  {/* Top quick link to Industries Main Page */}
+                  <div 
+                    onClick={() => handleNavClick('industries')}
+                    style={{
+                      padding: '8px 14px',
+                      borderRadius: '8px',
+                      fontSize: '11.5px',
+                      fontWeight: 800,
+                      color: '#0056d2',
+                      backgroundColor: '#eff6ff',
+                      cursor: 'pointer',
+                      textTransform: 'uppercase',
+                      letterSpacing: '0.06em',
+                      marginBottom: '18px',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'space-between',
+                      transition: 'background 0.15s ease'
+                    }}
+                    onMouseEnter={(e) => { e.currentTarget.style.backgroundColor = '#dbeafe'; }}
+                    onMouseLeave={(e) => { e.currentTarget.style.backgroundColor = '#eff6ff'; }}
+                  >
+                    <span>All Industries Overview</span>
+                    <span style={{ fontSize: '12px' }}>Explore Main Industries Page &rarr;</span>
+                  </div>
+
                   <div className="mega-dropdown-grid">
                     {/* Commercial & Corporate */}
                     <div className="mega-col">

@@ -33,31 +33,29 @@ export const Preloader: React.FC = () => {
       }}
     >
       <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '20px' }}>
-        {/* Animated Brand Logo */}
-        <div style={{ position: 'relative' }}>
-          <svg width="68" height="68" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect width="50" height="50" rx="12" fill="#0A1128"/>
-            <path d="M14 16C14 13.7909 15.7909 12 18 12H32C34.2091 12 36 13.7909 36 16V18C36 20.2091 34.2091 22 32 22H20C17.7909 22 16 23.7909 16 26V32C16 34.2091 17.7909 36 20 36H34C36.2091 36 38 34.2091 38 32" stroke="#0075FF" strokeWidth="5.5" strokeLinecap="round"/>
-            <path d="M18 18H32C33.1046 18 34 18.8954 34 20C34 21.1046 33.1046 22 32 22H20C18.8954 22 18 22.8954 18 24V28" stroke="#00C2FF" strokeWidth="3.5" strokeLinecap="round"/>
-          </svg>
+        {/* Official Brand Logo matching Header & Footer */}
+        <div style={{ position: 'relative', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
           <div 
             style={{
-              position: 'absolute',
-              inset: '-8px',
-              border: '2px solid rgba(0, 191, 255, 0.4)',
-              borderRadius: '20px',
-              animation: 'pulse 1.5s infinite ease-in-out'
-            }} 
-          />
-        </div>
-
-        {/* Brand Text */}
-        <div style={{ textAlign: 'center' }}>
-          <div style={{ fontSize: '20px', fontWeight: 900, color: '#ffffff', letterSpacing: '-0.02em' }}>
-            Smart-Links
-          </div>
-          <div style={{ fontSize: '11px', fontWeight: 800, color: '#00bfff', letterSpacing: '0.14em', textTransform: 'uppercase', marginTop: '2px' }}>
-            Cabling Solutions
+              background: '#ffffff',
+              padding: '14px 28px',
+              borderRadius: '14px',
+              boxShadow: '0 8px 30px rgba(0, 117, 255, 0.28), 0 0 0 1px rgba(255, 255, 255, 0.15)',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              animation: 'pulse 2s infinite ease-in-out'
+            }}
+          >
+            <img 
+              src="/smart_links_logo_hd.png" 
+              alt="Smart-Links Cabling Solutions" 
+              style={{
+                height: '42px',
+                width: 'auto',
+                display: 'block'
+              }}
+            />
           </div>
         </div>
 
