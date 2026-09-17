@@ -193,7 +193,7 @@ export const IndustriesPage: React.FC<IndustriesPageProps> = ({
                   <div className="industries-metric-icon">
                     <Users size={34} />
                   </div>
-                  <div className="industries-metric-num">100+</div>
+                  <div className="industries-metric-num">500+</div>
                   <div className="industries-metric-txt">Projects Completed</div>
                 </div>
 

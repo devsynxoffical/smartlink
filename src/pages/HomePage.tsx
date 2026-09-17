@@ -409,7 +409,7 @@ export const HomePage: React.FC<HomePageProps> = ({
                   <Users size={28} />
                 </div>
                 <div>
-                  <div className="about-stat-val">100+</div>
+                  <div className="about-stat-val">500+</div>
                   <div className="about-stat-lbl">Projects Completed</div>
                 </div>
               </div>

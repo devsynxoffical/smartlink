@@ -87,7 +87,7 @@ export const WhyUsPage: React.FC<WhyUsPageProps> = ({ onNavigate, onOpenQuote })
               <div className="why-stat-icon-wrap">
                 <Users size={28} strokeWidth={2} />
               </div>
-              <div className="why-stat-number">100+</div>
+              <div className="why-stat-number">500+</div>
               <div className="why-stat-label">Projects Completed</div>
             </div>
 
@@ -105,7 +105,7 @@ export const WhyUsPage: React.FC<WhyUsPageProps> = ({ onNavigate, onOpenQuote })
               <div className="why-stat-icon-wrap">
                 <ShieldCheck size={28} strokeWidth={2} />
               </div>
-              <div className="why-stat-number">15+</div>
+              <div className="why-stat-number">32+</div>
               <div className="why-stat-label">Years of Experience</div>
             </div>
 

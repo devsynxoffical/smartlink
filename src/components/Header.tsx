@@ -67,14 +67,14 @@ export const Header: React.FC<HeaderProps> = ({
               className={`nav-link ${currentTab === 'home' ? 'active' : ''}`}
               onClick={() => handleNavClick('home')}
             >
-              Home
+              HOME
             </button>
 
             <button
               className={`nav-link ${currentTab === 'about' ? 'active' : ''}`}
               onClick={() => handleNavClick('about')}
             >
-              About
+              ABOUT
             </button>
 
             {/* Services Dropdown */}
@@ -87,7 +87,7 @@ export const Header: React.FC<HeaderProps> = ({
                 className={`nav-link ${currentTab === 'services' || currentTab === 'service-detail' ? 'active' : ''}`}
                 onClick={() => handleNavClick('services')}
               >
-                Services <ChevronDown size={14} style={{ transform: servicesDropdown ? 'rotate(180deg)' : 'none', transition: 'transform 0.2s ease' }} />
+                SERVICES <ChevronDown size={14} style={{ transform: servicesDropdown ? 'rotate(180deg)' : 'none', transition: 'transform 0.2s ease' }} />
               </button>
               {servicesDropdown && (
                 <div className="mega-dropdown-menu mega-dropdown-services">
@@ -216,7 +216,7 @@ export const Header: React.FC<HeaderProps> = ({
                 className={`nav-link ${currentTab === 'industries' || currentTab === 'industry-detail' ? 'active' : ''}`}
                 onClick={() => handleNavClick('industries')}
               >
-                Industries <ChevronDown size={14} style={{ transform: industriesDropdown ? 'rotate(180deg)' : 'none', transition: 'transform 0.2s ease' }} />
+                INDUSTRIES <ChevronDown size={14} style={{ transform: industriesDropdown ? 'rotate(180deg)' : 'none', transition: 'transform 0.2s ease' }} />
               </button>
               {industriesDropdown && (
                 <div className="mega-dropdown-menu mega-dropdown-industries">
@@ -339,21 +339,21 @@ export const Header: React.FC<HeaderProps> = ({
               className={`nav-link ${currentTab === 'projects' ? 'active' : ''}`}
               onClick={() => handleNavClick('projects')}
             >
-              Projects
+              PROJECTS
             </button>
 
             <button
               className={`nav-link ${currentTab === 'why-us' ? 'active' : ''}`}
               onClick={() => handleNavClick('why-us')}
             >
-              Why Us
+              WHY US
             </button>
 
             <button
               className={`nav-link ${currentTab === 'contact' ? 'active' : ''}`}
               onClick={() => handleNavClick('contact')}
             >
-              Contact
+              CONTACT
             </button>
           </nav>
 

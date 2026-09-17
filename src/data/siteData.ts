@@ -5,9 +5,14 @@ export const leadershipData: LeaderItem[] = [
     id: 'andrew-wilson',
     name: 'Andrew Wilson',
     role: 'President & CEO',
+    department: 'Executive Management',
+    experience: '25+ Years Experience',
     bio: 'Visionary leadership with a focus on growth, innovation, and customer success.',
     image: '/andrew_wilson.webp',
-    fullBio: 'With over 25 years of executive leadership in telecommunications and physical layer infrastructure, Andrew guides Smart-Links with an unyielding commitment to engineering excellence, national client partnerships, and technological innovation.',
+    fullBio: 'With over 25 years of executive leadership in telecommunications and physical layer infrastructure, Andrew guides Smart-Links with an unyielding commitment to engineering excellence, national client partnerships, and technological innovation. Prior to founding Smart-Links, Andrew managed large-scale enterprise network transformations for Fortune 500 corporations nationwide.',
+    credentials: ['BICSI Corporate Member', 'Executive Leadership Council', 'Master of Science in Telecommunications'],
+    focusAreas: ['Corporate Strategy', 'Nationwide Growth & Partnerships', 'Operational Integrity', 'Enterprise Client Relations'],
+    quote: 'Our mission is simple: to engineer physical infrastructure that our clients can rely on without hesitation, today and decades into the future.',
     linkedin: 'https://linkedin.com',
     email: 'awilson@smart-linkscs.com'
   },
@@ -15,9 +20,14 @@ export const leadershipData: LeaderItem[] = [
     id: 'michael-carter',
     name: 'Michael Carter',
     role: 'Chief Operating Officer',
+    department: 'Operations & Delivery',
+    experience: '20+ Years Experience',
     bio: 'Operational excellence driving nationwide delivery and client satisfaction.',
     image: '/michael_carter.webp',
-    fullBio: 'Michael oversees field operations, safety compliance, and nationwide project rollouts. His background across mission-critical logistics ensures every installation is completed on time, within budget, and to the highest standards.',
+    fullBio: 'Michael oversees field operations, safety compliance, and nationwide project rollouts. His background across mission-critical logistics ensures every installation is completed on time, within budget, and to the highest industry standards. He has orchestrated multi-thousand-site deployments for leading retail, hospitality, and healthcare brands.',
+    credentials: ['OSHA 30 Certified', 'Project Management Professional (PMP)', 'Certified Safety Specialist'],
+    focusAreas: ['Nationwide Project Logistics', 'Zero-Accident Safety Programs', 'Quality Assurance & Audits', 'Resource Scheduling'],
+    quote: 'Execution is where vision meets reality. We uphold rigorous safety and quality benchmarks on every job site from coast to coast.',
     linkedin: 'https://linkedin.com',
     email: 'mcarter@smart-linkscs.com'
   },
@@ -25,9 +35,14 @@ export const leadershipData: LeaderItem[] = [
     id: 'jennifer-martinez',
     name: 'Jennifer Martinez',
     role: 'Chief Technology Officer',
+    department: 'Engineering & Technology',
+    experience: '18+ Years Experience',
     bio: 'Leading technology strategy and ensuring innovative, scalable solutions.',
     image: '/jennifer_martinez.webp',
-    fullBio: 'A certified RCDD with deep expertise in optical networking and enterprise cybersecurity systems, Jennifer directs engineering standards, emerging technology adoption, and technical architecture across all client engagements.',
+    fullBio: 'A certified RCDD with deep expertise in optical networking and enterprise cybersecurity systems, Jennifer directs engineering standards, emerging technology adoption, and technical architecture across all client engagements. She works closely with manufacturer partners to pioneer high-density fiber optics and intelligent building systems.',
+    credentials: ['BICSI RCDD (Registered Communications Distribution Designer)', 'Certified Network Systems Engineer', 'IEEE Senior Member'],
+    focusAreas: ['High-Density Fiber Optics', 'Data Center Design & Thermal Standards', 'DAS & Distributed Wireless', 'IoT & Smart Facility Automation'],
+    quote: 'Infrastructure must never become a bottleneck to innovation. We engineer networks that adapt seamlessly to tomorrow’s speed and bandwidth demands.',
     linkedin: 'https://linkedin.com',
     email: 'jmartinez@smart-linkscs.com'
   }
@@ -634,7 +649,7 @@ export const partnerLogos: PartnerLogo[] = [
 
 export const statsOverview = [
   { value: '10+', label: 'Industries Served' },
-  { value: '100+', label: 'Projects Completed' },
+  { value: '500+', label: 'Projects Completed' },
   { value: '99%', label: 'Client Satisfaction' },
   { value: 'Built for What\'s Next', label: 'Future-Ready Infrastructure' }
 ];

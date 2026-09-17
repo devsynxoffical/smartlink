@@ -16,6 +16,7 @@ import { IndustrySubPage } from './pages/IndustrySubPage';
 import { ProjectsPage } from './pages/ProjectsPage';
 import { WhyUsPage } from './pages/WhyUsPage';
 import { ContactPage } from './pages/ContactPage';
+import { LeadershipPage } from './pages/LeadershipPage';
 import { QuoteModal } from './components/QuoteModal';
 import { SearchModal } from './components/SearchModal';
 import { ServiceDetailModal } from './components/ServiceDetailModal';
@@ -25,6 +26,7 @@ const parseRoute = (): { tab: NavTab; subId: string } => {
   const path = window.location.pathname.replace(/^\/|\/$/g, '');
   if (!path || path === 'home') return { tab: 'home', subId: '' };
   if (path === 'about') return { tab: 'about', subId: '' };
+  if (path === 'leadership' || path === 'team') return { tab: 'leadership', subId: '' };
   if (path === 'services') return { tab: 'services', subId: '' };
   if (path === 'industries') return { tab: 'industries', subId: '' };
   if (path === 'projects') return { tab: 'projects', subId: '' };
@@ -66,6 +68,8 @@ export function App() {
       document.title = 'Smart-Links Cabling Solutions | Smart Infrastructure. Stronger Possibilities.';
     } else if (currentTab === 'about') {
       document.title = 'About Us & Leadership | Smart-Links Cabling Solutions';
+    } else if (currentTab === 'leadership') {
+      document.title = 'Executive Leadership & Team Profiles | Smart-Links Cabling Solutions';
     } else if (currentTab === 'services') {
       document.title = 'Our Services & Infrastructure | Smart-Links Cabling Solutions';
     } else if (currentTab === 'nationwide-rollouts' || (currentTab === 'service-detail' && activeSubId === 'nationwide-rollouts')) {
@@ -162,6 +166,13 @@ export function App() {
 
         {currentTab === 'about' && (
           <AboutPage
+            onNavigate={handleNavigate}
+            onOpenQuote={() => handleOpenQuote()}
+          />
+        )}
+
+        {currentTab === 'leadership' && (
+          <LeadershipPage
             onNavigate={handleNavigate}
             onOpenQuote={() => handleOpenQuote()}
           />

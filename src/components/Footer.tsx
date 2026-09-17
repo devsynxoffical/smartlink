@@ -68,6 +68,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
               <ul className="footer-nav-list">
                 <li><button onClick={() => handleNav('home')}>Home</button></li>
                 <li><button onClick={() => handleNav('about')}>About</button></li>
+                <li><button onClick={() => handleNav('leadership')}>Leadership Team</button></li>
                 <li><button onClick={() => handleNav('services')}>Services</button></li>
                 <li><button onClick={() => handleNav('industries')}>Industries</button></li>
                 <li><button onClick={() => handleNav('projects')}>Projects</button></li>

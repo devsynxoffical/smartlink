@@ -231,7 +231,7 @@ export const ProjectsPage: React.FC<ProjectsPageProps> = ({
               <div className="projects-metric-icon">
                 <Building2 size={44} strokeWidth={1.8} />
               </div>
-              <div className="projects-metric-num">100+</div>
+              <div className="projects-metric-num">500+</div>
               <div className="projects-metric-lbl">Projects Completed</div>
             </div>
 

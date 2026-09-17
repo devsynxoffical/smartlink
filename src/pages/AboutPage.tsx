@@ -67,7 +67,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onNavigate }) => {
                 Our leadership team brings decades of industry experience, technical knowledge, and a shared commitment to delivering reliable infrastructure solutions. We lead with integrity, innovation, and a focus on building lasting partnerships.
               </p>
               <button 
-                onClick={() => onNavigate('contact')}
+                onClick={() => onNavigate('leadership')}
                 className="btn-primary"
                 style={{ fontSize: '13.5px', padding: '12px 24px', borderRadius: '6px' }}
               >
