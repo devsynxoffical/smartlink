@@ -235,171 +235,115 @@ export const DataCenterInfrastructurePage: React.FC<DataCenterInfrastructurePage
   return (
     <div className="dc-page-root">
       {/* 1. HERO SECTION */}
-      <section id="dc-hero" className="dc-hero-section">
+      <section id="dc-hero" className="access-hero-section">
         {/* Background Image Container */}
-        <div className="dc-hero-bg-wrapper">
+        <div className="access-hero-bg-wrapper">
           <img
             src="/datacenter_hero_bg.webp"
             alt="Data Center Server Corridor"
-            className="dc-hero-bg-img"
+            className="access-hero-bg-img"
           />
-          <div className="dc-hero-gradient-overlay" />
+          <div className="access-hero-gradient-overlay" />
         </div>
 
-        <div className="dc-hero-container">
-          <div className="dc-hero-inner">
+        <div className="access-container">
+          <div className="access-hero-inner">
             {/* Left Content Area */}
-            <div className="dc-hero-content">
+            <div className="access-hero-content">
               {/* Breadcrumb Navigation */}
-              <nav className="fiber-breadcrumbs" aria-label="Breadcrumb">
+              <nav className="access-breadcrumbs" aria-label="Breadcrumb">
                 <button
                   type="button"
                   onClick={() => onNavigate('home')}
-                  className="fiber-breadcrumb-link"
+                  className="access-breadcrumb-link"
                 >
                   Home
                 </button>
-                <span className="fiber-breadcrumb-separator">&gt;</span>
+                <ChevronRight size={13} className="access-breadcrumb-separator" />
                 <button
                   type="button"
                   onClick={() => onNavigate('services')}
-                  className="fiber-breadcrumb-link"
+                  className="access-breadcrumb-link"
                 >
                   Services
                 </button>
-                <span className="fiber-breadcrumb-separator">&gt;</span>
-                <span className="fiber-breadcrumb-current">Data Center Infrastructure</span>
+                <ChevronRight size={13} className="access-breadcrumb-separator" />
+                <span className="access-breadcrumb-current">Data Center Infrastructure</span>
               </nav>
 
               {/* Eyebrow */}
-              <div className="fiber-hero-eyebrow">
-                <span className="fiber-eyebrow-text">DATA CENTER INFRASTRUCTURE</span>
+              <div className="access-hero-eyebrow">
+                DATA CENTER INFRASTRUCTURE
               </div>
 
               {/* Main Headline */}
-              <h1 className="dc-hero-headline">
-                MISSION CRITICAL<br />
-                INFRASTRUCTURE.<br />
-                <span className="dc-glow-text">BUILT TO PERFORM.</span>
+              <h1 className="access-hero-title">
+                MISSION CRITICAL.<br />
+                CREATE <span className="access-hero-title-highlight">SCALABLE FABRICS.</span>
               </h1>
 
               {/* Subtitle */}
-              <p className="dc-hero-subtitle">
-                End-to-end data center cabling and infrastructure solutions designed for maximum uptime, scalability, and performance.
+              <p className="access-hero-desc">
+                End-to-end data center cabling, hot/cold aisle containment, and high-density optical backbones engineered for maximum uptime.
               </p>
 
-              {/* 4 Feature Items (Connected to Sections) */}
-              <div className="fiber-hero-pills-row">
-                <button
-                  type="button"
-                  onClick={() => {
-                    const el = document.getElementById('dc-services');
-                    if (el) el.scrollIntoView({ behavior: 'smooth' });
-                  }}
-                  className="fiber-pill-item fiber-pill-interactive"
-                  title="View data center solutions"
-                >
-                  <div className="fiber-pill-icon">
-                    <div className="fiber-icon-circle-badge">
-                      <Zap size={15} strokeWidth={3} fill="#0075ff" />
-                    </div>
+              {/* 4 Feature Badges */}
+              <div className="access-hero-features-grid">
+                <div className="access-feature-item">
+                  <div className="access-feature-icon-wrap">
+                    <Zap size={20} strokeWidth={2.2} />
                   </div>
-                  <div className="fiber-pill-text">
-                    <span className="fiber-pill-main">Reliable</span>
-                    <span className="fiber-pill-sub">Performance</span>
-                  </div>
-                </button>
+                  <span className="access-feature-label">Reliable Performance</span>
+                </div>
 
-                <button
-                  type="button"
-                  onClick={() => {
-                    const el = document.getElementById('dc-why-choose');
-                    if (el) el.scrollIntoView({ behavior: 'smooth' });
-                  }}
-                  className="fiber-pill-item fiber-pill-interactive"
-                  title="Zero unplanned downtime architecture"
-                >
-                  <div className="fiber-pill-icon">
-                    <ShieldCheck size={28} strokeWidth={2.2} />
+                <div className="access-feature-item">
+                  <div className="access-feature-icon-wrap">
+                    <ShieldCheck size={20} strokeWidth={2.2} />
                   </div>
-                  <div className="fiber-pill-text">
-                    <span className="fiber-pill-main">Minimized</span>
-                    <span className="fiber-pill-sub">Downtime</span>
-                  </div>
-                </button>
+                  <span className="access-feature-label">Zero Downtime MOP</span>
+                </div>
 
-                <button
-                  type="button"
-                  onClick={() => {
-                    const el = document.getElementById('dc-why-choose');
-                    if (el) el.scrollIntoView({ behavior: 'smooth' });
-                  }}
-                  className="fiber-pill-item fiber-pill-interactive"
-                  title="High-density scalable pathways"
-                >
-                  <div className="fiber-pill-icon">
-                    <BarChart3 size={28} strokeWidth={2.2} />
+                <div className="access-feature-item">
+                  <div className="access-feature-icon-wrap">
+                    <BarChart3 size={20} strokeWidth={2.2} />
                   </div>
-                  <div className="fiber-pill-text">
-                    <span className="fiber-pill-main">Scalable</span>
-                    <span className="fiber-pill-sub">Infrastructure</span>
-                  </div>
-                </button>
+                  <span className="access-feature-label">Scalable Pathways</span>
+                </div>
 
-                <button
-                  type="button"
-                  onClick={() => {
-                    const el = document.getElementById('dc-process');
-                    if (el) el.scrollIntoView({ behavior: 'smooth' });
-                  }}
-                  className="fiber-pill-item fiber-pill-interactive"
-                  title="Certified data center deployment teams"
-                >
-                  <div className="fiber-pill-icon">
-                    <Users size={28} strokeWidth={2.2} />
+                <div className="access-feature-item">
+                  <div className="access-feature-icon-wrap">
+                    <Users size={20} strokeWidth={2.2} />
                   </div>
-                  <div className="fiber-pill-text">
-                    <span className="fiber-pill-main">Expert</span>
-                    <span className="fiber-pill-sub">Execution</span>
-                  </div>
-                </button>
+                  <span className="access-feature-label">Expert Execution</span>
+                </div>
               </div>
 
-              {/* Talk to Data Center Expert Button */}
-              <div style={{ marginTop: '36px' }}>
+              {/* CTA Action Buttons */}
+              <div className="access-hero-actions">
                 <button
                   type="button"
-                  onClick={() => onOpenQuote('Data Center Infrastructure')}
-                  className="dc-btn-hero-action"
+                  onClick={() => onOpenQuote('Data Center - Talk to an Expert')}
+                  className="access-btn-primary"
                 >
                   <span>TALK TO A DATA CENTER EXPERT</span>
-                  <ArrowRight size={18} />
+                  <ArrowRight size={16} />
                 </button>
               </div>
             </div>
 
-            {/* Right Watermark Slogan Badge */}
-            <div className="dc-hero-watermark-col">
-              <button
-                type="button"
-                className="fiber-slogan-box fiber-slogan-btn"
-                onClick={() => {
-                  const el = document.getElementById('dc-services');
-                  if (el) el.scrollIntoView({ behavior: 'smooth' });
-                }}
-                title="Explore data center solutions"
-              >
-                <div className="fiber-slogan-text">CONNECTING</div>
-                <div className="fiber-slogan-text">PEOPLE</div>
-                <div className="fiber-slogan-text">PLACES</div>
-                <div className="fiber-slogan-text">POSSIBILITIES</div>
-                <div className="fiber-slogan-line" />
-              </button>
-
-              <div className="dc-hero-lower-watermark">
-                <div className="dc-lower-tagline-text">DATA CENTERS</div>
-                <div className="dc-lower-tagline-text">POWER</div>
-                <div className="dc-lower-tagline-text">WHAT'S NEXT.</div>
+            {/* Right Side Vertical Corporate Brand Banner */}
+            <div className="access-hero-right-banner">
+              <div className="access-hero-pillar-box">
+                <div className="access-pillar-keywords">
+                  <span className="access-keyword">PEOPLE</span>
+                  <span className="access-keyword">PLACES</span>
+                  <span className="access-keyword">POSSIBILITIES</span>
+                </div>
+                <div className="access-pillar-accent-line" />
+                <div className="access-pillar-subtext">
+                  MISSION-CRITICAL.<br />
+                  HIGH DENSITY.
+                </div>
               </div>
             </div>
           </div>

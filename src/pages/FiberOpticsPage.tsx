@@ -179,153 +179,116 @@ export const FiberOpticsPage: React.FC<FiberOpticsPageProps> = ({
   return (
     <div className="fiber-page-root">
       {/* 1. HERO SECTION */}
-      <section id="fiber-hero" className="fiber-hero-section">
+      <section id="fiber-hero" className="access-hero-section">
         {/* Background Image Container */}
-        <div className="fiber-hero-bg-wrapper">
+        <div className="access-hero-bg-wrapper">
           <img
             src="/fiber_hero_tech.jpg"
             alt="Fiber Optic Technician"
-            className="fiber-hero-bg-img"
+            className="access-hero-bg-img"
           />
-          <div className="fiber-hero-gradient-overlay" />
+          <div className="access-hero-gradient-overlay" />
         </div>
 
-        <div className="fiber-hero-container">
-          <div className="fiber-hero-inner">
+        <div className="access-container">
+          <div className="access-hero-inner">
             {/* Left Content Area */}
-            <div className="fiber-hero-content">
+            <div className="access-hero-content">
               {/* Breadcrumb Navigation */}
-              <nav className="fiber-breadcrumbs" aria-label="Breadcrumb">
+              <nav className="access-breadcrumbs" aria-label="Breadcrumb">
                 <button
                   type="button"
                   onClick={() => onNavigate('home')}
-                  className="fiber-breadcrumb-link"
+                  className="access-breadcrumb-link"
                 >
                   Home
                 </button>
-                <span className="fiber-breadcrumb-separator">&gt;</span>
+                <ChevronRight size={13} className="access-breadcrumb-separator" />
                 <button
                   type="button"
                   onClick={() => onNavigate('services')}
-                  className="fiber-breadcrumb-link"
+                  className="access-breadcrumb-link"
                 >
                   Services
                 </button>
-                <span className="fiber-breadcrumb-separator">&gt;</span>
-                <span className="fiber-breadcrumb-current">Fiber Optic Solutions</span>
+                <ChevronRight size={13} className="access-breadcrumb-separator" />
+                <span className="access-breadcrumb-current">Fiber Optic Solutions</span>
               </nav>
 
               {/* Eyebrow */}
-              <div className="fiber-hero-eyebrow">
-                <span className="fiber-eyebrow-text">FIBER OPTIC SOLUTIONS</span>
+              <div className="access-hero-eyebrow">
+                FIBER OPTIC SOLUTIONS
               </div>
 
               {/* Main Headline */}
-              <h1 className="fiber-hero-headline">
+              <h1 className="access-hero-title">
                 HIGHER SPEEDS.<br />
-                GREATER <span className="fiber-glow-text">POSSIBILITIES.</span>
+                GREATER <span className="access-hero-title-highlight">POSSIBILITIES.</span>
               </h1>
 
               {/* Subtitle */}
-              <p className="fiber-hero-subtitle">
+              <p className="access-hero-desc">
                 End-to-end fiber optic solutions designed for today's high-performance networks and tomorrow's growth.
               </p>
 
-              {/* 4 Feature Items (Connected to Sections) */}
-              <div className="fiber-hero-pills-row">
-                <button
-                  type="button"
-                  onClick={() => {
-                    const el = document.getElementById('fiber-services');
-                    if (el) el.scrollIntoView({ behavior: 'smooth' });
-                  }}
-                  className="fiber-pill-item fiber-pill-interactive"
-                  title="View complete fiber optic services"
-                >
-                  <div className="fiber-pill-icon">
-                    <div className="fiber-icon-circle-badge">
-                      <Zap size={15} strokeWidth={3} fill="#0075ff" />
-                    </div>
+              {/* 4 Feature Badges */}
+              <div className="access-hero-features-grid">
+                <div className="access-feature-item">
+                  <div className="access-feature-icon-wrap">
+                    <Zap size={20} strokeWidth={2.2} />
                   </div>
-                  <div className="fiber-pill-text">
-                    <span className="fiber-pill-main">High</span>
-                    <span className="fiber-pill-sub">Performance</span>
-                  </div>
-                </button>
+                  <span className="access-feature-label">High Performance</span>
+                </div>
 
-                <button
-                  type="button"
-                  onClick={() => {
-                    const el = document.getElementById('fiber-why-choose');
-                    if (el) el.scrollIntoView({ behavior: 'smooth' });
-                  }}
-                  className="fiber-pill-item fiber-pill-interactive"
-                  title="Explore reliable infrastructure standards"
-                >
-                  <div className="fiber-pill-icon">
-                    <ShieldCheck size={28} strokeWidth={2.2} />
+                <div className="access-feature-item">
+                  <div className="access-feature-icon-wrap">
+                    <ShieldCheck size={20} strokeWidth={2.2} />
                   </div>
-                  <div className="fiber-pill-text">
-                    <span className="fiber-pill-main">Reliable</span>
-                    <span className="fiber-pill-sub">Infrastructure</span>
-                  </div>
-                </button>
+                  <span className="access-feature-label">Reliable Infrastructure</span>
+                </div>
 
-                <button
-                  type="button"
-                  onClick={() => {
-                    const el = document.getElementById('fiber-why-choose');
-                    if (el) el.scrollIntoView({ behavior: 'smooth' });
-                  }}
-                  className="fiber-pill-item fiber-pill-interactive"
-                  title="Scalable architecture for future demands"
-                >
-                  <div className="fiber-pill-icon">
-                    <BarChart3 size={28} strokeWidth={2.2} />
+                <div className="access-feature-item">
+                  <div className="access-feature-icon-wrap">
+                    <BarChart3 size={20} strokeWidth={2.2} />
                   </div>
-                  <div className="fiber-pill-text">
-                    <span className="fiber-pill-main">Scalable</span>
-                    <span className="fiber-pill-sub">for the Future</span>
-                  </div>
-                </button>
+                  <span className="access-feature-label">Scalable for Growth</span>
+                </div>
 
+                <div className="access-feature-item">
+                  <div className="access-feature-icon-wrap">
+                    <Users size={20} strokeWidth={2.2} />
+                  </div>
+                  <span className="access-feature-label">Expert Installation</span>
+                </div>
+              </div>
+
+              {/* CTA Action Buttons */}
+              <div className="access-hero-actions">
                 <button
                   type="button"
-                  onClick={() => {
-                    const el = document.getElementById('fiber-process');
-                    if (el) el.scrollIntoView({ behavior: 'smooth' });
-                  }}
-                  className="fiber-pill-item fiber-pill-interactive"
-                  title="Learn our proven deployment process"
+                  onClick={() => onOpenQuote('Fiber Optic - Talk to an Expert')}
+                  className="access-btn-primary"
                 >
-                  <div className="fiber-pill-icon">
-                    <Users size={28} strokeWidth={2.2} />
-                  </div>
-                  <div className="fiber-pill-text">
-                    <span className="fiber-pill-main">Experts</span>
-                    <span className="fiber-pill-sub">You Can Trust</span>
-                  </div>
+                  <span>TALK TO A FIBER OPTIC EXPERT</span>
+                  <ArrowRight size={16} />
                 </button>
               </div>
             </div>
 
-            {/* Right Watermark Slogan Badge */}
-            <div className="fiber-hero-watermark-col">
-              <button
-                type="button"
-                className="fiber-slogan-box fiber-slogan-btn"
-                onClick={() => {
-                  const el = document.getElementById('fiber-services');
-                  if (el) el.scrollIntoView({ behavior: 'smooth' });
-                }}
-                title="Explore fiber optic capabilities"
-              >
-                <div className="fiber-slogan-text">CONNECTING</div>
-                <div className="fiber-slogan-text">PEOPLE</div>
-                <div className="fiber-slogan-text">PLACES</div>
-                <div className="fiber-slogan-text">POSSIBILITIES</div>
-                <div className="fiber-slogan-line" />
-              </button>
+            {/* Right Side Vertical Corporate Brand Banner */}
+            <div className="access-hero-right-banner">
+              <div className="access-hero-pillar-box">
+                <div className="access-pillar-keywords">
+                  <span className="access-keyword">PEOPLE</span>
+                  <span className="access-keyword">PLACES</span>
+                  <span className="access-keyword">POSSIBILITIES</span>
+                </div>
+                <div className="access-pillar-accent-line" />
+                <div className="access-pillar-subtext">
+                  HIGH-SPEED OPTICS.<br />
+                  ZERO LATENCY.
+                </div>
+              </div>
             </div>
           </div>
         </div>
