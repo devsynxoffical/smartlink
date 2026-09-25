@@ -1,0 +1,129 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgBench" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b" />
+      <stop offset="100%" stop-color="#0f172a" />
+    </linearGradient>
+    <linearGradient id="chassisGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#334155" />
+      <stop offset="50%" stop-color="#1e293b" />
+      <stop offset="100%" stop-color="#0f172a" />
+    </linearGradient>
+    <linearGradient id="screenGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#051329" />
+      <stop offset="100%" stop-color="#020914" />
+    </linearGradient>
+    <linearGradient id="traceGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#22c55e" />
+      <stop offset="100%" stop-color="#16a34a" />
+    </linearGradient>
+    <linearGradient id="waterfallGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#22c55e" stop-opacity="0.35" />
+      <stop offset="100%" stop-color="#020914" stop-opacity="0.0" />
+    </linearGradient>
+    <filter id="analyzerGlow" x="-10%" y="-10%" width="125%" height="125%">
+      <feDropShadow dx="0" dy="10" stdDeviation="15" flood-color="#000000" flood-opacity="0.6" />
+    </filter>
+  </defs>
+
+  <!-- Dark Tech Background -->
+  <rect width="600" height="400" fill="url(#bgBench)" />
+
+  <!-- Background decorative RF grid waves -->
+  <g opacity="0.15" stroke="#38bdf8" stroke-width="1">
+    <circle cx="300" cy="200" r="160" fill="none" stroke-dasharray="6,6" />
+    <circle cx="300" cy="200" r="240" fill="none" stroke-dasharray="8,8" />
+  </g>
+
+  <!-- Handheld Spectrum Analyzer Instrument -->
+  <g filter="url(#analyzerGlow)" transform="translate(60, 30)">
+    <!-- Top RF N-Type Connector Port -->
+    <rect x="90" y="0" width="28" height="20" rx="3" fill="#94a3b8" stroke="#475569" stroke-width="2" />
+    <rect x="94" y="2" width="20" height="6" fill="#cbd5e1" />
+    <rect x="220" y="4" width="24" height="16" rx="2" fill="#64748b" />
+
+    <!-- Main Ruggedized Outer Chassis Body (Dark Blue/Grey with Corner Bumpers) -->
+    <rect x="20" y="16" width="440" height="320" rx="18" fill="url(#chassisGrad)" stroke="#475569" stroke-width="2" />
+
+    <!-- Yellow / High-Vis Rubber Corner Protective Bumpers -->
+    <path d="M20,40 L20,26 A10,10 0 0,1 30,16 L44,16 L40,36 L36,40 Z" fill="#eab308" />
+    <path d="M460,40 L460,26 A10,10 0 0,0 450,16 L436,16 L440,36 L444,40 Z" fill="#eab308" />
+    <path d="M20,312 L20,326 A10,10 0 0,0 30,336 L44,336 L40,316 L36,312 Z" fill="#eab308" />
+    <path d="M460,312 L460,326 A10,10 0 0,1 450,336 L436,336 L440,316 L444,312 Z" fill="#eab308" />
+
+    <!-- Inner Screen Bezel -->
+    <rect x="42" y="36" width="310" height="278" rx="8" fill="#090d16" stroke="#1e293b" stroke-width="2" />
+
+    <!-- LCD Display Screen -->
+    <rect x="52" y="46" width="290" height="258" rx="4" fill="url(#screenGrad)" />
+
+    <!-- Screen Header Bar (Status & Markers) -->
+    <rect x="52" y="46" width="290" height="22" fill="#0f172a" />
+    <text x="60" y="61" font-family="monospace" font-size="10" font-weight="700" fill="#38bdf8">RF SPECTRUM ANALYZER</text>
+    <text x="260" y="61" font-family="monospace" font-size="10" font-weight="700" fill="#22c55e">SWEEP: AUTO</text>
+
+    <!-- RF Grid Area -->
+    <g transform="translate(62, 75)">
+      <!-- Grid lines horizontal -->
+      <line x1="0" y1="0" x2="270" y2="0" stroke="#1e3a5f" stroke-width="1" />
+      <line x1="0" y1="36" x2="270" y2="36" stroke="#1e3a5f" stroke-width="1" stroke-dasharray="2,2" />
+      <line x1="0" y1="72" x2="270" y2="72" stroke="#1e3a5f" stroke-width="1" stroke-dasharray="2,2" />
+      <line x1="0" y1="108" x2="270" y2="108" stroke="#1e3a5f" stroke-width="1" stroke-dasharray="2,2" />
+      <line x1="0" y1="144" x2="270" y2="144" stroke="#1e3a5f" stroke-width="1" stroke-dasharray="2,2" />
+      <line x1="0" y1="180" x2="270" y2="180" stroke="#1e3a5f" stroke-width="1" />
+
+      <!-- Grid lines vertical -->
+      <line x1="0" y1="0" x2="0" y2="180" stroke="#1e3a5f" stroke-width="1" />
+      <line x1="45" y1="0" x2="45" y2="180" stroke="#1e3a5f" stroke-width="1" stroke-dasharray="2,2" />
+      <line x1="90" y1="0" x2="90" y2="180" stroke="#1e3a5f" stroke-width="1" stroke-dasharray="2,2" />
+      <line x1="135" y1="0" x2="135" y2="180" stroke="#1e3a5f" stroke-width="1" stroke-dasharray="2,2" />
+      <line x1="180" y1="0" x2="180" y2="180" stroke="#1e3a5f" stroke-width="1" stroke-dasharray="2,2" />
+      <line x1="225" y1="0" x2="225" y2="180" stroke="#1e3a5f" stroke-width="1" stroke-dasharray="2,2" />
+      <line x1="270" y1="0" x2="270" y2="180" stroke="#1e3a5f" stroke-width="1" />
+
+      <!-- Trace Spectrum Waveform Fill (Green Glow) -->
+      <path d="M0,165 L20,162 L40,158 L60,160 L80,154 L95,140 L105,80 L115,35 L125,75 L135,145 L150,158 L180,155 L200,110 L210,60 L220,115 L235,160 L270,164 L270,180 L0,180 Z" fill="url(#waterfallGrad)" />
+
+      <!-- Trace Spectrum Waveform Line -->
+      <path d="M0,165 L20,162 L40,158 L60,160 L80,154 L95,140 L105,80 L115,35 L125,75 L135,145 L150,158 L180,155 L200,110 L210,60 L220,115 L235,160 L270,164" fill="none" stroke="#22c55e" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+
+      <!-- Active Marker Peak 1 (700MHz Band 14 Public Safety) -->
+      <polygon points="115,20 110,32 120,32" fill="#ef4444" />
+      <text x="115" y="16" text-anchor="middle" font-family="monospace" font-size="8" font-weight="bold" fill="#ef4444">M1: -42.8 dBm</text>
+
+      <!-- Active Marker Peak 2 (1900MHz Cellular) -->
+      <polygon points="210,45 205,57 215,57" fill="#38bdf8" />
+      <text x="210" y="41" text-anchor="middle" font-family="monospace" font-size="8" font-weight="bold" fill="#38bdf8">M2: -48.2 dBm</text>
+    </g>
+
+    <!-- Bottom Screen Status Line -->
+    <g transform="translate(62, 270)">
+      <text x="0" y="18" font-family="monospace" font-size="8.5" fill="#94a3b8">START: 700.00 MHz</text>
+      <text x="135" y="18" text-anchor="middle" font-family="monospace" font-size="8.5" fill="#38bdf8">RBW: 100 kHz</text>
+      <text x="270" y="18" text-anchor="end" font-family="monospace" font-size="8.5" fill="#94a3b8">STOP: 3.80 GHz</text>
+    </g>
+
+    <!-- Right Side Control Keypad & Rotary Optical Dial -->
+    <g transform="translate(372, 50)">
+      <!-- Rotary Wheel -->
+      <circle cx="45" cy="50" r="32" fill="#334155" stroke="#64748b" stroke-width="2.5" />
+      <circle cx="45" cy="50" r="26" fill="#1e293b" />
+      <circle cx="58" cy="38" r="4" fill="#94a3b8" />
+
+      <!-- Function Buttons Grid -->
+      <rect x="15" y="105" width="26" height="18" rx="3" fill="#475569" stroke="#64748b" />
+      <rect x="48" y="105" width="26" height="18" rx="3" fill="#475569" stroke="#64748b" />
+      <rect x="15" y="132" width="26" height="18" rx="3" fill="#475569" stroke="#64748b" />
+      <rect x="48" y="132" width="26" height="18" rx="3" fill="#475569" stroke="#64748b" />
+      <rect x="15" y="160" width="26" height="18" rx="3" fill="#475569" stroke="#64748b" />
+      <rect x="48" y="160" width="26" height="18" rx="3" fill="#475569" stroke="#64748b" />
+
+      <!-- Mode & Enter Buttons -->
+      <rect x="15" y="195" width="59" height="24" rx="4" fill="#0056d2" stroke="#3b82f6" stroke-width="1.5" />
+      <text x="45" y="211" text-anchor="middle" font-family="sans-serif" font-size="10" font-weight="bold" fill="#ffffff">TEST</text>
+
+      <rect x="15" y="230" width="59" height="22" rx="4" fill="#22c55e" stroke="#4ade80" />
+      <text x="45" y="245" text-anchor="middle" font-family="sans-serif" font-size="9.5" font-weight="bold" fill="#ffffff">PASS</text>
+    </g>
+  </g>
+</svg>

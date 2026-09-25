@@ -1,4 +1,4 @@
-export type NavTab = 'home' | 'about' | 'services' | 'industries' | 'projects' | 'why-us' | 'contact' | 'service-detail' | 'industry-detail' | 'nationwide-rollouts' | 'leadership';
+export type NavTab = 'home' | 'about' | 'services' | 'industries' | 'projects' | 'why-us' | 'contact' | 'service-detail' | 'industry-detail' | 'nationwide-rollouts' | 'leadership' | 'privacy-policy' | 'terms-of-service';
 
 export interface RolloutServiceItem {
   id: string;

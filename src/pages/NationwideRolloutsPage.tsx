@@ -36,13 +36,94 @@ import {
   User,
   Mail,
   Phone,
-  Building
+  Building,
+  Cpu,
+  Cloud,
+  Landmark,
+  HeartPulse,
+  GraduationCap
 } from 'lucide-react';
 
 interface NationwideRolloutsPageProps {
   onNavigate: (tab: NavTab, subId?: string) => void;
   onOpenQuote: (serviceName?: string) => void;
 }
+
+export const rolloutProcessSteps = [
+  {
+    step: 1,
+    title: 'Consultation',
+    desc: 'Understand your goals'
+  },
+  {
+    step: 2,
+    title: 'Design & Planning',
+    desc: 'Custom solution design'
+  },
+  {
+    step: 3,
+    title: 'Installation',
+    desc: 'Expert deployment'
+  },
+  {
+    step: 4,
+    title: 'Testing & Certification',
+    desc: 'Validate performance'
+  },
+  {
+    step: 5,
+    title: 'Support',
+    desc: 'Ongoing maintenance'
+  }
+];
+
+export const rolloutIndustriesList = [
+  {
+    name: 'Data Centers',
+    icon: <Server size={22} strokeWidth={2.2} />,
+    industryId: 'commercial'
+  },
+  {
+    name: 'Cloud Providers',
+    icon: <Cloud size={22} strokeWidth={2.2} />,
+    industryId: 'commercial'
+  },
+  {
+    name: 'Financial Services',
+    icon: <Landmark size={22} strokeWidth={2.2} />,
+    industryId: 'commercial'
+  },
+  {
+    name: 'Healthcare',
+    icon: <HeartPulse size={22} strokeWidth={2.2} />,
+    industryId: 'healthcare'
+  },
+  {
+    name: 'Government',
+    icon: <Building2 size={22} strokeWidth={2.2} />,
+    industryId: 'government'
+  },
+  {
+    name: 'Education',
+    icon: <GraduationCap size={22} strokeWidth={2.2} />,
+    industryId: 'education'
+  },
+  {
+    name: 'Enterprise',
+    icon: <Building size={22} strokeWidth={2.2} />,
+    industryId: 'commercial'
+  },
+  {
+    name: 'Colocation Facilities',
+    icon: <Layers size={22} strokeWidth={2.2} />,
+    industryId: 'industrial'
+  },
+  {
+    name: 'Edge Facilities',
+    icon: <Network size={22} strokeWidth={2.2} />,
+    industryId: 'industrial'
+  }
+];
 
 export const rolloutServicesList: RolloutServiceItem[] = [
   {
@@ -564,6 +645,43 @@ export const NationwideRolloutsPage: React.FC<NationwideRolloutsPageProps> = ({
             </div>
           </div>
 
+          {/* OUR PROCESS / A PROVEN APPROACH SECTION (ATTACHED WITH FOOTER) */}
+          <section className="fiber-process-section" style={{ background: '#f8fafc', padding: '64px 0 80px 0', borderTop: '1px solid #e2e8f0', marginTop: '48px' }}>
+            <div className="container-wide">
+              <div className="fiber-process-header" style={{ marginBottom: '36px' }}>
+                <div className="fiber-eyebrow-cyan" style={{ marginBottom: '8px' }}>
+                  <span>OUR PROCESS</span>
+                </div>
+                <h2 className="fiber-process-title">
+                  A Proven Approach.
+                </h2>
+              </div>
+
+              <div className="fiber-timeline-row">
+                {rolloutProcessSteps.map((p, idx) => (
+                  <React.Fragment key={p.step}>
+                    <div className="fiber-step-node">
+                      <div className="fiber-step-badge">
+                        <span className="fiber-step-num">{p.step}</span>
+                      </div>
+                      <div className="fiber-step-info">
+                        <div className="fiber-step-name">{p.title}</div>
+                        <div className="fiber-step-desc">{p.desc}</div>
+                      </div>
+                    </div>
+
+                    {idx < rolloutProcessSteps.length - 1 && (
+                      <div className="fiber-step-arrow-connector">
+                        <span className="fiber-connector-line" />
+                        <ChevronRight size={16} className="fiber-connector-chevron" />
+                      </div>
+                    )}
+                  </React.Fragment>
+                ))}
+              </div>
+            </div>
+          </section>
+
           {/* Floating Bottom Sticky Bar */}
           <div className="rollout-floating-bar-wrapper">
             <div className="container-wide">
@@ -755,6 +873,43 @@ export const NationwideRolloutsPage: React.FC<NationwideRolloutsPageProps> = ({
               </div>
             </div>
           </div>
+
+          {/* OUR PROCESS / A PROVEN APPROACH SECTION (ATTACHED WITH FOOTER) */}
+          <section className="fiber-process-section" style={{ background: '#f8fafc', padding: '64px 0 80px 0', borderTop: '1px solid #e2e8f0', marginTop: '48px' }}>
+            <div className="container-wide">
+              <div className="fiber-process-header" style={{ marginBottom: '36px' }}>
+                <div className="fiber-eyebrow-cyan" style={{ marginBottom: '8px' }}>
+                  <span>OUR PROCESS</span>
+                </div>
+                <h2 className="fiber-process-title">
+                  A Proven Approach.
+                </h2>
+              </div>
+
+              <div className="fiber-timeline-row">
+                {rolloutProcessSteps.map((p, idx) => (
+                  <React.Fragment key={p.step}>
+                    <div className="fiber-step-node">
+                      <div className="fiber-step-badge">
+                        <span className="fiber-step-num">{p.step}</span>
+                      </div>
+                      <div className="fiber-step-info">
+                        <div className="fiber-step-name">{p.title}</div>
+                        <div className="fiber-step-desc">{p.desc}</div>
+                      </div>
+                    </div>
+
+                    {idx < rolloutProcessSteps.length - 1 && (
+                      <div className="fiber-step-arrow-connector">
+                        <span className="fiber-connector-line" />
+                        <ChevronRight size={16} className="fiber-connector-chevron" />
+                      </div>
+                    )}
+                  </React.Fragment>
+                ))}
+              </div>
+            </div>
+          </section>
         </div>
       )}
 

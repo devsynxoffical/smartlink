@@ -11,12 +11,20 @@ import { AboutPage } from './pages/AboutPage';
 import { ServicesPage } from './pages/ServicesPage';
 import { ServiceSubPage } from './pages/ServiceSubPage';
 import { NationwideRolloutsPage } from './pages/NationwideRolloutsPage';
+import { StructuredCablingPage } from './pages/StructuredCablingPage';
+import { FiberOpticsPage } from './pages/FiberOpticsPage';
+import { DataCenterInfrastructurePage } from './pages/DataCenterInfrastructurePage';
+import { VideoSurveillancePage } from './pages/VideoSurveillancePage';
+import { AccessControlPage } from './pages/AccessControlPage';
+import { DASPage } from './pages/DASPage';
+import { ITSolutionsPage } from './pages/ITSolutionsPage';
 import { IndustriesPage } from './pages/IndustriesPage';
 import { IndustrySubPage } from './pages/IndustrySubPage';
 import { ProjectsPage } from './pages/ProjectsPage';
 import { WhyUsPage } from './pages/WhyUsPage';
 import { ContactPage } from './pages/ContactPage';
-import { LeadershipPage } from './pages/LeadershipPage';
+import { PrivacyPolicyPage } from './pages/PrivacyPolicyPage';
+import { TermsOfServicePage } from './pages/TermsOfServicePage';
 import { QuoteModal } from './components/QuoteModal';
 import { SearchModal } from './components/SearchModal';
 import { ServiceDetailModal } from './components/ServiceDetailModal';
@@ -32,7 +40,13 @@ const parseRoute = (): { tab: NavTab; subId: string } => {
   if (path === 'projects') return { tab: 'projects', subId: '' };
   if (path === 'why-us') return { tab: 'why-us', subId: '' };
   if (path === 'contact') return { tab: 'contact', subId: '' };
+  if (path === 'privacy-policy' || path === 'privacy') return { tab: 'privacy-policy', subId: '' };
+  if (path === 'terms-of-service' || path === 'terms' || path === 'terms-and-conditions') return { tab: 'terms-of-service', subId: '' };
   if (path === 'nationwide-rollouts' || path === 'service/nationwide-rollouts') return { tab: 'nationwide-rollouts', subId: 'nationwide-rollouts' };
+  if (path === 'structured-cabling' || path === 'service/structured-cabling') return { tab: 'service-detail', subId: 'structured-cabling' };
+  if (path === 'it-solutions' || path === 'service/it-solutions') return { tab: 'service-detail', subId: 'it-solutions' };
+  if (path === 'access-control' || path === 'service/access-control') return { tab: 'service-detail', subId: 'access-control' };
+  if (path === 'das' || path === 'service/das' || path === 'das-systems' || path === 'service/das-systems') return { tab: 'service-detail', subId: 'das-systems' };
   if (path.startsWith('service/')) return { tab: 'service-detail', subId: path.replace('service/', '') };
   if (path.startsWith('industry/')) return { tab: 'industry-detail', subId: path.replace('industry/', '') };
   return { tab: 'home', subId: '' };
@@ -74,6 +88,14 @@ export function App() {
       document.title = 'Our Services & Infrastructure | Smart-Links Cabling Solutions';
     } else if (currentTab === 'nationwide-rollouts' || (currentTab === 'service-detail' && activeSubId === 'nationwide-rollouts')) {
       document.title = 'Nationwide Rollout Services | Smart-Links Cabling Solutions';
+    } else if (currentTab === 'service-detail' && activeSubId === 'structured-cabling') {
+      document.title = 'Structured Cabling Infrastructure | Smart-Links Cabling Solutions';
+    } else if (currentTab === 'service-detail' && activeSubId === 'it-solutions') {
+      document.title = 'IT Solutions & Infrastructure | Smart-Links Cabling Solutions';
+    } else if (currentTab === 'service-detail' && (activeSubId === 'das-systems' || activeSubId === 'das')) {
+      document.title = 'Distributed Antenna Systems (DAS) | Smart-Links Cabling Solutions';
+    } else if (currentTab === 'service-detail' && activeSubId === 'access-control') {
+      document.title = 'Access Control Systems | Smart-Links Cabling Solutions';
     } else if (currentTab === 'service-detail') {
       const s = servicesData.find(item => item.id === activeSubId);
       document.title = `${s ? s.title : 'Service'} | Smart-Links Cabling Solutions`;
@@ -88,12 +110,15 @@ export function App() {
       document.title = 'Why Us & Certifications | Smart-Links Cabling Solutions';
     } else if (currentTab === 'contact') {
       document.title = 'Contact Us & Locations | Smart-Links Cabling Solutions';
+    } else if (currentTab === 'privacy-policy') {
+      document.title = 'Privacy Policy | Smart-Links Cabling Solutions';
+    } else if (currentTab === 'terms-of-service') {
+      document.title = 'Terms of Service | Smart-Links Cabling Solutions';
     }
   }, [currentTab, activeSubId]);
 
-  const handleOpenQuote = (serviceName?: string) => {
-    setPreselectedQuoteService(serviceName);
-    setQuoteModalOpen(true);
+  const handleOpenQuote = (_serviceName?: string) => {
+    handleNavigate('contact');
   };
 
   const handleNavigate = (tab: NavTab, subId?: string) => {
@@ -129,6 +154,20 @@ export function App() {
   const handleSelectService = (service: ServiceItem) => {
     if (service.id === 'nationwide-rollouts') {
       handleNavigate('nationwide-rollouts', 'nationwide-rollouts');
+    } else if (service.id === 'structured-cabling') {
+      handleNavigate('service-detail', 'structured-cabling');
+    } else if (service.id === 'fiber-optics') {
+      handleNavigate('service-detail', 'fiber-optics');
+    } else if (service.id === 'data-center-infrastructure') {
+      handleNavigate('service-detail', 'data-center-infrastructure');
+    } else if (service.id === 'video-surveillance') {
+      handleNavigate('service-detail', 'video-surveillance');
+    } else if (service.id === 'access-control') {
+      handleNavigate('service-detail', 'access-control');
+    } else if (service.id === 'das-systems' || service.id === 'das') {
+      handleNavigate('service-detail', 'das-systems');
+    } else if (service.id === 'it-solutions') {
+      handleNavigate('service-detail', 'it-solutions');
     } else {
       setSelectedService(service);
     }
@@ -193,7 +232,56 @@ export function App() {
           />
         )}
 
-        {currentTab === 'service-detail' && activeSubId !== 'nationwide-rollouts' && (
+        {currentTab === 'service-detail' && activeSubId === 'structured-cabling' && (
+          <StructuredCablingPage
+            onNavigate={handleNavigate}
+            onOpenQuote={handleOpenQuote}
+          />
+        )}
+
+        {currentTab === 'service-detail' && activeSubId === 'fiber-optics' && (
+          <FiberOpticsPage
+            onNavigate={handleNavigate}
+            onOpenQuote={handleOpenQuote}
+          />
+        )}
+
+        {currentTab === 'service-detail' && activeSubId === 'data-center-infrastructure' && (
+          <DataCenterInfrastructurePage
+            onNavigate={handleNavigate}
+            onOpenQuote={handleOpenQuote}
+          />
+        )}
+
+        {currentTab === 'service-detail' && activeSubId === 'video-surveillance' && (
+          <VideoSurveillancePage
+            onNavigate={handleNavigate}
+            onOpenQuote={handleOpenQuote}
+          />
+        )}
+
+        {currentTab === 'service-detail' && activeSubId === 'access-control' && (
+          <AccessControlPage
+            onNavigate={handleNavigate}
+            onOpenQuote={handleOpenQuote}
+          />
+        )}
+
+        {currentTab === 'service-detail' && (activeSubId === 'das-systems' || activeSubId === 'das') && (
+          <DASPage
+            onNavigate={handleNavigate}
+            onOpenQuote={handleOpenQuote}
+          />
+        )}
+
+        {currentTab === 'service-detail' && activeSubId === 'it-solutions' && (
+          <ITSolutionsPage
+            onNavigate={handleNavigate}
+            onOpenQuote={handleOpenQuote}
+          />
+        )}
+
+        {currentTab === 'service-detail' && activeSubId !== 'nationwide-rollouts' && activeSubId !== 'structured-cabling' && activeSubId !== 'fiber-optics' && activeSubId !== 'data-center-infrastructure' && activeSubId !== 'video-surveillance' && activeSubId !== 'access-control' && activeSubId !== 'das-systems' && activeSubId !== 'das' && activeSubId !== 'it-solutions' && (
           <ServiceSubPage
             serviceId={activeSubId || servicesData[0].id}
             onNavigate={handleNavigate}
@@ -235,6 +323,20 @@ export function App() {
           <ContactPage
             onNavigate={handleNavigate}
             onOpenQuote={() => handleOpenQuote()}
+          />
+        )}
+
+        {currentTab === 'privacy-policy' && (
+          <PrivacyPolicyPage
+            onNavigate={handleNavigate}
+            onOpenQuote={handleOpenQuote}
+          />
+        )}
+
+        {currentTab === 'terms-of-service' && (
+          <TermsOfServicePage
+            onNavigate={handleNavigate}
+            onOpenQuote={handleOpenQuote}
           />
         )}
       </main>

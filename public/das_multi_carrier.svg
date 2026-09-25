@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f8fafc" />
+      <stop offset="100%" stop-color="#edf2f7" />
+    </linearGradient>
+    <filter id="cardShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-opacity="0.06" />
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="600" height="400" fill="url(#bgGrad)" rx="8" />
+
+  <!-- Subtle grid pattern -->
+  <g opacity="0.4" stroke="#e2e8f0" stroke-width="1">
+    <line x1="300" y1="30" x2="300" y2="370" stroke-dasharray="4,4" />
+    <line x1="30" y1="200" x2="570" y2="200" stroke-dasharray="4,4" />
+  </g>
+
+  <!-- Central Neutral Host Badge -->
+  <g transform="translate(300, 200)">
+    <circle r="36" fill="#0056d2" opacity="0.08" />
+    <circle r="28" fill="#ffffff" stroke="#0056d2" stroke-width="2" />
+    <path d="M-10,-10 C-4,-14 4,-14 10,-10 C14,-6 14,6 10,10 C4,14 -4,14 -10,10" fill="none" stroke="#0056d2" stroke-width="2.5" stroke-linecap="round" />
+    <circle cx="0" cy="0" r="4.5" fill="#0056d2" />
+    <path d="M-6,-6 C-2,-9 2,-9 6,-6" fill="none" stroke="#0056d2" stroke-width="2" stroke-linecap="round" />
+  </g>
+
+  <!-- 1. Top Left: Verizon -->
+  <g transform="translate(60, 90)">
+    <rect x="0" y="0" width="200" height="70" rx="8" fill="#ffffff" filter="url(#cardShadow)" />
+    <!-- Red Checkmark -->
+    <path d="M42,34 L52,46 L78,22" fill="none" stroke="#cd040b" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round" />
+    <!-- Verizon text -->
+    <text x="90" y="44" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="26" font-weight="900" fill="#000000" letter-spacing="-1">verizon</text>
+  </g>
+
+  <!-- 2. Top Right: AT&T -->
+  <g transform="translate(340, 90)">
+    <rect x="0" y="0" width="200" height="70" rx="8" fill="#ffffff" filter="url(#cardShadow)" />
+    <!-- AT&T Blue Globe -->
+    <g transform="translate(45, 35)">
+      <circle r="18" fill="none" stroke="#00a8e0" stroke-width="4.5" />
+      <path d="M-17,-3 C-7,-12 7,-12 17,-3" fill="none" stroke="#00a8e0" stroke-width="3" />
+      <path d="M-17,3 C-7,12 7,12 17,3" fill="none" stroke="#00a8e0" stroke-width="3" />
+      <line x1="-18" y1="0" x2="18" y2="0" stroke="#00a8e0" stroke-width="3.5" />
+    </g>
+    <!-- AT&T text -->
+    <text x="82" y="44" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="26" font-weight="900" fill="#000000" letter-spacing="1">AT&amp;T</text>
+  </g>
+
+  <!-- 3. Bottom Left: T-Mobile -->
+  <g transform="translate(60, 240)">
+    <rect x="0" y="0" width="200" height="70" rx="8" fill="#ffffff" filter="url(#cardShadow)" />
+    <!-- T-Mobile Magenta T and Dots -->
+    <g transform="translate(35, 20)">
+      <rect x="0" y="0" width="30" height="30" rx="4" fill="#e20074" />
+      <path d="M6,6 H24 M15,6 V24" stroke="#ffffff" stroke-width="4" stroke-linecap="square" />
+    </g>
+    <!-- T-Mobile text -->
+    <text x="75" y="43" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="22" font-weight="800" fill="#e20074" letter-spacing="-0.5">T-Mobile</text>
+  </g>
+
+  <!-- 4. Bottom Right: UScellular -->
+  <g transform="translate(340, 240)">
+    <rect x="0" y="0" width="200" height="70" rx="8" fill="#ffffff" filter="url(#cardShadow)" />
+    <!-- UScellular Starburst icon -->
+    <g transform="translate(42, 35)">
+      <!-- 4-petal starburst -->
+      <path d="M0,-16 L3,-5 L14,-8 L7,2 L16,7 L5,8 L4,18 L-2,8 L-14,10 L-7,1 L-16,-6 L-5,-5 Z" fill="#0056d2" />
+      <circle cx="-3" cy="-4" r="3" fill="#cd040b" />
+      <circle cx="4" cy="4" r="2.5" fill="#f59e0b" />
+    </g>
+    <!-- text -->
+    <text x="72" y="43" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="21" font-weight="800" fill="#002d72" letter-spacing="-0.5">uscellular</text>
+  </g>
+</svg>

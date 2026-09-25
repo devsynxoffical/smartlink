@@ -124,9 +124,9 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
               © 2024 Smart-Links Cabling Solutions. All rights reserved.
             </div>
             <div className="footer-dark-legal">
-              <a href="#privacy">Privacy Policy</a>
+              <button onClick={() => handleNav('privacy-policy')} style={{ background: 'none', border: 'none', color: 'inherit', font: 'inherit', cursor: 'pointer', padding: 0 }}>Privacy Policy</button>
               <span className="dot">|</span>
-              <a href="#terms">Terms of Service</a>
+              <button onClick={() => handleNav('terms-of-service')} style={{ background: 'none', border: 'none', color: 'inherit', font: 'inherit', cursor: 'pointer', padding: 0 }}>Terms of Service</button>
             </div>
           </div>
         </div>
