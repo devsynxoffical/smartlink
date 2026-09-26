@@ -8,7 +8,6 @@ import {
   CheckCircle2,
   ArrowRight,
   ChevronRight,
-  Download,
   Server,
   Cloud,
   Landmark,
@@ -19,10 +18,7 @@ import {
   Layers,
   Network,
   Cpu,
-  Clock,
-  Check,
-  Phone,
-  FileText
+  Check
 } from 'lucide-react';
 
 interface DataCenterInfrastructurePageProps {

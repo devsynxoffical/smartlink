@@ -3,23 +3,17 @@ import type { NavTab } from '../types';
 import {
   ShieldCheck,
   Lock,
-  FileText,
-  ChevronRight,
-  Mail,
-  Phone,
-  MapPin,
   CheckCircle2,
   ArrowRight
 } from 'lucide-react';
 
 interface PrivacyPolicyPageProps {
   onNavigate: (tab: NavTab, subId?: string) => void;
-  onOpenQuote: (serviceName?: string) => void;
+  onOpenQuote?: (serviceName?: string) => void;
 }
 
 export const PrivacyPolicyPage: React.FC<PrivacyPolicyPageProps> = ({
-  onNavigate,
-  onOpenQuote
+  onNavigate
 }) => {
   return (
     <div className="legal-page-root access-page-root">

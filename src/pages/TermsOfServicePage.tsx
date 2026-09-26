@@ -1,24 +1,19 @@
 import React from 'react';
 import type { NavTab } from '../types';
 import {
-  FileText,
   ShieldCheck,
-  ChevronRight,
   CheckCircle2,
   ArrowRight,
-  Scale,
-  Clock,
-  AlertCircle
+  Scale
 } from 'lucide-react';
 
 interface TermsOfServicePageProps {
   onNavigate: (tab: NavTab, subId?: string) => void;
-  onOpenQuote: (serviceName?: string) => void;
+  onOpenQuote?: (serviceName?: string) => void;
 }
 
 export const TermsOfServicePage: React.FC<TermsOfServicePageProps> = ({
-  onNavigate,
-  onOpenQuote
+  onNavigate
 }) => {
   return (
     <div className="legal-page-root access-page-root">

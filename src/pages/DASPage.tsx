@@ -8,7 +8,6 @@ import {
   CheckCircle2,
   ArrowRight,
   ChevronRight,
-  Download,
   Building2,
   HeartPulse,
   GraduationCap,
@@ -21,14 +20,7 @@ import {
   Trophy,
   Network,
   Cpu,
-  Phone,
-  FileText,
-  Check,
-  Settings,
-  Wifi,
-  Activity,
-  Layers,
-  Sparkles
+  Check
 } from 'lucide-react';
 
 interface DASPageProps {

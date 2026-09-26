@@ -7,17 +7,8 @@ import {
   Users,
   CheckCircle2,
   ArrowRight,
-  ArrowUpRight,
   Cpu,
-  Globe2,
   ChevronRight,
-  Building2,
-  Server,
-  GraduationCap,
-  Landmark,
-  Layers,
-  HeartPulse,
-  Factory,
   Check
 } from 'lucide-react';
 

@@ -8,6 +8,7 @@ import { BackToTop } from './components/BackToTop';
 
 import { HomePage } from './pages/HomePage';
 import { AboutPage } from './pages/AboutPage';
+import { LeadershipPage } from './pages/LeadershipPage';
 import { ServicesPage } from './pages/ServicesPage';
 import { ServiceSubPage } from './pages/ServiceSubPage';
 import { NationwideRolloutsPage } from './pages/NationwideRolloutsPage';
@@ -117,7 +118,10 @@ export function App() {
     }
   }, [currentTab, activeSubId]);
 
-  const handleOpenQuote = (_serviceName?: string) => {
+  const handleOpenQuote = (serviceName?: string) => {
+    if (serviceName) {
+      setPreselectedQuoteService(serviceName);
+    }
     handleNavigate('contact');
   };
 

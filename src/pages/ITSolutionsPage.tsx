@@ -19,13 +19,7 @@ import {
   Network,
   Check,
   Building,
-  Wifi,
-  Cloud,
-  HardDrive,
-  Layers,
-  Activity,
-  Zap,
-  Radio
+  Wifi
 } from 'lucide-react';
 
 interface ITSolutionsPageProps {

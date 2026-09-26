@@ -19,8 +19,7 @@ import {
   Factory,
   Network,
   Check,
-  Building,
-  Settings
+  Building
 } from 'lucide-react';
 
 interface VideoSurveillancePageProps {
@@ -281,13 +280,6 @@ export const VideoSurveillancePage: React.FC<VideoSurveillancePageProps> = ({
 
   const handleDownloadBrochure = () => {
     onOpenQuote('Video Surveillance Solutions Brochure & Security Assessment');
-  };
-
-  const handleScrollToSolutions = () => {
-    const el = document.getElementById('surv-services-section');
-    if (el) {
-      el.scrollIntoView({ behavior: 'smooth' });
-    }
   };
 
   return (

@@ -37,7 +37,6 @@ import {
   Mail,
   Phone,
   Building,
-  Cpu,
   Cloud,
   Landmark,
   HeartPulse,

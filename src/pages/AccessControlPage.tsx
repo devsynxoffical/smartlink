@@ -18,16 +18,7 @@ import {
   Factory,
   Network,
   Check,
-  Building,
-  KeyRound,
-  Smartphone,
-  Fingerprint,
-  DoorClosed,
-  Lock,
-  MonitorCheck,
-  Users2,
-  Shield,
-  Activity
+  Building
 } from 'lucide-react';
 
 interface AccessControlPageProps {
@@ -288,13 +279,6 @@ export const AccessControlPage: React.FC<AccessControlPageProps> = ({
 
   const handleDownloadBrochure = () => {
     onOpenQuote('Access Control Systems Brochure & Security Assessment');
-  };
-
-  const handleScrollToSolutions = () => {
-    const el = document.getElementById('access-services-section');
-    if (el) {
-      el.scrollIntoView({ behavior: 'smooth' });
-    }
   };
 
   return (

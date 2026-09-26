@@ -18,10 +18,6 @@ import {
   Factory,
   Check,
   Building,
-  Layers,
-  Activity,
-  Zap,
-  Radio,
   Server
 } from 'lucide-react';
 
