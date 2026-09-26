@@ -55,7 +55,7 @@ const cablingServicesList: CablingServiceCard[] = [
     id: 'copper-backbone',
     title: 'Copper Backbone & Riser',
     description: 'Multi-pair backbone distribution connecting MDF, IDF, and telecommunication rooms.',
-    image: '/cabling_backbone.webp',
+    image: '/cabling_copper_backbone.svg',
     category: 'Backbone & Riser Pathways',
     details: [
       '25, 50, and 100-pair Category 3/5e copper riser backbone distribution between telecom closets',
@@ -125,7 +125,7 @@ const cablingServicesList: CablingServiceCard[] = [
     id: 'av-systems',
     title: 'Low Voltage AV Cabling',
     description: 'Specialized low-voltage cabling for boardroom AV, paging, background audio, and displays.',
-    image: '/cabling_av_systems.webp',
+    image: '/cabling_av_systems.svg',
     category: 'Audio/Visual Low Voltage',
     details: [
       'HDBaseT 4K HDMI uncompressed video and control extension over Category 6A shielded cabling',
@@ -139,7 +139,7 @@ const cablingServicesList: CablingServiceCard[] = [
     id: 'industrial-cabling',
     title: 'Industrial & Plant Cabling',
     description: 'Ruggedized, shielded cabling resistant to oil, extreme temperatures, and heavy EMI.',
-    image: '/cabling_industrial.webp',
+    image: '/cabling_industrial_plant.svg',
     category: 'Harsh Environment Industrial',
     details: [
       'Industrial-grade Shielded/Foil Twisted Pair (SF/UTP) cabling designed to eliminate machine motor EMI',
@@ -153,7 +153,7 @@ const cablingServicesList: CablingServiceCard[] = [
     id: 'macs-support',
     title: 'Moves, Adds & Changes (MACs)',
     description: 'Agile day-two cabling modifications, drop additions, and office reconfiguration support.',
-    image: '/cabling_macs.webp',
+    image: '/cabling_macs_support.svg',
     category: 'Day-Two MAC Support',
     details: [
       'Rapid-response field dispatch for office workstation relocations, expansions, and cubicle reconfigurations',
