@@ -69,8 +69,8 @@ const fiberServicesList: FiberServiceCard[] = [
   {
     id: 'preterminated-solutions',
     title: 'Pre-Terminated Fiber Solutions',
-    description: 'Faster deployment with factory-terminated systems.',
-    image: '/hero_server_room_blue_cables.webp',
+    description: 'High-density factory-terminated MPO/MTP cassettes and trunks.',
+    image: '/fiber_preterminated.svg',
     category: 'Rapid Deployment',
     details: [
       'Factory-tested MTP/MPO multi-fiber trunk cables',
@@ -81,9 +81,9 @@ const fiberServicesList: FiberServiceCard[] = [
   },
   {
     id: 'aerial-underground',
-    title: 'Aerial & Underground Fiber',
-    description: 'Indoor, outdoor, aerial and direct-burial installations.',
-    image: '/featured_building_banner.webp',
+    title: 'Outside Plant (OSP) Fiber',
+    description: 'Armored direct-burial, underground conduit, and aerial fiber runs.',
+    image: '/fiber_osp_aerial_underground.svg',
     category: 'Outside Plant (OSP)',
     details: [
       'Directional boring and underground conduit installation',
@@ -107,9 +107,9 @@ const fiberServicesList: FiberServiceCard[] = [
   },
   {
     id: 'cable-pathways-trays',
-    title: 'Cable Pathways & Trays',
-    description: 'Complete pathway solutions for fiber infrastructure.',
-    image: '/projects_cta_cables_bg.webp',
+    title: 'Fiber Raceway & Pathways',
+    description: 'Dedicated yellow ducting and bend-radius safe routing channels.',
+    image: '/fiber_raceway_pathways.svg',
     category: 'Pathway Infrastructure',
     details: [
       'Yellow fiber optic raceway and ducting systems',
@@ -120,9 +120,9 @@ const fiberServicesList: FiberServiceCard[] = [
   },
   {
     id: 'repair-troubleshooting',
-    title: 'Repair & Troubleshooting',
-    description: 'Fast, reliable support to keep you connected.',
-    image: '/technician_vest.webp',
+    title: 'Fiber Diagnostics & Repair',
+    description: '24/7 emergency restoration, OTDR fault locating, and fusion re-splicing.',
+    image: '/fiber_emergency_repair.svg',
     category: 'Emergency Services',
     details: [
       '24/7 emergency fiber cut repair and restoration',
