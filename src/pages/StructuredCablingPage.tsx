@@ -55,7 +55,7 @@ const cablingServicesList: CablingServiceCard[] = [
     id: 'copper-backbone',
     title: 'Copper Backbone & Riser',
     description: 'Multi-pair backbone distribution connecting MDF, IDF, and telecommunication rooms.',
-    image: '/cabling_copper_backbone.svg',
+    image: '/cabling_backbone.webp',
     category: 'Backbone & Riser Pathways',
     details: [
       '25, 50, and 100-pair Category 3/5e copper riser backbone distribution between telecom closets',
@@ -69,7 +69,7 @@ const cablingServicesList: CablingServiceCard[] = [
     id: 'patch-panels',
     title: 'Patch Panels & Dressing',
     description: 'Flawless cable dressing, horizontal/vertical wire managers, and high-density panels.',
-    image: '/cabling_patch_panels.webp',
+    image: '/web/02-structured-cabling/01-patch-panels-dressing.jpg',
     category: 'Rack Cable Organization',
     details: [
       '1U/2U 24-port and 48-port angled and flat high-density Category 6A modular patch panels',
@@ -83,7 +83,7 @@ const cablingServicesList: CablingServiceCard[] = [
     id: 'pathways-raceways',
     title: 'Cable Trays & Pathways',
     description: 'Seismic-rated basket trays, ladder racks, and surface raceways for organized runs.',
-    image: '/cabling_pathways.webp',
+    image: '/web/02-structured-cabling/02-cable-trays-pathways.jpg',
     category: 'Pathway Routing & Rigging',
     details: [
       'Overhead wire mesh basket trays and tubular steel ladder racks engineered for high load capacities',
@@ -125,7 +125,7 @@ const cablingServicesList: CablingServiceCard[] = [
     id: 'av-systems',
     title: 'Low Voltage AV Cabling',
     description: 'Specialized low-voltage cabling for boardroom AV, paging, background audio, and displays.',
-    image: '/cabling_av_systems.svg',
+    image: '/web/02-structured-cabling/03-low-voltage-av-cabling.jpg',
     category: 'Audio/Visual Low Voltage',
     details: [
       'HDBaseT 4K HDMI uncompressed video and control extension over Category 6A shielded cabling',
@@ -139,7 +139,7 @@ const cablingServicesList: CablingServiceCard[] = [
     id: 'industrial-cabling',
     title: 'Industrial & Plant Cabling',
     description: 'Ruggedized, shielded cabling resistant to oil, extreme temperatures, and heavy EMI.',
-    image: '/cabling_industrial_plant.svg',
+    image: '/web/02-structured-cabling/04-industrial-plant-cabling.jpg',
     category: 'Harsh Environment Industrial',
     details: [
       'Industrial-grade Shielded/Foil Twisted Pair (SF/UTP) cabling designed to eliminate machine motor EMI',
@@ -153,7 +153,7 @@ const cablingServicesList: CablingServiceCard[] = [
     id: 'macs-support',
     title: 'Moves, Adds & Changes (MACs)',
     description: 'Agile day-two cabling modifications, drop additions, and office reconfiguration support.',
-    image: '/cabling_macs_support.svg',
+    image: '/web/02-structured-cabling/05-moves-adds-changes.jpg',
     category: 'Day-Two MAC Support',
     details: [
       'Rapid-response field dispatch for office workstation relocations, expansions, and cubicle reconfigurations',
@@ -167,7 +167,7 @@ const cablingServicesList: CablingServiceCard[] = [
     id: 'datacenter-cabling',
     title: 'Data Center Cabling Architecture',
     description: 'High-density top-of-rack (ToR) and end-of-row (EoR) structured cabling solutions.',
-    image: '/cabling_data_center.webp',
+    image: '/web/02-structured-cabling/06-data-center-cabling-architecture.jpg',
     category: 'Mission-Critical Data Centers',
     details: [
       'High-density Top-of-Rack (ToR), End-of-Row (EoR), and Middle-of-Row (MoR) cabling topologies',

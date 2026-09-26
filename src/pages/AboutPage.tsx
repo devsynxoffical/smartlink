@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import type { NavTab, LeaderItem } from '../types';
 import { leadershipData, locationsData } from '../data/siteData';
-import { 
-  ArrowRight, 
+import {
+  ArrowRight,
   Mail
 } from 'lucide-react';
 
@@ -17,7 +17,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onNavigate }) => {
   return (
     <div className="about-page-exact">
       {/* 1. HERO SECTION - Exact 1:1 Match to Mockup */}
-      <section 
+      <section
         className="about-hero-section"
         style={{
           backgroundImage: `url('/about_hero_bg.webp')`
@@ -66,7 +66,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onNavigate }) => {
               <p className="leadership-desc">
                 Our leadership team brings decades of industry experience, technical knowledge, and a shared commitment to delivering reliable infrastructure solutions. We lead with integrity, innovation, and a focus on building lasting partnerships.
               </p>
-              <button 
+              <button
                 onClick={() => onNavigate('contact')}
                 className="btn-primary"
                 style={{ fontSize: '13.5px', padding: '12px 24px', borderRadius: '6px' }}
@@ -139,7 +139,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onNavigate }) => {
                 We bring deep technical knowledge, industry certifications, and real-world experience to every project — from single-site installations to complex nationwide rollouts. Our commitment to quality, integrity, and customer success has made us a trusted partner for businesses, government agencies, educational institutions, and organizations across the United States.
               </p>
               <div style={{ marginTop: '24px' }}>
-                <button 
+                <button
                   onClick={() => onNavigate('why-us')}
                   className="btn-primary"
                   style={{ fontSize: '13.5px', padding: '12px 24px', borderRadius: '6px' }}
@@ -152,9 +152,9 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onNavigate }) => {
 
             {/* Right Photo with Smart-Links Technician */}
             <div className="story-photo-container">
-              <img 
-                src="/technician_cabling.webp" 
-                alt="Smart-Links Cabling Solutions Technician" 
+              <img
+                src="/technician_cabling.webp"
+                alt="Smart-Links Cabling Solutions Technician"
               />
               <div className="story-badge-overlay">
                 <div className="badge-text">
@@ -189,8 +189,8 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onNavigate }) => {
                 <div className="location-item-inner">
                   <div className="location-pin-wrap">
                     <svg width="22" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="location-pin-svg">
-                      <path d="M12 2C8.13401 2 5 5.13401 5 9C5 14.25 12 22 12 22C12 22 19 14.25 19 9C19 5.13401 15.866 2 12 2Z" fill="#0075FF"/>
-                      <circle cx="12" cy="9" r="3.2" fill="#FFFFFF"/>
+                      <path d="M12 2C8.13401 2 5 5.13401 5 9C5 14.25 12 22 12 22C12 22 19 14.25 19 9C19 5.13401 15.866 2 12 2Z" fill="#0075FF" />
+                      <circle cx="12" cy="9" r="3.2" fill="#FFFFFF" />
                     </svg>
                   </div>
                   <div className="location-info-block">
@@ -224,24 +224,24 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onNavigate }) => {
             </div>
             <div className="modal-body">
               <div className="executive-profile-row">
-                <img 
-                  src={selectedLeader.image} 
-                  alt={selectedLeader.name} 
+                <img
+                  src={selectedLeader.image}
+                  alt={selectedLeader.name}
                   style={{ width: '100px', height: '125px', objectFit: 'cover', borderRadius: '8px', flexShrink: 0 }}
                 />
                 <div>
                   <h3 style={{ fontSize: '22px', fontWeight: 800, color: '#0a1128' }}>{selectedLeader.name}</h3>
                   <p style={{ fontSize: '14px', fontWeight: 700, color: '#0075ff', margin: '4px 0 10px 0' }}>{selectedLeader.role}</p>
                   <div className="executive-profile-actions">
-                    <a 
-                      href={`mailto:${selectedLeader.email}`} 
+                    <a
+                      href={`mailto:${selectedLeader.email}`}
                       style={{ fontSize: '12px', color: '#475569', background: '#f1f5f9', padding: '6px 12px', borderRadius: '6px', fontWeight: 600, display: 'inline-flex', alignItems: 'center', gap: '4px' }}
                     >
                       <Mail size={13} /> Email
                     </a>
-                    <a 
-                      href={selectedLeader.linkedin} 
-                      target="_blank" 
+                    <a
+                      href={selectedLeader.linkedin}
+                      target="_blank"
                       rel="noopener noreferrer"
                       style={{ fontSize: '12px', color: '#0075ff', background: '#eff6ff', padding: '6px 12px', borderRadius: '6px', fontWeight: 600 }}
                     >

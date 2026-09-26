@@ -40,7 +40,7 @@ const dataCenterServicesList: DataCenterServiceCard[] = [
     id: 'rack-and-stack',
     title: 'Rack & Stack',
     description: 'Professional rack installation, equipment mounting, and cable management.',
-    image: '/card_structured_cabling.webp',
+    image: '/web/03-data-center-infrastructure/01-rack-and-stack.jpg',
     category: 'Equipment Deployment',
     details: [
       'Server, switch, PDU, and UPS rack mounting',
@@ -66,7 +66,7 @@ const dataCenterServicesList: DataCenterServiceCard[] = [
     id: 'cable-trays-pathways',
     title: 'Cable Trays & Pathways',
     description: 'Design and installation of cable trays, ladder racks, and pathways.',
-    image: '/projects_cta_cables_bg.webp',
+    image: '/web/03-data-center-infrastructure/02-cable-trays-pathways.jpg',
     category: 'Pathway Infrastructure',
     details: [
       'Overhead wire basket & ladder rack containment',
@@ -79,7 +79,7 @@ const dataCenterServicesList: DataCenterServiceCard[] = [
     id: 'mdf-idf-buildouts',
     title: 'MDF / IDF Buildouts',
     description: 'Main distribution frame (MDF) and intermediate distribution frame (IDF) implementation.',
-    image: '/card_fiber_optics.webp',
+    image: '/web/03-data-center-infrastructure/03-mdf-idf-buildouts.jpg',
     category: 'Core Distribution',
     details: [
       'Full MDF/IDF telecommunications room construction',
@@ -118,7 +118,7 @@ const dataCenterServicesList: DataCenterServiceCard[] = [
     id: 'cabinets-enclosures',
     title: 'Cabinets & Enclosures',
     description: 'Supply and installation of racks, cabinets, and enclosures.',
-    image: '/featured_building_banner.webp',
+    image: '/web/03-data-center-infrastructure/04-cabinets-enclosures.jpg',
     category: 'Containment & Security',
     details: [
       '42U–48U server and network enclosure cabinets',

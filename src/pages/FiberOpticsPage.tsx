@@ -69,8 +69,8 @@ const fiberServicesList: FiberServiceCard[] = [
   {
     id: 'preterminated-solutions',
     title: 'Pre-Terminated Fiber Solutions',
-    description: 'High-density factory-terminated MPO/MTP cassettes and trunks.',
-    image: '/fiber_preterminated.svg',
+    description: 'Faster deployment with factory-terminated systems.',
+    image: '/web/01-fiber-optics/01-pre-terminated-fiber-solutions.jpg',
     category: 'Rapid Deployment',
     details: [
       'Factory-tested MTP/MPO multi-fiber trunk cables',
@@ -81,9 +81,9 @@ const fiberServicesList: FiberServiceCard[] = [
   },
   {
     id: 'aerial-underground',
-    title: 'Outside Plant (OSP) Fiber',
-    description: 'Armored direct-burial, underground conduit, and aerial fiber runs.',
-    image: '/fiber_osp_aerial_underground.svg',
+    title: 'Aerial & Underground Fiber',
+    description: 'Indoor, outdoor, aerial and direct-burial installations.',
+    image: '/web/01-fiber-optics/02-aerial-underground-fiber.jpg',
     category: 'Outside Plant (OSP)',
     details: [
       'Directional boring and underground conduit installation',
@@ -107,9 +107,9 @@ const fiberServicesList: FiberServiceCard[] = [
   },
   {
     id: 'cable-pathways-trays',
-    title: 'Fiber Raceway & Pathways',
-    description: 'Dedicated yellow ducting and bend-radius safe routing channels.',
-    image: '/fiber_raceway_pathways.svg',
+    title: 'Cable Pathways & Trays',
+    description: 'Complete pathway solutions for fiber infrastructure.',
+    image: '/web/01-fiber-optics/03-cable-pathways-trays.jpg',
     category: 'Pathway Infrastructure',
     details: [
       'Yellow fiber optic raceway and ducting systems',
@@ -120,9 +120,9 @@ const fiberServicesList: FiberServiceCard[] = [
   },
   {
     id: 'repair-troubleshooting',
-    title: 'Fiber Diagnostics & Repair',
-    description: '24/7 emergency restoration, OTDR fault locating, and fusion re-splicing.',
-    image: '/fiber_emergency_repair.svg',
+    title: 'Repair & Troubleshooting',
+    description: 'Fast, reliable support to keep you connected.',
+    image: '/web/01-fiber-optics/04-repair-troubleshooting.jpg',
     category: 'Emergency Services',
     details: [
       '24/7 emergency fiber cut repair and restoration',

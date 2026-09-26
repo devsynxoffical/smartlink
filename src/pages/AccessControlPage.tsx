@@ -83,7 +83,7 @@ const accessServicesList: AccessServiceCard[] = [
     id: 'biometrics',
     title: 'Biometrics',
     description: 'Advanced fingerprint and facial recognition technology for higher security.',
-    image: '/access_biometrics.webp',
+    image: '/web/04-access-control/01-biometrics.jpg',
     category: 'Biometric Identity Verification',
     details: [
       'Optical and capacitive live-fingerprint scanners with spoof detection',
@@ -97,7 +97,7 @@ const accessServicesList: AccessServiceCard[] = [
     id: 'door-controllers',
     title: 'Door Controllers',
     description: 'Intelligent door controllers for single or multi-door systems.',
-    image: '/access_door_controllers.webp',
+    image: '/web/04-access-control/02-door-controllers.jpg',
     category: 'Intelligent Control Panels',
     details: [
       'Scalable 2-door, 4-door, and 8-door network access controllers (Mercury, Software House, Brivo)',
@@ -111,7 +111,7 @@ const accessServicesList: AccessServiceCard[] = [
     id: 'electrified-hardware',
     title: 'Electrified Hardware',
     description: 'Mag locks, electric strikes and exit devices for complete access control.',
-    image: '/access_electrified_hardware.webp',
+    image: '/web/04-access-control/03-electrified-hardware.jpg',
     category: 'Locking Hardware & Egress',
     details: [
       'High-holding force magnetic locks (600 lbs / 1200 lbs) with bond sensors',
@@ -125,7 +125,7 @@ const accessServicesList: AccessServiceCard[] = [
     id: 'access-control-software',
     title: 'Access Control Software',
     description: 'Powerful, easy-to-manage software for real-time control and reporting.',
-    image: '/access_software.webp',
+    image: '/web/04-access-control/04-access-control-software.jpg',
     category: 'Cloud & On-Premises Management',
     details: [
       'Intuitive web and mobile administrative dashboards for global user management',
@@ -139,7 +139,7 @@ const accessServicesList: AccessServiceCard[] = [
     id: 'visitor-management',
     title: 'Visitor Management',
     description: 'Streamline guest access with secure, automated visitor management.',
-    image: '/access_visitor_management.webp',
+    image: '/web/04-access-control/05-visitor-management.jpg',
     category: 'Guest Check-In & Badging',
     details: [
       'Self-service touchscreen iPad and tablet visitor check-in kiosks',
@@ -153,7 +153,7 @@ const accessServicesList: AccessServiceCard[] = [
     id: 'turnstiles-entry-systems',
     title: 'Turnstiles & Entry Systems',
     description: 'Physical security barriers for additional control.',
-    image: '/access_turnstiles.webp',
+    image: '/web/04-access-control/06-turnstiles-entry-systems.jpg',
     category: 'Speed Gates & Lobby Barriers',
     details: [
       'Optical speed gates with motorized retractable glass flaps for high-end corporate lobbies',
@@ -167,7 +167,7 @@ const accessServicesList: AccessServiceCard[] = [
     id: 'system-integration',
     title: 'System Integration',
     description: 'Seamless integration with video surveillance, alarms and building systems.',
-    image: '/access_system_integration.webp',
+    image: '/web/04-access-control/07-system-integration.jpg',
     category: 'Converged Physical Security',
     details: [
       'Direct cross-linking of badge swipe events with live and recorded surveillance video',
