@@ -199,7 +199,7 @@ export const SearchModal: React.FC<SearchModalProps> = ({
                         onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = '#ffffff')}
                       >
                         <div>
-                          <div style={{ fontSize: '14.5px', fontWeight: 700, color: '#0f172a' }}>{proj.client} — {proj.title}</div>
+                          <div style={{ fontSize: '14.5px', fontWeight: 700, color: '#0f172a' }}>{proj.client} • {proj.title}</div>
                           <div style={{ fontSize: '12.5px', color: '#64748b', marginTop: '2px' }}>{proj.description}</div>
                         </div>
                         <ArrowRight size={16} color="#0056d2" />

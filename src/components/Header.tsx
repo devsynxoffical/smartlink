@@ -55,7 +55,7 @@ export const Header: React.FC<HeaderProps> = ({
           {/* Logo matching the exact official branding */}
           <div className="brand-logo" onClick={() => handleNavClick('home')}>
             <img 
-              src="/smart_links_logo_hd.webp" 
+              src="/smart_links_logo_horizontal.webp" 
               alt="Smart-Links Cabling Solutions" 
               className="brand-logo-full-img" 
             />
@@ -194,7 +194,7 @@ export const Header: React.FC<HeaderProps> = ({
                       <div className="mega-col-list">
                         <div 
                           className="mega-item-link"
-                          onClick={() => handleNavClick('service-detail', 'nationwide-rollouts')}
+                          onClick={() => handleNavClick('nationwide-rollouts')}
                         >
                           <span>Nationwide Rollouts</span>
                           <span className="mega-item-chevron">&gt;</span>
@@ -340,6 +340,13 @@ export const Header: React.FC<HeaderProps> = ({
               onClick={() => handleNavClick('projects')}
             >
               PROJECTS
+            </button>
+
+            <button
+              className={`nav-link ${currentTab === 'nationwide-rollouts' ? 'active' : ''}`}
+              onClick={() => handleNavClick('nationwide-rollouts')}
+            >
+              NATIONWIDE
             </button>
 
             <button

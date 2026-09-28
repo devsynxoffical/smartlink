@@ -85,7 +85,7 @@ const dasServicesList: DASServiceCard[] = [
     id: 'rf-design-engineering',
     title: 'RF Design & Engineering',
     description: 'Site surveys, RF modeling and custom DAS design for optimal performance.',
-    image: '/das_rf_design.svg',
+    image: '/das_rf_design.webp',
     category: 'Engineering & Simulation',
     details: [
       'iBwave 3D RF propagation simulation and signal heat mapping',
@@ -99,7 +99,7 @@ const dasServicesList: DASServiceCard[] = [
     id: 'cabling-infrastructure',
     title: 'Cabling & Infrastructure',
     description: 'Expert installation of fiber, coax, cable trays and supporting infrastructure.',
-    image: '/projects_cta_cables_bg.webp',
+    image: '/das_coax_cabling.webp',
     category: 'Physical Layer Transport',
     details: [
       'Low-PIM ½" and ⅞" corrugated coaxial Heliax hardline cabling',
@@ -113,7 +113,7 @@ const dasServicesList: DASServiceCard[] = [
     id: 'system-testing-optimization',
     title: 'System Testing & Optimization',
     description: 'Commissioning, testing and optimization to ensure peak performance.',
-    image: '/das_system_testing.svg',
+    image: '/das_system_testing.webp',
     category: 'RF Validation & Commissioning',
     details: [
       '20-grid and 40-grid RF signal level testing per NFPA / IFC mandates',
@@ -169,7 +169,7 @@ const dasServicesList: DASServiceCard[] = [
     id: 'maintenance-support',
     title: 'Maintenance & Support',
     description: 'Ongoing monitoring, support and system upgrades.',
-    image: '/technician_vest.webp',
+    image: '/das_maintenance_support.webp',
     category: 'Lifecycle Management',
     details: [
       '24/7/365 remote network monitoring (NOC) and alarm notification',
@@ -284,10 +284,6 @@ export const DASPage: React.FC<DASPageProps> = ({
 }) => {
   const [selectedService, setSelectedService] = useState<DASServiceCard | null>(null);
 
-  const handleDownloadBrochure = () => {
-    onOpenQuote('DAS (Distributed Antenna Systems) Brochure & Engineering Specs');
-  };
-
   const handleScrollToSolutions = () => {
     const el = document.getElementById('das-services-section');
     if (el) {
@@ -351,7 +347,7 @@ export const DASPage: React.FC<DASPageProps> = ({
               {/* Paragraph Description */}
               <p className="das-hero-desc">
                 In-building and outdoor DAS solutions that deliver reliable cellular coverage,
-                enhance public safety communications, and keep people connected — everywhere they go.
+                enhance public safety communications, and keep people connected everywhere they go.
               </p>
 
               {/* 4 Feature Badges / Highlights */}
@@ -434,7 +430,6 @@ export const DASPage: React.FC<DASPageProps> = ({
           <div className="das-section-header-row">
             <div className="das-section-header-left">
               <div className="das-section-eyebrow">
-                <span className="das-eyebrow-dash">—</span>
                 <span>OUR DAS SOLUTIONS</span>
               </div>
               <h2 className="das-section-title">Complete DAS Services.</h2>
@@ -442,16 +437,6 @@ export const DASPage: React.FC<DASPageProps> = ({
                 From design and engineering to installation and optimization, Smart-Links
                 delivers end-to-end DAS solutions for commercial, industrial, and public safety environments.
               </p>
-            </div>
-            <div className="das-section-header-right">
-              <button
-                type="button"
-                onClick={handleDownloadBrochure}
-                className="das-download-brochure-btn"
-              >
-                <span>DOWNLOAD DAS BROCHURE</span>
-                <ArrowRight size={16} />
-              </button>
             </div>
           </div>
 
@@ -513,7 +498,6 @@ export const DASPage: React.FC<DASPageProps> = ({
             {/* Left Column: Why Smart-Links */}
             <div className="das-trust-left-col">
               <div className="das-section-eyebrow">
-                <span className="das-eyebrow-dash">—</span>
                 <span>WHY SMART-LINKS</span>
               </div>
               <h2 className="das-trust-heading">DAS Expertise You Can Trust.</h2>
@@ -580,7 +564,6 @@ export const DASPage: React.FC<DASPageProps> = ({
         <div className="das-container">
           <div className="das-process-header">
             <div className="das-section-eyebrow">
-              <span className="das-eyebrow-dash">—</span>
               <span>OUR PROCESS</span>
             </div>
             <h2 className="das-section-title">From Design to Ongoing Performance.</h2>
@@ -615,7 +598,6 @@ export const DASPage: React.FC<DASPageProps> = ({
         <div className="das-container">
           <div className="das-industries-header">
             <div className="das-section-eyebrow">
-              <span className="das-eyebrow-dash">—</span>
               <span>INDUSTRIES WE SERVE</span>
             </div>
             <h2 className="das-section-title">DAS Solutions for Every Environment.</h2>

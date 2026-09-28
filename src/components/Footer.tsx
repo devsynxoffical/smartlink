@@ -23,7 +23,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
             <div className="footer-col-brand">
               <div className="brand-logo" onClick={() => handleNav('home')} style={{ cursor: 'pointer' }}>
                 <img 
-                  src="/smart_links_logo_hd.webp" 
+                  src="/smart_links_logo_horizontal.webp" 
                   alt="Smart-Links Cabling Solutions" 
                   className="brand-logo-full-img" 
                 />
@@ -87,6 +87,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
                 <li><button onClick={() => handleNav('service-detail', 'access-control')}>Access Control</button></li>
                 <li><button onClick={() => handleNav('service-detail', 'das-systems')}>DAS</button></li>
                 <li><button onClick={() => handleNav('service-detail', 'it-solutions')}>IT Solutions</button></li>
+                <li><button onClick={() => handleNav('nationwide-rollouts')}>Nationwide Rollouts</button></li>
               </ul>
             </div>
 

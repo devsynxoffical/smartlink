@@ -308,7 +308,7 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({
                   <ArrowRight size={15} />
                 </button>
                 <button 
-                  onClick={() => scrollToSection('services-rollouts-section')}
+                  onClick={() => onNavigate('nationwide-rollouts')}
                   className="btn-hero-dark-outline"
                 >
                   <span>NATIONWIDE ROLLOUTS</span>
@@ -384,7 +384,7 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({
               <div
                 key={card.id}
                 className="services-solution-card"
-                onClick={() => onNavigate('service-detail', card.id)}
+                onClick={() => card.id === 'nationwide-rollouts' ? onNavigate('nationwide-rollouts') : onNavigate('service-detail', card.id)}
               >
                 <div className="services-solution-top-row">
                   <div className="services-solution-icon-circle">
@@ -444,7 +444,7 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({
                 From single sites to nationwide multi-location deployments, we deliver consistent, high-quality infrastructure solutions across the United States.
               </p>
               <button 
-                onClick={() => onNavigate('service-detail', 'nationwide-rollouts')}
+                onClick={() => onNavigate('nationwide-rollouts')}
                 className="btn-rollouts-blue"
               >
                 <span>EXPLORE NATIONWIDE ROLLOUTS</span>
@@ -589,7 +589,7 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({
                 MORE CONNECTED TOMORROW.
               </h2>
               <p className="services-cta-p">
-                Partner with Smart-Links for reliable, scalable infrastructure — nationwide.
+                Partner with Smart-Links for reliable, scalable infrastructure nationwide.
               </p>
               <div className="services-cta-actions">
                 <button 

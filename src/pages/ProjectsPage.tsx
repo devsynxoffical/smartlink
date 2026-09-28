@@ -276,7 +276,7 @@ export const ProjectsPage: React.FC<ProjectsPageProps> = ({
                 “{testimonialsData[testimonialIdx].quote}”
               </p>
               <div className="projects-testimonial-author">
-                — {testimonialsData[testimonialIdx].author}, {testimonialsData[testimonialIdx].company}
+                {testimonialsData[testimonialIdx].author}, {testimonialsData[testimonialIdx].company}
               </div>
 
               {/* Dots */}

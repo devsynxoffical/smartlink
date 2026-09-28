@@ -277,10 +277,6 @@ export const StructuredCablingPage: React.FC<StructuredCablingPageProps> = ({
 }) => {
   const [selectedService, setSelectedService] = useState<CablingServiceCard | null>(null);
 
-  const handleDownloadBrochure = () => {
-    onOpenQuote('Structured Cabling Solutions Brochure & Design Guide');
-  };
-
   return (
     <div className="access-page-root">
       {/* 1. HERO SECTION */}
@@ -407,7 +403,6 @@ export const StructuredCablingPage: React.FC<StructuredCablingPageProps> = ({
           <div className="access-section-header-row">
             <div className="access-section-header-left">
               <div className="access-section-eyebrow">
-                <span className="access-eyebrow-dash">—</span>
                 <span>OUR STRUCTURED CABLING SOLUTIONS</span>
               </div>
               <h2 className="access-section-title">Complete Structured Cabling Systems.</h2>
@@ -415,16 +410,6 @@ export const StructuredCablingPage: React.FC<StructuredCablingPageProps> = ({
                 From single-office workstation drops to multi-floor enterprise campus backbones, Smart-Links delivers reliable,
                 future-ready cabling infrastructure tailored to your exact facility and speed requirements.
               </p>
-            </div>
-            <div className="access-section-header-right">
-              <button
-                type="button"
-                onClick={handleDownloadBrochure}
-                className="access-download-brochure-btn"
-              >
-                <span>DOWNLOAD BROCHURE</span>
-                <ArrowRight size={16} />
-              </button>
             </div>
           </div>
 
@@ -486,7 +471,6 @@ export const StructuredCablingPage: React.FC<StructuredCablingPageProps> = ({
             {/* Left Column: Why Smart-Links */}
             <div className="access-trust-left-col">
               <div className="access-section-eyebrow">
-                <span className="access-eyebrow-dash">—</span>
                 <span>WHY SMART-LINKS</span>
               </div>
               <h2 className="access-trust-heading">Structured Cabling That Works for You.</h2>
@@ -553,7 +537,6 @@ export const StructuredCablingPage: React.FC<StructuredCablingPageProps> = ({
         <div className="access-container">
           <div className="access-process-header">
             <div className="access-section-eyebrow">
-              <span className="access-eyebrow-dash">—</span>
               <span>OUR PROCESS</span>
             </div>
             <h2 className="access-section-title">From Assessment to Ongoing Support.</h2>
@@ -588,7 +571,6 @@ export const StructuredCablingPage: React.FC<StructuredCablingPageProps> = ({
         <div className="access-container">
           <div className="access-industries-header">
             <div className="access-section-eyebrow">
-              <span className="access-eyebrow-dash">—</span>
               <span>INDUSTRIES WE SERVE</span>
             </div>
             <h2 className="access-section-title">Structured Cabling for Any Environment.</h2>

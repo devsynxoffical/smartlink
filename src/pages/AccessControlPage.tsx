@@ -277,10 +277,6 @@ export const AccessControlPage: React.FC<AccessControlPageProps> = ({
 }) => {
   const [selectedService, setSelectedService] = useState<AccessServiceCard | null>(null);
 
-  const handleDownloadBrochure = () => {
-    onOpenQuote('Access Control Systems Brochure & Security Assessment');
-  };
-
   return (
     <div className="access-page-root">
       {/* 1. HERO SECTION */}
@@ -334,7 +330,7 @@ export const AccessControlPage: React.FC<AccessControlPageProps> = ({
               {/* Subtitle */}
               <p className="access-hero-desc">
                 Modern access control solutions designed to protect your people, property,
-                and assets — with scalable systems for any size facility.
+                and assets with scalable systems for any size facility.
               </p>
 
               {/* 4 Feature Badges */}
@@ -407,7 +403,6 @@ export const AccessControlPage: React.FC<AccessControlPageProps> = ({
           <div className="access-section-header-row">
             <div className="access-section-header-left">
               <div className="access-section-eyebrow">
-                <span className="access-eyebrow-dash">—</span>
                 <span>OUR ACCESS CONTROL SOLUTIONS</span>
               </div>
               <h2 className="access-section-title">Complete Access Control Systems.</h2>
@@ -415,16 +410,6 @@ export const AccessControlPage: React.FC<AccessControlPageProps> = ({
                 From simple door access to enterprise-wide integrated security, Smart-Links delivers reliable,
                 future-ready access control solutions tailored to your facility and operational needs.
               </p>
-            </div>
-            <div className="access-section-header-right">
-              <button
-                type="button"
-                onClick={handleDownloadBrochure}
-                className="access-download-brochure-btn"
-              >
-                <span>DOWNLOAD BROCHURE</span>
-                <ArrowRight size={16} />
-              </button>
             </div>
           </div>
 
@@ -486,7 +471,6 @@ export const AccessControlPage: React.FC<AccessControlPageProps> = ({
             {/* Left Column: Why Smart-Links */}
             <div className="access-trust-left-col">
               <div className="access-section-eyebrow">
-                <span className="access-eyebrow-dash">—</span>
                 <span>WHY SMART-LINKS</span>
               </div>
               <h2 className="access-trust-heading">Access Control That Works for You.</h2>
@@ -553,7 +537,6 @@ export const AccessControlPage: React.FC<AccessControlPageProps> = ({
         <div className="access-container">
           <div className="access-process-header">
             <div className="access-section-eyebrow">
-              <span className="access-eyebrow-dash">—</span>
               <span>OUR PROCESS</span>
             </div>
             <h2 className="access-section-title">From Assessment to Ongoing Support.</h2>
@@ -588,7 +571,6 @@ export const AccessControlPage: React.FC<AccessControlPageProps> = ({
         <div className="access-container">
           <div className="access-industries-header">
             <div className="access-section-eyebrow">
-              <span className="access-eyebrow-dash">—</span>
               <span>INDUSTRIES WE SERVE</span>
             </div>
             <h2 className="access-section-title">Access Control for Any Environment.</h2>

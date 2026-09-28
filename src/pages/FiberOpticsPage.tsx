@@ -96,7 +96,7 @@ const fiberServicesList: FiberServiceCard[] = [
     id: 'testing-certification',
     title: 'Testing & Certification',
     description: 'OTDR, loss testing and full documentation.',
-    image: '/technician_server_rack.webp',
+    image: '/web/01-fiber-optics/05-testing-certification.jpg',
     category: 'Tier 1 & Tier 2 Testing',
     details: [
       'Fluke Versiv Tier 1 Optical Loss Test Set (OLTS)',

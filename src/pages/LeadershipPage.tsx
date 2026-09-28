@@ -242,7 +242,7 @@ export const LeadershipPage: React.FC<LeadershipPageProps> = ({
                 </div>
                 <h3 className="commitment-title">Future-Ready Architecture</h3>
                 <p className="commitment-text">
-                  We design infrastructure that anticipates future bandwidth demands—incorporating high-density single-mode fiber, Category 6A, and high-speed Wi-Fi 7 pathways.
+                  We design infrastructure that anticipates future bandwidth demands, incorporating high-density single-mode fiber, Category 6A, and high-speed Wi-Fi 7 pathways.
                 </p>
               </div>
             </div>
@@ -353,7 +353,7 @@ export const LeadershipPage: React.FC<LeadershipPageProps> = ({
                     <p className="modal-quote-text">
                       "{selectedLeader.quote}"
                     </p>
-                    <span className="modal-quote-author">— {selectedLeader.name}, {selectedLeader.role}</span>
+                    <span className="modal-quote-author">{selectedLeader.name}, {selectedLeader.role}</span>
                   </div>
                 )}
 

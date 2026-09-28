@@ -136,7 +136,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onNavigate }) => {
                 Smart-Links Cabling Solutions, LLC. was founded on the principle that reliable infrastructure drives real progress. With more than 30 years of IT experience, the experts at Smart-Links Cabling Solutions. LLC. are here to assist you.
               </p>
               <p className="story-paragraph">
-                We bring deep technical knowledge, industry certifications, and real-world experience to every project — from single-site installations to complex nationwide rollouts. Our commitment to quality, integrity, and customer success has made us a trusted partner for businesses, government agencies, educational institutions, and organizations across the United States.
+                We bring deep technical knowledge, industry certifications, and real-world experience to every project, from single-site installations to complex nationwide rollouts. Our commitment to quality, integrity, and customer success has made us a trusted partner for businesses, government agencies, educational institutions, and organizations across the United States.
               </p>
               <div style={{ marginTop: '24px' }}>
                 <button

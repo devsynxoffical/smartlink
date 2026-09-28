@@ -42,7 +42,7 @@ const itServicesList: ITServiceCard[] = [
     id: 'server-racks',
     title: 'Server Rack & Cabinet Setup',
     description: '42U/48U rack assembly, vertical wire routing, and seismic anchoring.',
-    image: '/it_server_racks.webp',
+    image: '/images/01-server-rack-cabinet-setup.jpg',
     category: 'Rack Engineering & Architecture',
     details: [
       'Precision installation of 42U/48U server enclosures and 2-post/4-post open frame racks',
@@ -56,7 +56,7 @@ const itServicesList: ITServiceCard[] = [
     id: 'network-switching',
     title: 'Enterprise Switching & Routing',
     description: 'Core, distribution, and access layer switch installation and VLAN staging.',
-    image: '/it_network_switching.webp',
+    image: '/images/02-enterprise-switching-routing.jpg',
     category: 'Core & Edge Network Hardware',
     details: [
       'Deployment and stacking of enterprise multi-gigabit PoE++ access and core switches',
@@ -70,11 +70,11 @@ const itServicesList: ITServiceCard[] = [
     id: 'wifi-surveys',
     title: 'High-Density Wi-Fi 6E / 7',
     description: 'Ekahau RF 3D predictive heatmaps, access point mounting, and spectrum tuning.',
-    image: '/it_wifi_wireless.webp',
+    image: '/images/03-high-density-wifi-6e-7.jpg',
     category: 'Enterprise Wireless Networks',
     details: [
       'Comprehensive Ekahau Sidekick II active, passive, and spectrum RF site surveys',
-      '3D predictive predictive propagation heatmaps ensuring zero dead zones and high SNR',
+      '3D predictive propagation heatmaps ensuring zero dead zones and high SNR',
       'Tri-band 2.4 GHz, 5 GHz, and 6 GHz spectrum channel allocation and power tuning',
       'Clean ceiling tile grid mounting, wall bracket placement, and concealed Cat6A cabling'
     ],
@@ -84,7 +84,7 @@ const itServicesList: ITServiceCard[] = [
     id: 'pdu-power',
     title: 'Smart PDU & Power Metering',
     description: 'Switched and metered rack PDUs for remote outlet rebooting and power monitoring.',
-    image: '/it_pdu_power.webp',
+    image: '/images/04-smart-pdu-power-metering.jpg',
     category: 'Intelligent Power Distribution',
     details: [
       'Zero-U vertical metered and switched PDUs with per-outlet kilowatt-hour monitoring',
@@ -98,7 +98,7 @@ const itServicesList: ITServiceCard[] = [
     id: 'ups-backup',
     title: 'UPS & Battery Backup Systems',
     description: 'Online double-conversion UPS systems protecting critical servers from outages.',
-    image: '/it_ups_backup.webp',
+    image: '/images/05-ups-battery-backup.jpg',
     category: 'Mission-Critical Power Protection',
     details: [
       'True online double-conversion topology delivering zero transfer time (<0ms) to battery',
@@ -112,7 +112,7 @@ const itServicesList: ITServiceCard[] = [
     id: 'closet-remediation',
     title: 'IDF/MDF Closet Remediation',
     description: 'Complete overhaul of tangled patch cables, unmanaged cords, and legacy racks.',
-    image: '/it_closet_remediation.webp',
+    image: '/images/06-idf-mdf-closet-remediation.jpg',
     category: 'Telecom Closet Cleanups',
     details: [
       'Zero-downtime scheduled off-hours re-cabling, tone tracing, and drop re-termination',
@@ -126,7 +126,7 @@ const itServicesList: ITServiceCard[] = [
     id: 'conf-av',
     title: 'Boardroom AV & Collaboration',
     description: 'Interactive displays, Microsoft Teams/Zoom Rooms, ceiling mics, and USB-C docks.',
-    image: '/it_conf_av.webp',
+    image: '/images/07-boardroom-av-collaboration.jpg',
     category: 'Smart Workplace Collaboration',
     details: [
       'Turnkey Microsoft Teams Rooms and Zoom Rooms hardware appliances with one-touch join',
@@ -140,7 +140,7 @@ const itServicesList: ITServiceCard[] = [
     id: 'hardware-staging',
     title: 'Hardware Staging & Provisioning',
     description: 'Centralized warehousing, image flashing, asset tagging, and multi-site kitting.',
-    image: '/it_staging.webp',
+    image: '/images/08-hardware-staging-provisioning.jpg',
     category: 'Multi-Site Logistics & Provisioning',
     details: [
       'Secure ESD-safe staging lab for bulk hardware unboxing, firmware flashing, and burn-in testing',
@@ -154,7 +154,7 @@ const itServicesList: ITServiceCard[] = [
     id: 'edge-computing',
     title: 'Edge Computing Micro Data Centers',
     description: 'Self-contained soundproof enclosures with built-in cooling, UPS, and remote access.',
-    image: '/it_edge_computing.webp',
+    image: '/images/09-edge-micro-data-center.jpg',
     category: 'Edge Infrastructure Enclosures',
     details: [
       'Acoustically dampened (<45 dB) NEMA-rated sealed micro data center cabinets for remote sites',
@@ -168,7 +168,7 @@ const itServicesList: ITServiceCard[] = [
     id: 'managed-support',
     title: '24/7 Managed Infrastructure',
     description: 'Proactive monitoring, dispatch SLAs, firmware patch management, and break-fix response.',
-    image: '/it_managed_support.webp',
+    image: '/images/10-managed-infrastructure-24-7.jpg',
     category: 'Enterprise SLAs & Field Support',
     details: [
       '24/7/365 Network Operations Center (NOC) remote infrastructure telemetry and health monitoring',
@@ -277,10 +277,6 @@ export const ITSolutionsPage: React.FC<ITSolutionsPageProps> = ({
   onOpenQuote
 }) => {
   const [selectedService, setSelectedService] = useState<ITServiceCard | null>(null);
-
-  const handleDownloadBrochure = () => {
-    onOpenQuote('IT Solutions & Infrastructure Brochure & Technical Assessment');
-  };
 
   return (
     <div className="access-page-root">
@@ -408,23 +404,12 @@ export const ITSolutionsPage: React.FC<ITSolutionsPageProps> = ({
           <div className="access-section-header-row">
             <div className="access-section-header-left">
               <div className="access-section-eyebrow">
-                <span className="access-eyebrow-dash">—</span>
                 <span>OUR IT INFRASTRUCTURE SOLUTIONS</span>
               </div>
               <h2 className="access-section-title">Complete IT Infrastructure Systems.</h2>
               <p className="access-section-subtitle">
                 From server room cleanups and switch provisioning to high-density Wi-Fi deployments and edge micro data centers, Smart-Links delivers robust, scalable technology systems.
               </p>
-            </div>
-            <div className="access-section-header-right">
-              <button
-                type="button"
-                onClick={handleDownloadBrochure}
-                className="access-download-brochure-btn"
-              >
-                <span>DOWNLOAD BROCHURE</span>
-                <ArrowRight size={16} />
-              </button>
             </div>
           </div>
 
@@ -486,7 +471,6 @@ export const ITSolutionsPage: React.FC<ITSolutionsPageProps> = ({
             {/* Left Column: Why Smart-Links */}
             <div className="access-trust-left-col">
               <div className="access-section-eyebrow">
-                <span className="access-eyebrow-dash">—</span>
                 <span>WHY SMART-LINKS</span>
               </div>
               <h2 className="access-trust-heading">IT Infrastructure That Works for You.</h2>
@@ -553,7 +537,6 @@ export const ITSolutionsPage: React.FC<ITSolutionsPageProps> = ({
         <div className="access-container">
           <div className="access-process-header">
             <div className="access-section-eyebrow">
-              <span className="access-eyebrow-dash">—</span>
               <span>OUR PROCESS</span>
             </div>
             <h2 className="access-section-title">From Assessment to Ongoing Support.</h2>
@@ -588,7 +571,6 @@ export const ITSolutionsPage: React.FC<ITSolutionsPageProps> = ({
         <div className="access-container">
           <div className="access-industries-header">
             <div className="access-section-eyebrow">
-              <span className="access-eyebrow-dash">—</span>
               <span>INDUSTRIES WE SERVE</span>
             </div>
             <h2 className="access-section-title">IT Solutions for Any Environment.</h2>

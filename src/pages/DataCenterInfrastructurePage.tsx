@@ -224,10 +224,6 @@ export const DataCenterInfrastructurePage: React.FC<DataCenterInfrastructurePage
 }) => {
   const [selectedService, setSelectedService] = useState<DataCenterServiceCard | null>(null);
 
-  const handleDownloadBrochure = () => {
-    onOpenQuote('Data Center Infrastructure Brochure & Consultation');
-  };
-
   return (
     <div className="dc-page-root">
       {/* 1. HERO SECTION */}
@@ -359,19 +355,8 @@ export const DataCenterInfrastructurePage: React.FC<DataCenterInfrastructurePage
                 Complete Solutions for Modern Data Centers.
               </h2>
               <p className="fiber-services-subtext">
-                From design and build to installation and support, Smart-Links delivers high-performance infrastructure for data centers of all sizes — from edge facilities to hyperscale environments.
+                From design and build to installation and support, Smart-Links delivers high-performance infrastructure for data centers of all sizes, from edge facilities to hyperscale environments.
               </p>
-            </div>
-
-            <div className="fiber-section-head-right">
-              <button
-                type="button"
-                onClick={handleDownloadBrochure}
-                className="dc-btn-brochure-link"
-              >
-                <span>DOWNLOAD DATA CENTER BROCHURE</span>
-                <ArrowRight size={16} />
-              </button>
             </div>
           </div>
 

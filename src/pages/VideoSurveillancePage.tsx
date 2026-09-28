@@ -42,7 +42,7 @@ const surveillanceServicesList: SurveillanceServiceCard[] = [
     id: 'ip-cameras',
     title: 'IP Cameras',
     description: 'High-resolution IP cameras for indoor and outdoor environments.',
-    image: '/surv_ip_cameras.webp',
+    image: '/web/05-video-surveillance/01-ip-cameras.jpg',
     category: 'High-Definition Optics',
     details: [
       '4K Ultra-HD, 5MP, and 1080p high-resolution network optics',
@@ -56,7 +56,7 @@ const surveillanceServicesList: SurveillanceServiceCard[] = [
     id: 'analog-cameras',
     title: 'Analog Cameras',
     description: 'Cost-effective surveillance solutions for a wide range of applications.',
-    image: '/surv_analog_cameras.webp',
+    image: '/web/05-video-surveillance/02-analog-cameras.jpg',
     category: 'Legacy & Hybrid Upgrades',
     details: [
       'High-Definition Transport Video Interface (HD-TVI/CVI) over coax',
@@ -70,7 +70,7 @@ const surveillanceServicesList: SurveillanceServiceCard[] = [
     id: 'nvr-dvr-solutions',
     title: 'NVR & DVR Solutions',
     description: 'Reliable recording, storage and management systems.',
-    image: '/surv_nvr_dvr.webp',
+    image: '/web/05-video-surveillance/03-nvr-dvr-solutions.jpg',
     category: 'Core Recording Hardware',
     details: [
       'Enterprise Network Video Recorders (NVR) with RAID storage redundancy',
@@ -84,7 +84,7 @@ const surveillanceServicesList: SurveillanceServiceCard[] = [
     id: 'video-management-systems',
     title: 'Video Management Systems',
     description: 'Centralized monitoring, analytics and remote access from anywhere.',
-    image: '/surv_vms.webp',
+    image: '/web/05-video-surveillance/04-video-management-systems.jpg',
     category: 'VMS & Control Software',
     details: [
       'Unified multi-site VMS dashboard with interactive floor plan mapping',
@@ -98,7 +98,7 @@ const surveillanceServicesList: SurveillanceServiceCard[] = [
     id: 'indoor-outdoor-solutions',
     title: 'Indoor & Outdoor Solutions',
     description: 'Durable, weather-resistant cameras built for any environment.',
-    image: '/surv_indoor_outdoor.webp',
+    image: '/web/05-video-surveillance/05-indoor-outdoor-solutions.jpg',
     category: 'Environmental Hardening',
     details: [
       'IP66 / IP67 weatherproof and IK10 vandal-resistant enclosures',
@@ -112,7 +112,7 @@ const surveillanceServicesList: SurveillanceServiceCard[] = [
     id: 'video-analytics',
     title: 'Video Analytics',
     description: 'AI-powered analytics for people, vehicle and behavior detection.',
-    image: '/surv_video_analytics.webp',
+    image: '/web/05-video-surveillance/06-video-analytics.jpg',
     category: 'AI & Edge Intelligence',
     details: [
       'AI person, vehicle, and object classification and tracking',
@@ -126,7 +126,7 @@ const surveillanceServicesList: SurveillanceServiceCard[] = [
     id: 'remote-monitoring',
     title: 'Remote Monitoring',
     description: 'Stay connected with secure mobile and desktop access.',
-    image: '/surv_remote_monitoring.webp',
+    image: '/web/05-video-surveillance/07-remote-monitoring.jpg',
     category: 'Cloud & Mobile Connectivity',
     details: [
       'Secure iOS & Android mobile streaming with biometrics login',
@@ -140,7 +140,7 @@ const surveillanceServicesList: SurveillanceServiceCard[] = [
     id: 'system-integration',
     title: 'System Integration',
     description: 'Seamless integration with access control, alarms and building systems.',
-    image: '/surv_system_integration.webp',
+    image: '/web/05-video-surveillance/08-system-integration.jpg',
     category: 'Security Convergence',
     details: [
       'Direct synchronization with badge access control and door contacts',
@@ -154,7 +154,7 @@ const surveillanceServicesList: SurveillanceServiceCard[] = [
     id: 'storage-backup',
     title: 'Storage & Backup',
     description: 'Scalable storage solutions for short and long-term retention.',
-    image: '/surv_storage_backup.webp',
+    image: '/web/05-video-surveillance/09-storage-backup.jpg',
     category: 'Enterprise Data Archiving',
     details: [
       'Direct-Attached Storage (DAS), Storage Area Networks (SAN) and NAS',
@@ -168,7 +168,7 @@ const surveillanceServicesList: SurveillanceServiceCard[] = [
     id: 'installation-support',
     title: 'Installation & Support',
     description: 'Professional installation, maintenance and ongoing support.',
-    image: '/surv_installation_support.webp',
+    image: '/web/05-video-surveillance/10-installation-support.jpg',
     category: 'Full Lifecycle Services',
     details: [
       'Certified cabling technicians adhering strictly to BICSI and NEC standards',
@@ -277,10 +277,6 @@ export const VideoSurveillancePage: React.FC<VideoSurveillancePageProps> = ({
   onOpenQuote
 }) => {
   const [selectedService, setSelectedService] = useState<SurveillanceServiceCard | null>(null);
-
-  const handleDownloadBrochure = () => {
-    onOpenQuote('Video Surveillance Solutions Brochure & Security Assessment');
-  };
 
   return (
     <div className="surv-page-root">
@@ -409,7 +405,6 @@ export const VideoSurveillancePage: React.FC<VideoSurveillancePageProps> = ({
           <div className="surv-section-header-row">
             <div className="surv-section-header-left">
               <div className="surv-section-eyebrow">
-                <span className="surv-eyebrow-dash">—</span>
                 <span>OUR VIDEO SURVEILLANCE SOLUTIONS</span>
               </div>
               <h2 className="surv-section-title">Complete Video Surveillance Systems.</h2>
@@ -417,16 +412,6 @@ export const VideoSurveillancePage: React.FC<VideoSurveillancePageProps> = ({
                 From design and installation to monitoring and support, Smart-Links delivers reliable,
                 high-performance video surveillance solutions for businesses of all sizes.
               </p>
-            </div>
-            <div className="surv-section-header-right">
-              <button
-                type="button"
-                onClick={handleDownloadBrochure}
-                className="surv-download-brochure-btn"
-              >
-                <span>DOWNLOAD BROCHURE</span>
-                <ArrowRight size={16} />
-              </button>
             </div>
           </div>
 
@@ -488,13 +473,12 @@ export const VideoSurveillancePage: React.FC<VideoSurveillancePageProps> = ({
             {/* Left Column: Why Smart-Links */}
             <div className="surv-trust-left-col">
               <div className="surv-section-eyebrow">
-                <span className="surv-eyebrow-dash">—</span>
                 <span>WHY SMART-LINKS</span>
               </div>
               <h2 className="surv-trust-heading">Security. Visibility. Confidence.</h2>
               <p className="surv-trust-desc">
                 Our certified team designs and deploys video surveillance systems that help you protect
-                your people, assets and facilities — with reliable performance and long-term support.
+                your people, assets and facilities with reliable performance and long-term support.
               </p>
 
               {/* 4 Feature Highlights Grid */}
@@ -555,7 +539,6 @@ export const VideoSurveillancePage: React.FC<VideoSurveillancePageProps> = ({
         <div className="surv-container">
           <div className="surv-process-header">
             <div className="surv-section-eyebrow">
-              <span className="surv-eyebrow-dash">—</span>
               <span>OUR PROCESS</span>
             </div>
             <h2 className="surv-section-title">From Assessment to Ongoing Support.</h2>
@@ -590,7 +573,6 @@ export const VideoSurveillancePage: React.FC<VideoSurveillancePageProps> = ({
         <div className="surv-container">
           <div className="surv-industries-header">
             <div className="surv-section-eyebrow">
-              <span className="surv-eyebrow-dash">—</span>
               <span>INDUSTRIES WE SERVE</span>
             </div>
             <h2 className="surv-section-title">Security Solutions for Every Industry.</h2>
