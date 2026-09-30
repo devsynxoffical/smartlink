@@ -5524,7 +5524,7 @@ button {
 .industries-carbon-hero {
   background-image: 
     linear-gradient(90deg, rgba(2, 7, 19, 0.94) 0%, rgba(2, 7, 19, 0.76) 42%, rgba(2, 7, 19, 0.15) 70%, rgba(2, 7, 19, 0.45) 100%),
-    url('/about_hero_bg.webp');
+    url('/industries_hero_building.png');
   background-position: 85% center;
 }
 
