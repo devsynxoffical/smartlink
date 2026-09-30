@@ -258,7 +258,7 @@ export const ContactPage: React.FC<ContactPageProps> = ({ onOpenQuote }) => {
       <section 
         className="contact-hero-section"
         style={{
-          backgroundImage: `url('/contact_hero_bg.webp')`
+          backgroundImage: `url('/contact_hero_new_office.png')`
         }}
       >
         <div className="contact-hero-overlay" />
