@@ -20,7 +20,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onNavigate }) => {
       <section
         className="about-hero-section"
         style={{
-          backgroundImage: `url('/about_hero_bg.webp')`
+          backgroundImage: `url('/about_hero_new_reception.png')`
         }}
       >
         <div className="about-hero-overlay" />
