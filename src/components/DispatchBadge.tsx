@@ -52,7 +52,7 @@ export const DispatchBadge: React.FC<DispatchBadgeProps> = ({ onOpenQuote }) => 
         <span style={{ color: 'rgba(255, 255, 255, 0.2)' }}>|</span>
 
         <a
-          href="tel:4075550100"
+          href="tel:8665103630"
           style={{
             fontSize: '12px',
             fontWeight: 800,
@@ -64,7 +64,7 @@ export const DispatchBadge: React.FC<DispatchBadgeProps> = ({ onOpenQuote }) => 
           }}
         >
           <Phone size={12} />
-          <span>(407) 555-0100</span>
+          <span>(866) 510-3630</span>
         </a>
 
         <span style={{ color: 'rgba(255, 255, 255, 0.2)' }}>|</span>

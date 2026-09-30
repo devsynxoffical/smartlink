@@ -98,17 +98,17 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
                 <div className="footer-contact-item">
                   <MapPin size={16} className="footer-contact-icon" style={{ marginTop: '2px' }} />
                   <div>
-                    1234 Innovation Drive<br />
-                    Orlando, FL 32801
+                    300 SE 2nd Street, Suite 600<br />
+                    Fort Lauderdale, FL 33301
                   </div>
                 </div>
                 <div className="footer-contact-item">
                   <Phone size={16} className="footer-contact-icon" />
-                  <a href="tel:4075550100">(407) 555-0100</a>
+                  <a href="tel:8665103630">(866) 510-3630</a>
                 </div>
                 <div className="footer-contact-item">
                   <Mail size={16} className="footer-contact-icon" />
-                  <a href="mailto:info@smart-linksces.com">info@smart-linksces.com</a>
+                  <a href="mailto:Info@smart-linkscs.com">Info@smart-linkscs.com</a>
                 </div>
               </div>
             </div>

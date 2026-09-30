@@ -157,9 +157,9 @@ export const TermsOfServicePage: React.FC<TermsOfServicePageProps> = ({
               <div style={{ backgroundColor: '#f8fafc', border: '1px solid #e2e8f0', borderRadius: '10px', padding: '20px 24px', marginTop: '16px' }}>
                 <p style={{ margin: '0 0 8px 0', fontWeight: 700, color: '#0a1128' }}>Smart-Links Cabling Solutions, LLC</p>
                 <p style={{ margin: '0 0 6px 0' }}>Attn: General Counsel / Contracts Management</p>
-                <p style={{ margin: '0 0 6px 0' }}>1234 Innovation Drive, Orlando, FL 32801</p>
-                <p style={{ margin: '0 0 6px 0' }}>Email: <a href="mailto:contracts@smart-linksces.com" style={{ color: '#0056d2', fontWeight: 600 }}>contracts@smart-linksces.com</a></p>
-                <p style={{ margin: 0 }}>Phone: (407) 555-0100</p>
+                <p style={{ margin: '0 0 6px 0' }}>300 SE 2nd Street, Suite 600, Fort Lauderdale, FL 33301</p>
+                <p style={{ margin: '0 0 6px 0' }}>Email: <a href="mailto:Info@smart-linkscs.com" style={{ color: '#0056d2', fontWeight: 600 }}>Info@smart-linkscs.com</a></p>
+                <p style={{ margin: 0 }}>Phone: (866) 510-3630</p>
               </div>
 
             </div>

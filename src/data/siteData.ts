@@ -50,11 +50,11 @@ export const leadershipData: LeaderItem[] = [
 
 export const locationsData: LocationItem[] = [
   {
-    id: 'hq-orlando',
+    id: 'hq-fort-lauderdale',
     name: 'Corporate Headquarters',
-    address: '1234 Innovation Drive',
-    cityStateZip: 'Orlando, FL 32801',
-    phone: '(407) 555-0100',
+    address: '300 SE 2nd Street, Suite 600',
+    cityStateZip: 'Fort Lauderdale, FL 33301',
+    phone: '(866) 510-3630',
     isHQ: true
   },
   {

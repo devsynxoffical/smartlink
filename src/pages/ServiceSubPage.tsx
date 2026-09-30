@@ -305,12 +305,12 @@ export const ServiceSubPage: React.FC<ServiceSubPageProps> = ({
               <span>START YOUR PROJECT QUOTE</span>
               <ArrowRight size={16} />
             </button>
-            <button 
-              onClick={() => onNavigate('contact')}
+            <a 
+              href="tel:8665103630"
               className="btn-outline-white"
             >
-              <span>CALL (407) 555-0100</span>
-            </button>
+              <span>CALL (866) 510-3630</span>
+            </a>
           </div>
         </div>
       </section>
