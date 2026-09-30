@@ -70,7 +70,7 @@ const serviceOptionsList: ServiceTile[] = [
   {
     id: 'pos-retail',
     title: 'POS & Retail Technology',
-    image: '/project_walmart.webp'
+    image: '/pos_retail_technology.png'
   },
   {
     id: 'mdf-idf',
