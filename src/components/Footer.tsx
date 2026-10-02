@@ -7,7 +7,7 @@ interface FooterProps {
   onOpenQuote: () => void;
 }
 
-export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
+export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenQuote }) => {
   const handleNav = (tab: NavTab, subId?: string) => {
     onNavigate(tab, subId);
     window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -73,6 +73,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
                 <li><button onClick={() => handleNav('industries')}>Industries</button></li>
                 <li><button onClick={() => handleNav('projects')}>Projects</button></li>
                 <li><button onClick={() => handleNav('why-us')}>Why Us</button></li>
+                <li><button onClick={onOpenQuote}>Request a Quote</button></li>
                 <li><button onClick={() => handleNav('contact')}>Contact</button></li>
               </ul>
             </div>

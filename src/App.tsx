@@ -26,6 +26,7 @@ import { WhyUsPage } from './pages/WhyUsPage';
 import { ContactPage } from './pages/ContactPage';
 import { PrivacyPolicyPage } from './pages/PrivacyPolicyPage';
 import { TermsOfServicePage } from './pages/TermsOfServicePage';
+import { QuotePage } from './pages/QuotePage';
 import { QuoteModal } from './components/QuoteModal';
 import { SearchModal } from './components/SearchModal';
 import { ServiceDetailModal } from './components/ServiceDetailModal';
@@ -41,6 +42,7 @@ const parseRoute = (): { tab: NavTab; subId: string } => {
   if (path === 'projects') return { tab: 'projects', subId: '' };
   if (path === 'why-us') return { tab: 'why-us', subId: '' };
   if (path === 'contact') return { tab: 'contact', subId: '' };
+  if (path === 'quote' || path === 'get-a-quote' || path === 'request-a-quote') return { tab: 'quote', subId: '' };
   if (path === 'privacy-policy' || path === 'privacy') return { tab: 'privacy-policy', subId: '' };
   if (path === 'terms-of-service' || path === 'terms' || path === 'terms-and-conditions') return { tab: 'terms-of-service', subId: '' };
   if (path === 'nationwide-rollouts' || path === 'service/nationwide-rollouts') return { tab: 'nationwide-rollouts', subId: 'nationwide-rollouts' };
@@ -111,6 +113,8 @@ export function App() {
       document.title = 'Why Us & Certifications | Smart-Links Cabling Solutions';
     } else if (currentTab === 'contact') {
       document.title = 'Contact Us & Locations | Smart-Links Cabling Solutions';
+    } else if (currentTab === 'quote') {
+      document.title = 'Request a Quote | Smart-Links Cabling Solutions';
     } else if (currentTab === 'privacy-policy') {
       document.title = 'Privacy Policy | Smart-Links Cabling Solutions';
     } else if (currentTab === 'terms-of-service') {
@@ -122,7 +126,7 @@ export function App() {
     if (serviceName) {
       setPreselectedQuoteService(serviceName);
     }
-    handleNavigate('contact');
+    setQuoteModalOpen(true);
   };
 
   const handleNavigate = (tab: NavTab, subId?: string) => {
@@ -327,6 +331,13 @@ export function App() {
           <ContactPage
             onNavigate={handleNavigate}
             onOpenQuote={() => handleOpenQuote()}
+          />
+        )}
+
+        {currentTab === 'quote' && (
+          <QuotePage
+            onNavigate={handleNavigate}
+            preselectedService={preselectedQuoteService}
           />
         )}
 

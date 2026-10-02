@@ -2350,6 +2350,29 @@ button {
   padding: 32px;
 }
 
+.quote-modal-scrollable-body {
+  scrollbar-width: thin;
+  scrollbar-color: #cbd5e1 #f8fafc;
+}
+
+.quote-modal-scrollable-body::-webkit-scrollbar {
+  width: 8px;
+}
+
+.quote-modal-scrollable-body::-webkit-scrollbar-track {
+  background: #f8fafc;
+  border-radius: 4px;
+}
+
+.quote-modal-scrollable-body::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+
+.quote-modal-scrollable-body::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
 @media (max-width: 640px) {
   .modal-backdrop {
     padding: 12px 10px;
