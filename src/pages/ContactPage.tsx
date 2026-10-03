@@ -353,7 +353,7 @@ export const ContactPage: React.FC<ContactPageProps> = ({ onOpenQuote }) => {
 
               <div className="hq-building-photo-wrap">
                 <img 
-                  src="/about_hero_bg.webp" 
+                  src="/image.png" 
                   alt="Smart-Links Cabling Solutions Headquarters" 
                 />
               </div>
