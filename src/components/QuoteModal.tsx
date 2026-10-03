@@ -13,12 +13,8 @@ import {
   Radio, 
   Globe, 
   Settings, 
-  Building, 
-  Clock, 
   Check, 
   UploadCloud, 
-  Phone, 
-  Mail, 
   FileText 
 } from 'lucide-react';
 
@@ -41,13 +37,11 @@ export const QuoteModal: React.FC<QuoteModalProps> = ({
 }) => {
   const [step, setStep] = useState<1 | 2 | 3>(1);
   const [selectedServices, setSelectedServices] = useState<string[]>(['Structured Cabling']);
-  const [otherServiceText, setOtherServiceText] = useState('');
   
   const [buildingType, setBuildingType] = useState('Commercial Office / HQ');
   const [sqFt, setSqFt] = useState('25,000 - 50,000 sq ft');
   const [estimatedDrops, setEstimatedDrops] = useState('50 - 200 Drops / Outlets');
   const [timeline, setTimeline] = useState('Within 1-3 Months');
-  const [budgetRange, setBudgetRange] = useState('$25,000 - $75,000');
   
   const [name, setName] = useState('');
   const [jobTitle, setJobTitle] = useState('');
@@ -642,7 +636,7 @@ export const QuoteModal: React.FC<QuoteModalProps> = ({
                     padding: '16px',
                     marginBottom: '16px'
                   }}>
-                    <div style={{ fontWeight: 700, color: '#0f172a', fontSize: '14px', marginBottom: '10px', borderBottom: '1px solid #e2e8f0', pb: '6px' }}>
+                    <div style={{ fontWeight: 700, color: '#0f172a', fontSize: '14px', marginBottom: '10px', borderBottom: '1px solid #e2e8f0', paddingBottom: '6px' }}>
                       Review Request Details:
                     </div>
 

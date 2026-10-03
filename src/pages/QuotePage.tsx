@@ -1,7 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import type { NavTab } from '../types';
 import {
-  FileText,
   Settings,
   MapPin,
   UploadCloud,
@@ -14,11 +13,7 @@ import {
   CheckCircle2,
   Zap,
   Building,
-  HardHat,
   Phone,
-  Mail,
-  HelpCircle,
-  ChevronDown,
   Award,
   Layers,
   FileCheck2,
@@ -150,7 +145,6 @@ export const QuotePage: React.FC<QuotePageProps> = ({ onNavigate, preselectedSer
   // Document Upload & Referral
   const [uploadedFileName, setUploadedFileName] = useState<string | null>(null);
   const [howHeard, setHowHeard] = useState('');
-  const [specialNotes, setSpecialNotes] = useState('');
 
   const [validationError, setValidationError] = useState<string | null>(null);
   const fileInputRef = useRef<HTMLInputElement>(null);
@@ -265,7 +259,6 @@ export const QuotePage: React.FC<QuotePageProps> = ({ onNavigate, preselectedSer
     setCity('');
     setZipCode('');
     setUploadedFileName(null);
-    setSpecialNotes('');
     setValidationError(null);
   };
 
